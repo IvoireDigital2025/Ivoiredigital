@@ -1,4 +1,4 @@
-import { LucideIcon, Globe, BrainCircuit, BarChart4, Sparkles, RocketIcon, MessagesSquare } from "lucide-react";
+import { LucideIcon, Globe, BrainCircuit, BarChart4, Sparkles, Rocket, MessagesSquare } from "lucide-react";
 
 export interface Service {
   id: string;
@@ -34,7 +34,7 @@ export const services: Service[] = [
   },
   {
     id: "seo",
-    icon: RocketIcon,
+    icon: Rocket,
     title: "SEO Optimization",
     description: "Improve visibility in search engines and drive organic traffic through strategic optimization."
   },
