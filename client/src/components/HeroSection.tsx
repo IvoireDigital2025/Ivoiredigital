@@ -14,21 +14,21 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
-              Empower Your Business with AI & Digital Solutions
+              Empower Your Business with <span className="gradient-text text-white">AI & Digital Solutions</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 max-w-lg">
               We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
               <Button 
-                className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white text-center py-3 px-8"
+                className="btn-futuristic bg-accent hover:bg-accent text-black font-medium text-center py-3 px-8"
                 onClick={() => scrollToSection("services")}
               >
                 Explore Services
               </Button>
               <Button 
                 variant="outline" 
-                className="bg-white hover:bg-gray-100 text-[#14532d] text-center py-3 px-8"
+                className="border border-white/70 bg-transparent hover:bg-white/10 text-white text-center py-3 px-8"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact Us
@@ -41,11 +41,14 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <img 
-              src="/images/ai-agent.jpg" 
-              alt="AI agent with digital interfaces and connections" 
-              className="rounded-lg shadow-xl"
-            />
+            <div className="relative rounded-lg overflow-hidden glow-blue">
+              <img 
+                src="/images/ai-agent.jpg" 
+                alt="AI agent with digital interfaces and connections" 
+                className="rounded-lg shadow-xl"
+              />
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-primary/20 to-transparent opacity-70"></div>
+            </div>
           </motion.div>
         </div>
       </div>
