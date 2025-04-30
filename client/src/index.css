@@ -1,54 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
-
 :root {
   --background: 0 0% 100%;
-  --foreground: 20 14.3% 4.1%;
-  --muted: 60 4.8% 95.9%;
-  --muted-foreground: 25 5.3% 44.7%;
+  --foreground: 220 14.3% 15%; /* Darker blue-gray for text */
+  --muted: 210 20% 95%;
+  --muted-foreground: 210 20% 45%;
   --popover: 0 0% 100%;
-  --popover-foreground: 20 14.3% 4.1%;
+  --popover-foreground: 220 14.3% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 20 14.3% 4.1%;
-  --border: 20 5.9% 90%;
-  --input: 20 5.9% 90%;
-  --primary: 144 70% 20%;
-  --primary-light: 142 64% 30%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 152 75% 52%;
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 36 100% 50%;
-  --accent-foreground: 24 9.8% 10%;
+  --card-foreground: 220 14.3% 15%;
+  --border: 210 15% 90%;
+  --input: 210 15% 90%;
+  --primary: 200 80% 40%; /* Bright blue matching AI interface */
+  --primary-light: 200 70% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 209 100% 60%; /* Secondary blue highlight */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 35 90% 55%; /* Gold/amber from the AI interface */
+  --accent-foreground: 0 0% 10%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 20 14.3% 4.1%;
+  --ring: 200 80% 40%;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: 240 10% 3.9%;
+  --background: 210 30% 8%; /* Dark blue-gray background */
   --foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --popover: 240 10% 3.9%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 75%;
+  --popover: 210 30% 8%;
   --popover-foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
+  --card: 210 30% 10%;
   --card-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --primary: 144 70% 20%;
-  --primary-light: 142 64% 30%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 152 75% 52%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --primary: 200 95% 45%; /* Bright blue from AI interface */
+  --primary-light: 199 95% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 205 100% 65%; /* Brighter secondary blue */
   --secondary-foreground: 0 0% 98%;
-  --accent: 36 100% 50%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  --accent: 35 100% 60%; /* Glowing gold accent */
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 62.8% 40.6%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 240 4.9% 83.9%;
+  --ring: 200 95% 45%;
 }
 
 @layer base {
@@ -71,16 +71,128 @@ html {
 }
 
 .hero-gradient {
-  background: linear-gradient(rgba(20, 83, 45, 0.8), rgba(20, 83, 45, 0.9)), url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background: linear-gradient(to right, hsla(210, 90%, 20%, 0.9), hsla(200, 100%, 25%, 0.85));
   background-size: cover;
   background-position: center;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid hsl(var(--border));
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: hsl(var(--primary) / 0.5);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
 }
 
 .testimonial-gradient {
-  background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(90deg, hsl(210, 30%, 98%) 0%, hsl(206, 100%, 99%) 100%);
+}
+
+/* Add futuristic border details with gold accent */
+.futuristic-border {
+  position: relative;
+  border: 1px solid hsl(var(--primary) / 0.3);
+  box-shadow: 0 0 15px hsl(var(--primary) / 0.1);
+}
+
+.futuristic-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, hsl(var(--accent) / 0.8), transparent);
+}
+
+.futuristic-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to left, hsl(var(--accent) / 0.8), transparent);
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 15px 2px hsl(var(--primary) / 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-blue:hover {
+  box-shadow: 0 0 20px 5px hsl(var(--primary) / 0.3);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px 2px hsl(var(--accent) / 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-gold:hover {
+  box-shadow: 0 0 20px 5px hsl(var(--accent) / 0.3);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Futuristic button with hover effect */
+.btn-futuristic {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+  border: 1px solid hsl(var(--primary) / 0.6);
+}
+
+.btn-futuristic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary-light)));
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.btn-futuristic:hover::before {
+  opacity: 1;
+}
+
+.btn-futuristic:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px hsl(var(--primary) / 0.4);
+  border-color: transparent;
 }
