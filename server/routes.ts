@@ -14,7 +14,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const message = await storage.createContactMessage({
         name: contactData.name,
         email: contactData.email,
-        phone: contactData.phone || "",
+        phone: contactData.phone || null, // Consistent with storage
         service: contactData.service,
         message: contactData.message,
       });

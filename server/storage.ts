@@ -42,8 +42,13 @@ export class MemStorage implements IStorage {
   async createContactMessage(insertMessage: InsertContact): Promise<ContactMessage> {
     const id = this.contactCurrentId++;
     const createdAt = new Date().toISOString();
+    // Create contact message with proper typing
     const message: ContactMessage = { 
-      ...insertMessage, 
+      name: insertMessage.name,
+      email: insertMessage.email,
+      phone: insertMessage.phone || null, // Ensure phone is string or null
+      service: insertMessage.service,
+      message: insertMessage.message,
       id, 
       createdAt
     };
