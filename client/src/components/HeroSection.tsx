@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
+import aiAgentImage from "../assets/ai-agent.jpg";
 
 export default function HeroSection() {
   return (
@@ -42,7 +43,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <img 
-              src="/images/ai-agent.jpg" 
+              src={aiAgentImage} 
               alt="AI agent with digital interfaces and connections" 
               className="rounded-lg shadow-xl"
             />
