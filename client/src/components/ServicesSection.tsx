@@ -4,12 +4,8 @@ import { motion } from "framer-motion";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="services" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -17,10 +13,8 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground">
-            Our <span className="gradient-text">Services</span>
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Our Services</h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive digital solutions to help your business thrive in the modern marketplace.
           </p>
         </motion.div>
