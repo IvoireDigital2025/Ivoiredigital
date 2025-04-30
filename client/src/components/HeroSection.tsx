@@ -42,7 +42,7 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1663104941185-3eda37d42bea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
               alt="Business AI agent working with technology" 
               className="rounded-lg shadow-xl"
             />
