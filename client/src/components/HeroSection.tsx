@@ -42,8 +42,8 @@ export default function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1596741964346-791466b552b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-              alt="AI agent digital technology interface" 
+              src="/images/ai-agent.jpg" 
+              alt="AI agent with digital interfaces and connections" 
               className="rounded-lg shadow-xl"
             />
           </motion.div>
