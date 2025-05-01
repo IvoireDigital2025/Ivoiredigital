@@ -121,7 +121,7 @@ export default function ContactSection() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                  <p className="text-gray-600">123 Digital Avenue, Tech City, CA 90210</p>
+                  <p className="text-gray-600">Dallas, TX</p>
                 </div>
               </div>
             </div>

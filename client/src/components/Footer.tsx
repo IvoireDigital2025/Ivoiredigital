@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-800 text-sm text-gray-400">
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="text-center sm:text-left">
-              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved.
+              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved. | Dallas, TX
             </div>
             <div className="text-center sm:text-right">
               <a href="#" className="hover:text-[#f59e0b] transition-colors">Privacy Policy</a>
