@@ -1,0 +1,148 @@
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { FileText, Clock, ArrowRight } from "lucide-react";
+
+interface Guide {
+  id: string;
+  title: string;
+  description: string;
+  readTime: string;
+  category: string;
+  icon: React.ReactNode;
+}
+
+const guides: Guide[] = [
+  {
+    id: "guide-1",
+    title: "The Complete Guide to Implementing AI Chatbots for Small Business Customer Service",
+    description: "Learn how to select, implement, and optimize AI chatbots for your small business to provide 24/7 customer support without increasing staff costs.",
+    readTime: "15 min read",
+    category: "AI Implementation",
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+  },
+  {
+    id: "guide-2",
+    title: "Local SEO Mastery: How to Dominate Google Maps for Dallas Businesses",
+    description: "A step-by-step guide to optimizing your Google Business Profile, building local citations, and earning reviews to increase your visibility in local search.",
+    readTime: "20 min read",
+    category: "Digital Marketing",
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+  },
+  {
+    id: "guide-3",
+    title: "Small Business Automation Blueprint: 5 Processes to Automate Today",
+    description: "Discover the five business processes that every small business should automate, with implementation instructions and recommended tools.",
+    readTime: "18 min read",
+    category: "Business Automation",
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+  },
+  {
+    id: "guide-4",
+    title: "Creating a High-Converting Website for Service-Based Businesses",
+    description: "Learn the essential elements that every service business website needs to effectively convert visitors into leads and customers.",
+    readTime: "12 min read",
+    category: "Web Development",
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+  }
+];
+
+export default function GuidesSection() {
+  return (
+    <section id="guides" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Free Business Growth Guides</h2>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Practical, actionable guides to help you implement AI solutions, improve your digital marketing, and automate your business processes.
+          </p>
+        </motion.div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          {guides.map((guide, index) => (
+            <motion.div
+              key={guide.id}
+              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-5">
+                  {guide.icon}
+                </div>
+                <div>
+                  <span className="text-sm font-medium px-3 py-1 bg-[#14532d]/10 text-[#14532d] rounded-full inline-block mb-3">
+                    {guide.category}
+                  </span>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {guide.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {guide.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{guide.readTime}</span>
+                    </div>
+                    <a href="#" className="inline-flex items-center text-[#14532d] font-medium hover:text-[#f59e0b] transition-colors">
+                      Read Guide <ArrowRight className="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Button 
+            className="bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 px-8"
+          >
+            Browse All Guides
+          </Button>
+        </motion.div>
+        
+        {/* Hidden SEO content */}
+        <div className="sr-only">
+          <h2>Free AI Implementation Guides for Small Businesses</h2>
+          <p>
+            Download our comprehensive guides on implementing artificial intelligence in your 
+            small business operations. Learn about chatbot implementation, automated lead 
+            qualification, AI-powered content creation, and customer service automation 
+            without the need for technical expertise.
+          </p>
+          
+          <h2>Digital Marketing Guides for Dallas Local Businesses</h2>
+          <p>
+            Our expert guides walk you through improving your local search presence, 
+            optimizing Google Business Profile, running effective social media campaigns, 
+            and implementing content marketing strategies that work specifically for 
+            businesses in the Dallas market.
+          </p>
+          
+          <h2>Business Process Automation Resources and Tutorials</h2>
+          <p>
+            Step-by-step guides for automating repetitive tasks in your small business, 
+            including customer onboarding, appointment scheduling, invoice management, 
+            email marketing, and social media posting - all designed to save you time 
+            and reduce operational costs.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -56,9 +56,30 @@ export default function Footer() {
                   Blog
                 </button>
               </li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Guides</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">FAQ</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("case-studies")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  Case Studies
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("guides")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  Guides
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("faq")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  FAQ
+                </button>
+              </li>
               <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Support</a></li>
             </ul>
           </div>
@@ -66,10 +87,30 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Team</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Press</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("about-us")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("services")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  Services
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("portfolio")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  Portfolio
+                </button>
+              </li>
               <li>
                 <button 
                   onClick={() => handleNavClick("contact")} 

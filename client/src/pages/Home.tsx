@@ -5,6 +5,10 @@ import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSection from "@/components/BlogSection";
+import FAQSection from "@/components/FAQSection";
+import GuidesSection from "@/components/GuidesSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import AboutUsPage from "@/components/AboutUsPage";
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -36,6 +40,10 @@ export default function Home() {
         <PortfolioSection />
         <TestimonialsSection />
         <BlogSection />
+        <FAQSection />
+        <GuidesSection />
+        <CaseStudiesSection />
+        <AboutUsPage />
         <CTASection />
         <ContactSection />
       </main>
