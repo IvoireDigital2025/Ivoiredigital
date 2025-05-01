@@ -11,8 +11,11 @@ import CaseStudiesSection from "@/components/CaseStudiesSection";
 import AboutUsPage from "@/components/AboutUsPage";
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
+import SectionDivider from "@/components/SectionDivider";
+import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import { Fragment } from "react";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,24 +33,63 @@ export default function Home() {
     };
   }, []);
 
+  // Group sections into logical content blocks
+  const mainContent = [
+    { Component: HeroSection, id: "hero" },
+    { Component: ServicesSection, id: "services" },
+    { Component: PortfolioSection, id: "portfolio" },
+    { Component: TestimonialsSection, id: "testimonials" }
+  ];
+
+  const resourcesContent = [
+    { Component: BlogSection, id: "blog" },
+    { Component: CaseStudiesSection, id: "case-studies" },
+    { Component: GuidesSection, id: "guides" }
+  ];
+
+  const aboutContent = [
+    { Component: AboutSection, id: "about" },
+    { Component: AboutUsPage, id: "about-us" },
+    { Component: FAQSection, id: "faq" }
+  ];
+
   return (
     <div className="font-inter text-gray-800 bg-gray-50">
       <Header scrolled={scrolled} />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <PortfolioSection />
-        <TestimonialsSection />
-        <BlogSection />
-        <FAQSection />
-        <GuidesSection />
-        <CaseStudiesSection />
-        <AboutUsPage />
+        {/* Main Marketing Content */}
+        {mainContent.map(({ Component, id }, index) => (
+          <Component key={id} />
+        ))}
+
+        {/* Resources Section Divider */}
+        <SectionDivider 
+          title="Resources & Insights" 
+          subtitle="Valuable content to help your business grow with AI and digital marketing"
+        />
+        
+        {/* Resources Section */}
+        {resourcesContent.map(({ Component, id }, index) => (
+          <Component key={id} />
+        ))}
+
+        {/* Company Information Divider */}
+        <SectionDivider 
+          title="About Ivoire Digital" 
+          subtitle="Learn who we are and how we help Dallas businesses succeed"
+        />
+        
+        {/* Company Information */}
+        {aboutContent.map(({ Component, id }, index) => (
+          <Component key={id} />
+        ))}
+
+        {/* Call to Action and Contact */}
         <CTASection />
         <ContactSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
