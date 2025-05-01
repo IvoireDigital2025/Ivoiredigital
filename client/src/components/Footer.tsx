@@ -48,7 +48,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Blog</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavClick("blog")} 
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                >
+                  Blog
+                </button>
+              </li>
               <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Case Studies</a></li>
               <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Guides</a></li>
               <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">FAQ</a></li>

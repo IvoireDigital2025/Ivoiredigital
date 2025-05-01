@@ -33,6 +33,7 @@ export default function Header({ scrolled }: HeaderProps) {
           <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
           <button onClick={() => handleNavClick("portfolio")} className="hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="hover:text-[#f59e0b] transition-colors">Testimonials</button>
+          <button onClick={() => handleNavClick("blog")} className="hover:text-[#f59e0b] transition-colors">Blog</button>
           <button onClick={() => handleNavClick("contact")} className="hover:text-[#f59e0b] transition-colors">Contact</button>
         </div>
         
@@ -59,6 +60,7 @@ export default function Header({ scrolled }: HeaderProps) {
           <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Services</button>
           <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Testimonials</button>
+          <button onClick={() => handleNavClick("blog")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Blog</button>
           <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Contact</button>
           <Button 
             className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white w-full"
