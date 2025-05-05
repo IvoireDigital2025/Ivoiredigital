@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
+import ivoireLogo from "@/assets/ivoire-logo.png";
 
 export default function Footer() {
   const handleNavClick = (id: string) => {
@@ -11,8 +12,16 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="#" className="text-2xl font-poppins font-bold mb-4 block">
-              <span className="text-[#f59e0b]">Ivoire</span> Digital
+            <a href="#" onClick={() => handleNavClick("home")} className="inline-block mb-4">
+              <img 
+                src={ivoireLogo} 
+                alt="Ivoire Digital Logo" 
+                className="h-12 object-contain" 
+                style={{ 
+                  filter: 'brightness(1.2) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
+                  background: 'transparent' 
+                }} 
+              />
             </a>
             <p className="text-gray-400 mb-6">
               Empowering small businesses with AI and digital solutions to attract more clients and automate operations.

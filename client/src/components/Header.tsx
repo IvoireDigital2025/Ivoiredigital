@@ -2,6 +2,7 @@ import { useState } from "react";
 import { scrollToSection } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import ivoireLogo from "@/assets/ivoire-logo.png";
 
 interface HeaderProps {
   scrolled: boolean;
@@ -24,8 +25,16 @@ export default function Header({ scrolled }: HeaderProps) {
       scrolled ? "bg-[#14532d] shadow-md" : "bg-transparent"
     }`}>
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#" className="text-2xl font-poppins font-bold text-white">
-          <span className="text-[#f59e0b]">Ivoire</span> Digital
+        <a href="#" className="flex items-center" onClick={() => handleNavClick("home")}>
+          <img 
+            src={ivoireLogo} 
+            alt="Ivoire Digital Logo" 
+            className="h-12 object-contain" 
+            style={{ 
+              filter: 'drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
+              background: 'transparent' 
+            }} 
+          />
         </a>
         
         <div className="hidden md:flex space-x-8 text-white">
