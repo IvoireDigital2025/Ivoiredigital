@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
-import ivoireLogo from "@/assets/ivoire-logo.png";
+import ivoireLogo from "@/assets/ivoire-logo-new.png";
 
 export default function Footer() {
   const handleNavClick = (id: string) => {
