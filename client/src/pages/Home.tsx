@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import AIShowcaseSection from "@/components/AIShowcaseSection";
 import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -37,6 +38,7 @@ export default function Home() {
   const mainContent = [
     { Component: HeroSection, id: "hero" },
     { Component: ServicesSection, id: "services" },
+    { Component: AIShowcaseSection, id: "ai-showcase" },
     { Component: PortfolioSection, id: "portfolio" },
     { Component: TestimonialsSection, id: "testimonials" }
   ];
