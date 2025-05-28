@@ -47,7 +47,7 @@ export default function Header({ scrolled }: HeaderProps) {
         </div>
         
         <Button 
-          className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white"
+          className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white ml-12"
           onClick={() => handleNavClick("contact")}
         >
           Get Started
