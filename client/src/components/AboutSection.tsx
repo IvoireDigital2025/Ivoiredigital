@@ -58,7 +58,8 @@ export default function AboutSection() {
             
             <div className="mt-8">
               <Button 
-                className="bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 px-6"
+                size="lg"
+                className="bg-[#14532d] hover:bg-[#166534] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => scrollToSection("contact")}
               >
                 Schedule a Consultation

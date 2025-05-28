@@ -20,16 +20,18 @@ export default function HeroSection() {
             <p className="text-base md:text-lg opacity-90 max-w-lg">
               We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button 
-                className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white text-center py-3 px-8"
+                size="lg"
+                className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => scrollToSection("services")}
               >
                 Explore Services
               </Button>
               <Button 
+                size="lg"
                 variant="outline" 
-                className="bg-white hover:bg-gray-100 text-[#14532d] text-center py-3 px-8"
+                className="bg-white hover:bg-gray-50 text-[#14532d] border-2 border-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact Us
