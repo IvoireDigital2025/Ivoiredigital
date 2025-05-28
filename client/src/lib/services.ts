@@ -12,36 +12,36 @@ export const services: Service[] = [
     id: "website",
     icon: Monitor,
     title: "Website Development",
-    description: "Professional, mobile-responsive websites that convert visitors into customers and showcase your brand effectively."
+    description: "Custom, responsive websites optimized for conversion that showcase your brand's unique identity."
   },
   {
     id: "ai",
     icon: Cpu,
-    title: "AI Automation",
-    description: "Smart chatbots and virtual assistants that handle customer inquiries, schedule appointments, and qualify leads automatically."
+    title: "AI Solutions",
+    description: "Intelligent chatbots, virtual assistants, and automated systems to handle customer inquiries 24/7."
   },
   {
     id: "marketing",
     icon: BarChart,
     title: "Digital Marketing",
-    description: "Data-driven marketing campaigns that attract your ideal customers and generate measurable business growth."
+    description: "Strategic campaigns that increase visibility, attract qualified leads, and boost your conversion rates."
   },
   {
     id: "automation",
     icon: LayoutGrid,
-    title: "Business Process Automation",
-    description: "Custom automation solutions that eliminate repetitive tasks and streamline your daily operations."
+    title: "Business Automation",
+    description: "Streamline operations and reduce manual work with custom automation solutions tailored to your needs."
   },
   {
     id: "seo",
     icon: Search,
-    title: "Search Engine Optimization",
-    description: "Strategic SEO that improves your Google rankings and brings qualified customers to your business."
+    title: "SEO Optimization",
+    description: "Improve visibility in search engines and drive organic traffic through strategic optimization."
   },
   {
     id: "reviews",
     icon: MessageCircle,
-    title: "Reputation Management",
-    description: "Automated review collection and management systems that build trust and attract new customers."
+    title: "Review Management",
+    description: "Proactively gather and manage customer reviews to build trust and improve your online reputation."
   }
 ];
