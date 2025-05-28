@@ -29,7 +29,7 @@ export default function Header({ scrolled }: HeaderProps) {
           <img 
             src={ivoireLogo} 
             alt="Ivoire Digital Logo" 
-            className="h-20 object-contain" 
+            className="h-28 object-contain" 
             style={{ 
               filter: 'drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
               background: 'transparent' 

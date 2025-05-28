@@ -16,7 +16,7 @@ export default function Footer() {
               <img 
                 src={ivoireLogo} 
                 alt="Ivoire Digital Logo" 
-                className="h-20 object-contain" 
+                className="h-28 object-contain" 
                 style={{ 
                   filter: 'brightness(1.2) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
                   background: 'transparent' 
