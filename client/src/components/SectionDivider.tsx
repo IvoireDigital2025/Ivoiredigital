@@ -16,11 +16,11 @@ export default function SectionDivider({ title, subtitle }: SectionDividerProps)
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">
+          <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d]">
             {title}
           </h2>
           {subtitle && (
-            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto">
               {subtitle}
             </p>
           )}

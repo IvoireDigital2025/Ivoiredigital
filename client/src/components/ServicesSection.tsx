@@ -13,8 +13,8 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Our Services</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d]">Our Services</h2>
+          <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto">
             Comprehensive digital solutions to help your business thrive in the modern marketplace.
           </p>
         </motion.div>

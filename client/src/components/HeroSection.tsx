@@ -14,10 +14,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold leading-tight">
               Empower Your Business with AI & Digital Solutions
             </h1>
-            <p className="text-lg md:text-xl opacity-90 max-w-lg">
+            <p className="text-base md:text-lg opacity-90 max-w-lg">
               We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
