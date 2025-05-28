@@ -20,7 +20,7 @@ export default function HeroSection() {
             <p className="text-base md:text-lg opacity-90 max-w-lg">
               We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-6 pt-2">
               <Button 
                 size="lg"
                 className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
