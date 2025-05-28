@@ -24,8 +24,8 @@ export default function Header({ scrolled }: HeaderProps) {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? "bg-[#14532d] shadow-md" : "bg-transparent"
     }`}>
-      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#" className="flex items-center" onClick={() => handleNavClick("home")}>
+      <nav className="container mx-auto px-6 py-3 flex items-center">
+        <a href="#" className="flex items-center flex-shrink-0" onClick={() => handleNavClick("home")}>
           <img 
             src={ivoireLogo} 
             alt="Ivoire Digital Logo" 
@@ -37,7 +37,7 @@ export default function Header({ scrolled }: HeaderProps) {
           />
         </a>
         
-        <div className="hidden md:flex space-x-8 text-white">
+        <div className="hidden md:flex space-x-8 text-white mx-auto">
           <button onClick={() => handleNavClick("home")} className="hover:text-[#f59e0b] transition-colors">Home</button>
           <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
           <button onClick={() => handleNavClick("portfolio")} className="hover:text-[#f59e0b] transition-colors">Portfolio</button>
@@ -47,7 +47,7 @@ export default function Header({ scrolled }: HeaderProps) {
         </div>
         
         <Button 
-          className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white ml-12"
+          className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white flex-shrink-0"
           onClick={() => handleNavClick("contact")}
         >
           Get Started
