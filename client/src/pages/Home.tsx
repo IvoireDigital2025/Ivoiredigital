@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import BusinessTargetSection from "@/components/BusinessTargetSection";
 import ServicesSection from "@/components/ServicesSection";
 import AIShowcaseSection from "@/components/AIShowcaseSection";
 import AboutSection from "@/components/AboutSection";
@@ -37,6 +38,7 @@ export default function Home() {
   // Group sections into logical content blocks
   const mainContent = [
     { Component: HeroSection, id: "hero" },
+    { Component: BusinessTargetSection, id: "business-target" },
     { Component: ServicesSection, id: "services" },
     { Component: AIShowcaseSection, id: "ai-showcase" },
     { Component: PortfolioSection, id: "portfolio" },
