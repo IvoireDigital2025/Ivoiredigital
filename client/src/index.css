@@ -70,6 +70,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Mobile-first responsive design improvements */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    line-height: 1.2;
+  }
+  
+  h2, h3 {
+    line-height: 1.3;
+  }
+  
+  /* Improve touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better spacing for mobile */
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+}
+
 .hero-gradient {
   background: linear-gradient(rgba(20, 83, 45, 0.8), rgba(20, 83, 45, 0.9)), url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
   background-size: cover;

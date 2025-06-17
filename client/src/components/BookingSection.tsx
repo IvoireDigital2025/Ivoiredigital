@@ -112,25 +112,25 @@ export default function BookingSection() {
 
   if (isSubmitted) {
     return (
-      <section id="booking" className="py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
-        <div className="container mx-auto px-6">
+      <section id="booking" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
-            className="max-w-2xl mx-auto text-center text-white"
+            className="max-w-2xl mx-auto text-center text-white px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <CheckCircle className="h-16 w-16 mx-auto mb-6 text-green-400" />
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
+            <CheckCircle className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 sm:mb-6 text-green-400" />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4">
               Appointment Booked Successfully!
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
               Thank you for scheduling a consultation with us. We'll contact you within 24 hours to confirm your appointment details and send you a calendar invite.
             </p>
             <Button 
               onClick={() => setIsSubmitted(false)}
               variant="outline"
-              className="bg-white text-[#14532d] border-white hover:bg-gray-50"
+              className="bg-white text-[#14532d] border-white hover:bg-gray-50 px-6 py-3"
             >
               Book Another Appointment
             </Button>
