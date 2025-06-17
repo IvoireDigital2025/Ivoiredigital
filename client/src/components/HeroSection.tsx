@@ -6,21 +6,21 @@ import aiAgentImage from "../assets/ai-agent.jpg";
 export default function HeroSection() {
   return (
     <section id="home" className="hero-gradient text-white min-h-screen flex items-center">
-      <div className="container mx-auto px-6 pt-24 pb-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div 
-            className="space-y-6"
+            className="space-y-6 text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold leading-tight">
               Empower Your Business with AI & Digital Solutions
             </h1>
-            <p className="text-base md:text-lg opacity-90 max-w-lg">
+            <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-lg mx-auto md:mx-0">
               We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 pt-2">
+            <div className="flex flex-col sm:flex-row sm:space-x-4 md:space-x-8 space-y-3 sm:space-y-0 pt-2 justify-center md:justify-start">
               <Button 
                 size="lg"
                 className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
