@@ -129,7 +129,7 @@ const blogPosts: Record<string, BlogPost> = {
         "Document your current processes before automating to ensure nothing important is missed"
       ],
       conclusion: "Business automation isn't about replacing human touch—it's about amplifying your ability to provide excellent service consistently. By implementing these AI-powered systems, service-based businesses can operate more professionally, reduce stress, and focus on growth rather than getting bogged down in administrative tasks.",
-      seoKeywords: ["business automation Dallas", "service business automation", "AI business tools", "small business efficiency", "automated scheduling systems", "GoHighLevel automation"]
+      seoKeywords: ["business automation", "service business automation", "AI business tools", "small business efficiency", "automated scheduling systems", "GoHighLevel automation"]
     }
   }
 };

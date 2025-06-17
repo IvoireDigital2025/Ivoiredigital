@@ -46,7 +46,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-3",
-    title: "Business Process Automation Saves Dallas Accounting Firm 25 Hours Per Week",
+    title: "Business Process Automation Saves Accounting Firm 25 Hours Per Week",
     client: "Precision Accounting Services",
     industry: "Financial Services",
     challenge: "A growing accounting firm was wasting valuable staff time on repetitive tasks like client onboarding, document collection, appointment scheduling, and follow-up emails.",
@@ -74,7 +74,7 @@ export default function CaseStudiesSection() {
         >
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Client Success Stories</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Real results we've achieved for businesses just like yours in Dallas and beyond.
+            Real results we've achieved for businesses just like yours nationwide.
           </p>
         </motion.div>
         
@@ -158,17 +158,17 @@ export default function CaseStudiesSection() {
         
         {/* Hidden SEO content */}
         <div className="sr-only">
-          <h2>AI Implementation Case Studies for Dallas Small Businesses</h2>
+          <h2>AI Implementation Case Studies for Small Businesses</h2>
           <p>
-            Read how Dallas businesses are achieving remarkable results with AI implementation. 
+            Read how small businesses nationwide are achieving remarkable results with AI implementation. 
             Our case studies detail specific challenges, solutions, and measurable outcomes for 
             retail stores, service providers, healthcare practices, and professional services 
             firms that have implemented artificial intelligence solutions.
           </p>
           
-          <h2>Dallas Digital Marketing Success Stories and ROI Examples</h2>
+          <h2>Digital Marketing Success Stories and ROI Examples</h2>
           <p>
-            Explore real results from our digital marketing campaigns for Dallas-area businesses. 
+            Explore real results from our digital marketing campaigns for businesses nationwide. 
             Our case studies show specific metrics like traffic increases, conversion rates, 
             cost per acquisition, and overall ROI for local SEO, Google Ads, social media, 
             and content marketing campaigns across various industries.
