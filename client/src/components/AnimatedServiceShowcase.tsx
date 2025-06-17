@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Coffee, Utensils, Store, Building2, Bot, Phone, MessageSquare, Calendar, TrendingUp, Users, Zap, Clock } from "lucide-react";
+import { Coffee, Utensils, Store, Building2, Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone } from "lucide-react";
 
 export default function AnimatedServiceShowcase() {
   const [activeIndustry, setActiveIndustry] = useState(0);
@@ -13,28 +13,28 @@ export default function AnimatedServiceShowcase() {
       color: "from-amber-500 to-orange-600",
       services: [
         {
-          icon: Bot,
-          title: "AI Order Assistant",
-          description: "Handles custom orders, dietary restrictions, and upselling automatically",
-          stats: "300% faster ordering"
+          icon: Globe,
+          title: "New Engaging Website",
+          description: "Beautiful, mobile-friendly website that converts visitors into customers",
+          stats: "Professional online presence"
         },
         {
           icon: Phone,
-          title: "Phone Order Automation",
-          description: "Takes orders via phone 24/7, never misses a call or order",
-          stats: "Zero missed calls"
+          title: "Automate Incoming Calls",
+          description: "Never miss a call - customers get instant responses even when you're busy",
+          stats: "24/7 phone coverage"
+        },
+        {
+          icon: Calendar,
+          title: "Appointment Scheduling",
+          description: "Customers book their own appointments online, syncs with your calendar",
+          stats: "Reduces booking time by 80%"
         },
         {
           icon: Users,
-          title: "Loyalty Program AI",
-          description: "Automatically tracks customer preferences and rewards",
+          title: "Customer Loyalty Program",
+          description: "Keep customers coming back with automated rewards and special offers",
           stats: "85% customer retention"
-        },
-        {
-          icon: TrendingUp,
-          title: "Sales Analytics",
-          description: "Track peak hours, popular items, and optimize inventory",
-          stats: "40% revenue increase"
         }
       ]
     },
@@ -46,27 +46,27 @@ export default function AnimatedServiceShowcase() {
       services: [
         {
           icon: Calendar,
-          title: "Smart Reservations",
-          description: "AI manages bookings, waitlists, and table optimization",
+          title: "Online Booking System",
+          description: "Customers can book tables online, automatic confirmations and reminders",
           stats: "95% table efficiency"
         },
         {
-          icon: MessageSquare,
-          title: "Review Management",
-          description: "Automatically responds to reviews and manages online reputation",
+          icon: Star,
+          title: "Google Review Management",
+          description: "Get more 5-star reviews on Google, respond to feedback automatically",
           stats: "4.8★ average rating"
         },
         {
-          icon: Phone,
-          title: "Takeout Automation",
-          description: "Handles takeout orders, timing, and customer notifications",
-          stats: "50% faster service"
+          icon: Smartphone,
+          title: "Text Message Marketing",
+          description: "Send special offers and updates directly to customers' phones",
+          stats: "95% open rate"
         },
         {
-          icon: Bot,
-          title: "Menu Assistant",
-          description: "Helps customers with menu questions and dietary needs",
-          stats: "90% satisfaction rate"
+          icon: MessageSquare,
+          title: "Missed Call Text Back",
+          description: "When you can't answer, customers get an instant text with your info",
+          stats: "No lost customers"
         }
       ]
     },
@@ -77,28 +77,28 @@ export default function AnimatedServiceShowcase() {
       color: "from-green-500 to-emerald-600",
       services: [
         {
-          icon: Zap,
-          title: "Inventory Intelligence",
-          description: "Predicts demand, automates reordering, prevents stockouts",
-          stats: "99% stock availability"
+          icon: Mail,
+          title: "Email Marketing Campaigns",
+          description: "Send targeted promotions and newsletters to bring customers back",
+          stats: "35% more repeat sales"
         },
         {
           icon: MessageSquare,
-          title: "Customer Support Bot",
-          description: "Answers product questions, handles complaints, processes returns",
-          stats: "24/7 availability"
-        },
-        {
-          icon: TrendingUp,
-          title: "Sales Optimization",
-          description: "Analyzes buying patterns and suggests promotions",
-          stats: "35% profit increase"
+          title: "Customer Communication",
+          description: "SMS, email, and voicemail campaigns to stay connected with customers",
+          stats: "3x more engagement"
         },
         {
           icon: Users,
-          title: "Customer Insights",
-          description: "Tracks customer behavior and personalizes marketing",
-          stats: "60% repeat customers"
+          title: "Customer Database",
+          description: "Track customer purchases and preferences for better marketing",
+          stats: "Know your customers"
+        },
+        {
+          icon: Star,
+          title: "Social Media Management",
+          description: "Professional posts and content to attract new customers online",
+          stats: "Increased visibility"
         }
       ]
     },
@@ -109,28 +109,28 @@ export default function AnimatedServiceShowcase() {
       color: "from-blue-500 to-indigo-600",
       services: [
         {
-          icon: Zap,
-          title: "Workflow Automation",
-          description: "Streamlines processes across departments and systems",
-          stats: "80% time savings"
+          icon: Users,
+          title: "CRM & Pipeline Management",
+          description: "Track leads from first contact to sale, never lose a potential customer",
+          stats: "200% more leads converted"
         },
         {
-          icon: Bot,
-          title: "Advanced CRM Integration",
-          description: "Connects all customer touchpoints with intelligent automation",
-          stats: "200% lead conversion"
+          icon: MessageSquare,
+          title: "Virtual Employee Assistant",
+          description: "Handles follow-ups, appointment setting, and customer conversations",
+          stats: "Works 24/7"
         },
         {
-          icon: TrendingUp,
-          title: "Business Intelligence",
-          description: "Advanced analytics and predictive insights for growth",
-          stats: "Strategic advantage"
+          icon: Mail,
+          title: "Marketing Automation",
+          description: "Automatic email sequences that nurture leads into paying customers",
+          stats: "Set it and forget it"
         },
         {
-          icon: Clock,
-          title: "Multi-Channel Support",
-          description: "Unified customer experience across all platforms",
-          stats: "Seamless experience"
+          icon: Globe,
+          title: "Professional Website + SEO",
+          description: "Get found on Google with a website that ranks high in search results",
+          stats: "More online visibility"
         }
       ]
     }
@@ -159,11 +159,11 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d] mb-4">
-            Tailored Solutions for Every Industry
+            Marketing Services for Every Business
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Our AI and automation services adapt to your specific business needs. 
-            See how we customize solutions for different industries.
+            Simple marketing tools that help you get more customers and grow your business. 
+            See what we can do for your specific type of business.
           </p>
         </motion.div>
 
@@ -207,7 +207,7 @@ export default function AnimatedServiceShowcase() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold">{currentIndustry.name}</h3>
-                    <p className="text-white/90">Specialized AI Solutions</p>
+                    <p className="text-white/90">Marketing & Growth Solutions</p>
                   </div>
                 </div>
               </div>
@@ -266,14 +266,14 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            Ready to see how these solutions can transform your specific business? 
-            Let's create a custom automation strategy for your industry.
+            Ready to get more customers and grow your business? 
+            Let's set up these marketing tools for your specific business type.
           </p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            Get Industry-Specific Solutions
+            Get Your Marketing Setup
           </button>
         </motion.div>
       </div>

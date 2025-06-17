@@ -1,4 +1,4 @@
-import { LucideIcon, Monitor, Cpu, BarChart, LayoutGrid, Search, MessageCircle } from "lucide-react";
+import { LucideIcon, Monitor, Phone, Mail, Calendar, Star, Users, Smartphone, MessageSquare } from "lucide-react";
 
 export interface Service {
   id: string;
@@ -11,37 +11,49 @@ export const services: Service[] = [
   {
     id: "website",
     icon: Monitor,
-    title: "Website Development",
-    description: "Custom, responsive websites optimized for conversion that showcase your brand's unique identity."
+    title: "New Professional Website",
+    description: "Beautiful, mobile-friendly websites that turn visitors into customers and help you get found on Google."
   },
   {
-    id: "ai",
-    icon: Cpu,
-    title: "AI Solutions",
-    description: "Intelligent chatbots, virtual assistants, and automated systems to handle customer inquiries 24/7."
+    id: "calls",
+    icon: Phone,
+    title: "Never Miss a Call Again",
+    description: "Automatic call handling and missed call text-back so you never lose a potential customer."
+  },
+  {
+    id: "appointments",
+    icon: Calendar,
+    title: "Online Booking & Scheduling",
+    description: "Let customers book appointments online 24/7. Automatic reminders reduce no-shows by 80%."
   },
   {
     id: "marketing",
-    icon: BarChart,
-    title: "Digital Marketing",
-    description: "Strategic campaigns that increase visibility, attract qualified leads, and boost your conversion rates."
-  },
-  {
-    id: "automation",
-    icon: LayoutGrid,
-    title: "Business Automation",
-    description: "Streamline operations and reduce manual work with custom automation solutions tailored to your needs."
-  },
-  {
-    id: "seo",
-    icon: Search,
-    title: "SEO Optimization",
-    description: "Improve visibility in search engines and drive organic traffic through strategic optimization."
+    icon: Mail,
+    title: "Email & Text Marketing",
+    description: "Send promotions and stay in touch with customers through email campaigns and text messages."
   },
   {
     id: "reviews",
-    icon: MessageCircle,
-    title: "Review Management",
-    description: "Proactively gather and manage customer reviews to build trust and improve your online reputation."
+    icon: Star,
+    title: "Get More Google Reviews",
+    description: "Automatically ask happy customers for reviews and respond to feedback to boost your online reputation."
+  },
+  {
+    id: "loyalty",
+    icon: Users,
+    title: "Customer Loyalty Programs",
+    description: "Keep customers coming back with automated rewards, special offers, and personalized follow-ups."
+  },
+  {
+    id: "communication",
+    icon: MessageSquare,
+    title: "Customer Communication Hub",
+    description: "Manage all customer conversations in one place - SMS, email, calls, and voicemails."
+  },
+  {
+    id: "social",
+    icon: Smartphone,
+    title: "Social Media Management",
+    description: "Professional social media posts and content creation to attract new customers online."
   }
 ];
