@@ -24,12 +24,12 @@ export default function Header({ scrolled }: HeaderProps) {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? "bg-[#14532d] shadow-md" : "bg-transparent"
     }`}>
-      <nav className="container mx-auto px-6 py-3 flex items-center">
+      <nav className="container mx-auto px-4 sm:px-6 py-2 sm:py-3 flex items-center">
         <a href="#" className="flex items-center flex-shrink-0" onClick={() => handleNavClick("home")}>
           <img 
             src={ivoireLogo} 
             alt="Ivoire Digital Logo" 
-            className="h-32 object-contain" 
+            className="h-20 sm:h-28 md:h-32 object-contain" 
             style={{ 
               filter: 'drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
               background: 'transparent' 

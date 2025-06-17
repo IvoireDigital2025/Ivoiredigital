@@ -141,19 +141,19 @@ export default function BookingSection() {
   }
 
   return (
-    <section id="booking" className="py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
-      <div className="container mx-auto px-6">
+    <section id="booking" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-white mb-4">
             Book Your Free Consultation
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto px-4">
             Schedule a 30-minute consultation to discuss how AI and digital marketing can transform your business. No commitment required.
           </p>
         </motion.div>
@@ -165,10 +165,10 @@ export default function BookingSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+          <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {/* Personal Information */}
                   <FormField
                     control={form.control}
@@ -268,10 +268,10 @@ export default function BookingSection() {
                 </div>
 
                 {/* Scheduling Information */}
-                <div className="border-t border-gray-200 pt-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Preferred Schedule</h3>
+                <div className="border-t border-gray-200 pt-4 sm:pt-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Preferred Schedule</h3>
                   
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                     <FormField
                       control={form.control}
                       name="preferredDate"
@@ -376,16 +376,16 @@ export default function BookingSection() {
                   )}
                 />
 
-                <div className="pt-6 border-t border-gray-200">
+                <div className="pt-4 sm:pt-6 border-t border-gray-200">
                   <Button 
                     type="submit" 
-                    className="w-full bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 text-lg"
+                    className="w-full bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 sm:py-4 text-base sm:text-lg"
                     disabled={mutation.isPending}
                   >
                     {mutation.isPending ? "Booking Your Appointment..." : "Book Free Consultation"}
                   </Button>
                   
-                  <p className="text-sm text-gray-600 text-center mt-4">
+                  <p className="text-xs sm:text-sm text-gray-600 text-center mt-3 sm:mt-4 px-2">
                     By booking this consultation, you agree to our terms of service. 
                     We'll contact you within 24 hours to confirm your appointment.
                   </p>
