@@ -11,12 +11,12 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   const { icon: Icon, title, description } = service;
   
   return (
-    <div className="service-card bg-gray-50 rounded-xl p-8 transition-all duration-300 border border-gray-100 h-full">
-      <div className="w-16 h-16 bg-[#14532d]/10 rounded-lg flex items-center justify-center mb-6">
-        <Icon className="h-8 w-8 text-[#14532d]" />
+    <div className="service-card bg-gray-50 rounded-xl p-4 sm:p-6 md:p-8 transition-all duration-300 border border-gray-100 h-full">
+      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#14532d]/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
+        <Icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-[#14532d]" />
       </div>
-      <h3 className="text-xl font-poppins font-semibold mb-3 text-[#14532d]">{title}</h3>
-      <p className="text-gray-600 mb-4">
+      <h3 className="text-lg sm:text-xl font-poppins font-semibold mb-3 text-[#14532d] leading-tight">{title}</h3>
+      <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
         {description}
       </p>
       

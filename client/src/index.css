@@ -100,6 +100,58 @@ html {
   body {
     overflow-x: hidden;
   }
+  
+  /* Better form inputs on mobile */
+  input, textarea, select {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 0.75rem;
+  }
+  
+  /* Improve mobile navigation */
+  nav {
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Better card spacing */
+  .grid > * {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Focus improvements for accessibility */
+button:focus, 
+a:focus, 
+input:focus, 
+textarea:focus, 
+select:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Better loading states */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth scrolling improvements */
+html {
+  scroll-padding-top: 80px; /* Account for fixed header */
 }
 
 .hero-gradient {
