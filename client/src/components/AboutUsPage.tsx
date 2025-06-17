@@ -98,10 +98,10 @@ export default function AboutUsPage() {
           >
             <Globe className="h-12 w-12 text-[#f59e0b] mb-6" />
             <h4 className="text-xl font-semibold text-gray-900 mb-3">
-              Dallas Market Specialists
+              Nationwide Business Specialists
             </h4>
             <p className="text-gray-600">
-              We understand the unique aspects of the Dallas business environment and tailor our strategies to help you stand out in the local market while reaching your ideal customers.
+              We work with companies nationwide and understand the unique aspects of different business environments. Our strategies are tailored to help you stand out in your market while reaching your ideal customers, regardless of location.
             </p>
           </motion.div>
           
@@ -202,17 +202,17 @@ export default function AboutUsPage() {
           <h2>The Best AI Agency in Dallas for Small Business Growth</h2>
           <p>
             Ivoire Digital is committed to democratizing access to cutting-edge AI technology 
-            for small businesses in Dallas and beyond. We've helped dozens of local businesses 
+            for small businesses nationwide. We've helped dozens of businesses across the country 
             implement chatbots, automated marketing, intelligent analytics, and business process 
             automation, resulting in significant cost savings and revenue growth.
           </p>
           
-          <h2>Dallas Digital Marketing Specialists with Local Market Expertise</h2>
+          <h2>Digital Marketing Specialists with National Market Expertise</h2>
           <p>
-            As a Dallas-based agency, we understand the unique aspects of the local business 
-            environment. Our digital marketing strategies are specifically tailored to help 
-            Dallas businesses stand out in competitive local searches, attract nearby customers, 
-            and build strong community connections through targeted digital campaigns.
+            As a nationwide digital marketing agency, we understand the unique aspects of different 
+            business environments across the country. Our digital marketing strategies are specifically 
+            tailored to help businesses stand out in competitive markets, attract their target customers, 
+            and build strong connections through targeted digital campaigns, regardless of location.
           </p>
         </div>
       </div>
