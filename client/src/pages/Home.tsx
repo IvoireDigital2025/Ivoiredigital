@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import BusinessTargetSection from "@/components/BusinessTargetSection";
 import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
+import AutomatedWebsiteShowcase from "@/components/AutomatedWebsiteShowcase";
 import ServicesSection from "@/components/ServicesSection";
 import AIShowcaseSection from "@/components/AIShowcaseSection";
 import AboutSection from "@/components/AboutSection";
@@ -41,6 +42,7 @@ export default function Home() {
     { Component: HeroSection, id: "hero" },
     { Component: BusinessTargetSection, id: "business-target" },
     { Component: AnimatedServiceShowcase, id: "animated-services" },
+    { Component: AutomatedWebsiteShowcase, id: "automated-websites" },
     { Component: ServicesSection, id: "services" },
     { Component: AIShowcaseSection, id: "ai-showcase" },
     { Component: PortfolioSection, id: "portfolio" },
