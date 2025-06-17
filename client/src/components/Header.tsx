@@ -37,7 +37,7 @@ export default function Header({ scrolled }: HeaderProps) {
           />
         </a>
         
-        <div className="hidden md:flex space-x-6 text-white mx-auto text-sm">
+        <div className="hidden lg:flex space-x-6 text-white mx-auto text-sm xl:text-base">
           <button onClick={() => handleNavClick("home")} className="hover:text-[#f59e0b] transition-colors">Home</button>
           <a href="/about" className="hover:text-[#f59e0b] transition-colors">About Us</a>
           <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
@@ -57,7 +57,7 @@ export default function Header({ scrolled }: HeaderProps) {
         
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden text-white text-2xl focus:outline-none"
+          className="lg:hidden text-white text-2xl focus:outline-none ml-auto"
           aria-label="Toggle mobile menu"
         >
           <Menu className="h-6 w-6" />
@@ -65,7 +65,7 @@ export default function Header({ scrolled }: HeaderProps) {
       </nav>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-3">
           <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Home</button>
           <a href="/about" className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2">About Us</a>

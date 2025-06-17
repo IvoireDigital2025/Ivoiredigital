@@ -91,7 +91,7 @@ export default function ContactSection() {
             className="order-2 md:order-1"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d] mb-4 sm:mb-6">Get in Touch</h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
               Have questions or ready to discuss your project? Fill out the form and our team will get back to you within 24 hours.
             </p>
             
