@@ -9,6 +9,7 @@ interface Guide {
   readTime: string;
   category: string;
   icon: React.ReactNode;
+  slug: string;
 }
 
 const guides: Guide[] = [
@@ -18,15 +19,17 @@ const guides: Guide[] = [
     description: "Learn how to select, implement, and optimize AI chatbots for your small business to provide 24/7 customer support without increasing staff costs.",
     readTime: "15 min read",
     category: "AI Implementation",
-    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />,
+    slug: "ai-chatbots-implementation"
   },
   {
     id: "guide-2",
-    title: "Local SEO Mastery: How to Dominate Google Maps for Dallas Businesses",
+    title: "Local SEO Mastery: How to Dominate Google Maps for Your Business",
     description: "A step-by-step guide to optimizing your Google Business Profile, building local citations, and earning reviews to increase your visibility in local search.",
     readTime: "20 min read",
     category: "Digital Marketing",
-    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />,
+    slug: "local-seo-mastery"
   },
   {
     id: "guide-3",
@@ -34,7 +37,8 @@ const guides: Guide[] = [
     description: "Discover the five business processes that every small business should automate, with implementation instructions and recommended tools.",
     readTime: "18 min read",
     category: "Business Automation",
-    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />,
+    slug: "business-automation-blueprint"
   },
   {
     id: "guide-4",
@@ -42,7 +46,8 @@ const guides: Guide[] = [
     description: "Learn the essential elements that every service business website needs to effectively convert visitors into leads and customers.",
     readTime: "12 min read",
     category: "Web Development",
-    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />
+    icon: <FileText className="h-8 w-8 text-[#f59e0b]" />,
+    slug: "high-converting-website"
   }
 ];
 
@@ -92,7 +97,7 @@ export default function GuidesSection() {
                       <Clock className="h-4 w-4 mr-1" />
                       <span>{guide.readTime}</span>
                     </div>
-                    <a href="#" className="inline-flex items-center text-[#14532d] font-medium hover:text-[#f59e0b] transition-colors">
+                    <a href={`/guide/${guide.slug}`} className="inline-flex items-center text-[#14532d] font-medium hover:text-[#f59e0b] transition-colors">
                       Read Guide <ArrowRight className="h-4 w-4 ml-1" />
                     </a>
                   </div>

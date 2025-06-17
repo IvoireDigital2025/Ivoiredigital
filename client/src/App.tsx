@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Admin from "@/pages/Admin";
 import BlogPost from "@/pages/BlogPost";
 import AboutUs from "@/pages/AboutUs";
+import Guide from "@/pages/Guide";
 import FloatingContactButton from "@/components/FloatingContactButton";
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/admin" component={Admin} />
       <Route path="/about" component={AboutUs} />
       <Route path="/blog/:slug" component={BlogPost} />
+      <Route path="/guide/:slug" component={Guide} />
       <Route component={NotFound} />
     </Switch>
   );
