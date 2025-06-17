@@ -56,11 +56,11 @@ export default function Footer() {
           
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Resources</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <button 
                   onClick={() => handleNavClick("blog")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Blog
                 </button>
@@ -68,7 +68,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("case-studies")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Case Studies
                 </button>
@@ -76,7 +76,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("guides")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Guides
                 </button>
@@ -84,22 +84,22 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("faq")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   FAQ
                 </button>
               </li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Support</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Support</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <button 
                   onClick={() => handleNavClick("about-us")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   About Us
                 </button>
@@ -107,7 +107,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("services")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Services
                 </button>
@@ -115,7 +115,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("portfolio")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Portfolio
                 </button>
@@ -123,7 +123,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => handleNavClick("contact")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors"
+                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
                 >
                   Contact
                 </button>
@@ -132,10 +132,10 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800 text-sm text-gray-400">
-          <div className="grid sm:grid-cols-2 gap-4">
+        <div className="pt-6 sm:pt-8 border-t border-gray-800 text-xs sm:text-sm text-gray-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
             <div className="text-center sm:text-left">
-              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved. | Dallas, TX
+              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved.
             </div>
             <div className="text-center sm:text-right">
               <a href="#" className="hover:text-[#f59e0b] transition-colors">Privacy Policy</a>
