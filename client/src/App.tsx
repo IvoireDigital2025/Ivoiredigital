@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Admin from "@/pages/Admin";
 import BlogPost from "@/pages/BlogPost";
+import AboutUs from "@/pages/AboutUs";
 import FloatingContactButton from "@/components/FloatingContactButton";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/admin" component={Admin} />
+      <Route path="/about" component={AboutUs} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />
     </Switch>

@@ -12,7 +12,7 @@ import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import GuidesSection from "@/components/GuidesSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import AboutUsPage from "@/components/AboutUsPage";
+
 import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import SectionDivider from "@/components/SectionDivider";
@@ -57,7 +57,6 @@ export default function Home() {
 
   const aboutContent = [
     { Component: AboutSection, id: "about" },
-    { Component: AboutUsPage, id: "about-us" },
     { Component: FAQSection, id: "faq" }
   ];
 
@@ -83,8 +82,8 @@ export default function Home() {
 
         {/* Company Information Divider */}
         <SectionDivider 
-          title="About Ivoire Digital" 
-          subtitle="Learn who we are and how we help Dallas businesses succeed"
+          title="About Our Services" 
+          subtitle="Learn more about our approach and frequently asked questions"
         />
         
         {/* Company Information */}

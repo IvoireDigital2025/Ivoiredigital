@@ -114,10 +114,10 @@ export default function AboutUsPage() {
           >
             <Zap className="h-12 w-12 text-[#f59e0b] mb-6" />
             <h4 className="text-xl font-semibold text-gray-900 mb-3">
-              Results-Based Billing
+              Transparent, Value-Driven Pricing
             </h4>
             <p className="text-gray-600">
-              Unlike most agencies that bill for activities, we tie our success to your results. Our performance-based pricing ensures we're fully aligned with your business goals.
+              We offer clear, upfront pricing with no hidden fees or long-term contracts. Our packages are designed to deliver maximum value, and we focus on measurable results that directly impact your bottom line.
             </p>
           </motion.div>
         </div>

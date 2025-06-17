@@ -39,6 +39,7 @@ export default function Header({ scrolled }: HeaderProps) {
         
         <div className="hidden md:flex space-x-6 text-white mx-auto text-sm">
           <button onClick={() => handleNavClick("home")} className="hover:text-[#f59e0b] transition-colors">Home</button>
+          <a href="/about" className="hover:text-[#f59e0b] transition-colors">About Us</a>
           <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
           <button onClick={() => handleNavClick("portfolio")} className="hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="hover:text-[#f59e0b] transition-colors">Testimonials</button>
