@@ -30,12 +30,10 @@ export default function AboutUs() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-[#14532d] to-[#166534]">
         <div className="container mx-auto px-6">
           <div className="mb-8">
-            <Button variant="outline" asChild className="bg-white text-[#14532d] border-white hover:bg-gray-50">
-              <a href="/" className="inline-flex items-center">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
-              </a>
-            </Button>
+            <a href="/" className="inline-flex items-center bg-white text-[#14532d] border border-white px-4 py-2 rounded-md hover:bg-gray-50 transition-colors font-medium">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </a>
           </div>
           
           <motion.div
