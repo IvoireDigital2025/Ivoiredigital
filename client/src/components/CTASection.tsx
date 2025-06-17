@@ -19,7 +19,7 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button 
               className="bg-white hover:bg-gray-100 text-[#14532d] font-medium py-3 px-8"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("booking")}
             >
               Schedule a Free Consultation
             </Button>

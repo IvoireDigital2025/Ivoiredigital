@@ -60,7 +60,7 @@ export default function AboutSection() {
               <Button 
                 size="lg"
                 className="bg-[#14532d] hover:bg-[#166534] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("booking")}
               >
                 Schedule a Consultation
               </Button>

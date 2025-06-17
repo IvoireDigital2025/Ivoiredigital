@@ -151,7 +151,7 @@ export default function BusinessTargetSection() {
             Ready to see how automation and smart marketing can transform your business operations and boost your revenue?
           </p>
           <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Get Your Free Consultation
