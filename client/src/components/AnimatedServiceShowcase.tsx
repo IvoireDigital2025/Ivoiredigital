@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Coffee, Utensils, Store, Building2, Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone } from "lucide-react";
+import { 
+  Coffee, Utensils, Store, Building2, Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone,
+  Scissors, Home, Dumbbell, Heart, Car, Wrench, Sparkles, Stethoscope, Camera, HardHat
+} from "lucide-react";
 
 export default function AnimatedServiceShowcase() {
   const [activeIndustry, setActiveIndustry] = useState(0);
@@ -71,66 +74,258 @@ export default function AnimatedServiceShowcase() {
       ]
     },
     {
-      id: "retail",
-      name: "Food & Beverage Retail",
-      icon: Store,
-      color: "from-green-500 to-emerald-600",
+      id: "beauty",
+      name: "Beauty & Wellness",
+      icon: Scissors,
+      color: "from-pink-500 to-rose-600",
       services: [
         {
-          icon: Mail,
-          title: "Email Marketing Campaigns",
-          description: "Send targeted promotions and newsletters to bring customers back",
-          stats: "35% more repeat sales"
-        },
-        {
-          icon: MessageSquare,
-          title: "Customer Communication",
-          description: "SMS, email, and voicemail campaigns to stay connected with customers",
-          stats: "3x more engagement"
-        },
-        {
-          icon: Users,
-          title: "Customer Database",
-          description: "Track customer purchases and preferences for better marketing",
-          stats: "Know your customers"
+          icon: Calendar,
+          title: "Online Appointment Booking",
+          description: "Let clients book hair, nail, or tattoo appointments 24/7 with automatic reminders",
+          stats: "Reduces no-shows by 90%"
         },
         {
           icon: Star,
-          title: "Social Media Management",
-          description: "Professional posts and content to attract new customers online",
-          stats: "Increased visibility"
+          title: "Beauty Review Management",
+          description: "Get stunning before/after photos shared as reviews to attract new clients",
+          stats: "Beautiful portfolio"
+        },
+        {
+          icon: Smartphone,
+          title: "Client Retention Texts",
+          description: "Automated appointment reminders and follow-ups for rebooking",
+          stats: "80% rebooking rate"
+        },
+        {
+          icon: Users,
+          title: "VIP Client Programs",
+          description: "Reward your best clients with exclusive offers and priority booking",
+          stats: "Premium experience"
         }
       ]
     },
     {
-      id: "midsize",
-      name: "Mid-Size Companies",
-      icon: Building2,
-      color: "from-blue-500 to-indigo-600",
+      id: "realestate",
+      name: "Real Estate",
+      icon: Home,
+      color: "from-blue-500 to-cyan-600",
       services: [
         {
-          icon: Users,
-          title: "CRM & Pipeline Management",
-          description: "Track leads from first contact to sale, never lose a potential customer",
-          stats: "200% more leads converted"
+          icon: Globe,
+          title: "Property Showcase Website",
+          description: "Professional website with virtual tours and lead capture forms",
+          stats: "More qualified leads"
         },
         {
-          icon: MessageSquare,
-          title: "Virtual Employee Assistant",
-          description: "Handles follow-ups, appointment setting, and customer conversations",
-          stats: "Works 24/7"
+          icon: Phone,
+          title: "Lead Response System",
+          description: "Instant response to property inquiries, even when you're showing homes",
+          stats: "Never miss a buyer"
         },
         {
           icon: Mail,
-          title: "Marketing Automation",
-          description: "Automatic email sequences that nurture leads into paying customers",
-          stats: "Set it and forget it"
+          title: "Buyer/Seller Nurturing",
+          description: "Automated email sequences for market updates and property alerts",
+          stats: "Stay top of mind"
         },
         {
+          icon: Calendar,
+          title: "Showing Scheduler",
+          description: "Clients can book property viewings directly from your listings",
+          stats: "Streamlined showings"
+        }
+      ]
+    },
+    {
+      id: "fitness",
+      name: "Fitness & Wellness",
+      icon: Dumbbell,
+      color: "from-emerald-500 to-teal-600",
+      services: [
+        {
+          icon: Calendar,
+          title: "Class Booking System",
+          description: "Members book yoga, pilates, or personal training sessions online",
+          stats: "Maximize class capacity"
+        },
+        {
+          icon: Users,
+          title: "Membership Management",
+          description: "Automated billing, renewals, and member communication",
+          stats: "Reduce churn by 60%"
+        },
+        {
+          icon: Smartphone,
+          title: "Workout Reminders",
+          description: "Motivational texts and class reminders to keep members engaged",
+          stats: "Higher attendance"
+        },
+        {
+          icon: Star,
+          title: "Transformation Stories",
+          description: "Showcase member success stories and before/after photos",
+          stats: "Social proof"
+        }
+      ]
+    },
+    {
+      id: "automotive",
+      name: "Automotive Services",
+      icon: Car,
+      color: "from-gray-500 to-slate-600",
+      services: [
+        {
+          icon: Calendar,
+          title: "Service Scheduling",
+          description: "Customers book car detailing, repairs, or maintenance appointments",
+          stats: "Organized schedule"
+        },
+        {
+          icon: Phone,
+          title: "Emergency Response",
+          description: "24/7 mobile mechanic dispatch and customer communication",
+          stats: "Always available"
+        },
+        {
+          icon: Mail,
+          title: "Maintenance Reminders",
+          description: "Automated service reminders based on mileage and time",
+          stats: "Repeat customers"
+        },
+        {
+          icon: Star,
+          title: "Work Portfolio",
+          description: "Before/after photos of detailing and repair work",
+          stats: "Visual credibility"
+        }
+      ]
+    },
+    {
+      id: "healthcare",
+      name: "Healthcare & Wellness",
+      icon: Stethoscope,
+      color: "from-indigo-500 to-purple-600",
+      services: [
+        {
+          icon: Calendar,
+          title: "Patient Scheduling",
+          description: "Online booking for chiropractic, dental, or therapy appointments",
+          stats: "Efficient scheduling"
+        },
+        {
+          icon: MessageSquare,
+          title: "Appointment Reminders",
+          description: "Reduce no-shows with automated SMS and email reminders",
+          stats: "98% attendance rate"
+        },
+        {
+          icon: Star,
+          title: "Patient Testimonials",
+          description: "Collect and showcase patient success stories and reviews",
+          stats: "Build trust"
+        },
+        {
+          icon: Users,
+          title: "Patient Follow-up",
+          description: "Automated wellness check-ins and treatment reminders",
+          stats: "Better outcomes"
+        }
+      ]
+    },
+    {
+      id: "events",
+      name: "Event Services",
+      icon: Camera,
+      color: "from-violet-500 to-purple-600",
+      services: [
+        {
           icon: Globe,
-          title: "Professional Website + SEO",
-          description: "Get found on Google with a website that ranks high in search results",
-          stats: "More online visibility"
+          title: "Portfolio Website",
+          description: "Stunning galleries for photographers, DJs, and event planners",
+          stats: "Professional showcase"
+        },
+        {
+          icon: Calendar,
+          title: "Event Booking",
+          description: "Clients can check availability and book events online",
+          stats: "Streamlined booking"
+        },
+        {
+          icon: Mail,
+          title: "Client Communication",
+          description: "Automated contracts, invoices, and event timeline updates",
+          stats: "Professional process"
+        },
+        {
+          icon: Star,
+          title: "Event Testimonials",
+          description: "Showcase happy couples and successful events",
+          stats: "Social validation"
+        }
+      ]
+    },
+    {
+      id: "homeservices",
+      name: "Home Services",
+      icon: HardHat,
+      color: "from-orange-500 to-red-600",
+      services: [
+        {
+          icon: Phone,
+          title: "Emergency Dispatch",
+          description: "24/7 plumbing, HVAC, and cleaning service requests",
+          stats: "Always responsive"
+        },
+        {
+          icon: Calendar,
+          title: "Service Scheduling",
+          description: "Customers book maintenance and repair appointments online",
+          stats: "Organized workflow"
+        },
+        {
+          icon: Star,
+          title: "Work Documentation",
+          description: "Before/after photos and customer testimonials",
+          stats: "Proven results"
+        },
+        {
+          icon: Users,
+          title: "Service Reminders",
+          description: "Automated follow-ups for seasonal maintenance",
+          stats: "Recurring revenue"
+        }
+      ]
+    },
+    {
+      id: "medspas",
+      name: "Med Spas & Clinics",
+      icon: Sparkles,
+      color: "from-rose-500 to-pink-600",
+      services: [
+        {
+          icon: Calendar,
+          title: "Treatment Booking",
+          description: "Online scheduling for cosmetic treatments and consultations",
+          stats: "Premium experience"
+        },
+        {
+          icon: MessageSquare,
+          title: "Pre/Post Care",
+          description: "Automated treatment instructions and follow-up care",
+          stats: "Better results"
+        },
+        {
+          icon: Star,
+          title: "Transformation Gallery",
+          description: "Showcase beautiful before/after treatment results",
+          stats: "Visual proof"
+        },
+        {
+          icon: Users,
+          title: "VIP Client Program",
+          description: "Exclusive offers for repeat clients and referrals",
+          stats: "Client loyalty"
         }
       ]
     }
@@ -159,11 +354,11 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d] mb-4">
-            Marketing Services for Every Business
+            Branded, Done-For-You Marketing Solutions
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Simple marketing tools that help you get more customers and grow your business. 
-            See what we can do for your specific type of business.
+            Complete marketing systems customized for your industry. We set everything up for you - 
+            websites, booking systems, review management, and customer communication tools.
           </p>
         </motion.div>
 
@@ -266,14 +461,14 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            Ready to get more customers and grow your business? 
-            Let's set up these marketing tools for your specific business type.
+            Ready to get a complete branded marketing system for your business? 
+            We handle everything - setup, customization, and training so you can focus on serving customers.
           </p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            Get Your Marketing Setup
+            Get Your Done-For-You Solution
           </button>
         </motion.div>
       </div>
