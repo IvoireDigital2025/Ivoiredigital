@@ -44,15 +44,16 @@ export default function Header({ scrolled }: HeaderProps) {
           <button onClick={() => handleNavClick("portfolio")} className="hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="hover:text-[#f59e0b] transition-colors">Testimonials</button>
           <button onClick={() => handleNavClick("blog")} className="hover:text-[#f59e0b] transition-colors">Blog</button>
+          <button onClick={() => handleNavClick("booking")} className="hover:text-[#f59e0b] transition-colors">Book Consultation</button>
           <button onClick={() => handleNavClick("contact")} className="hover:text-[#f59e0b] transition-colors">Contact</button>
         </div>
         
         <Button 
           size="sm"
           className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white flex-shrink-0 text-sm px-4 py-2"
-          onClick={() => handleNavClick("contact")}
+          onClick={() => handleNavClick("booking")}
         >
-          Get Started
+          Book Free Consultation
         </Button>
         
         <button
@@ -73,12 +74,13 @@ export default function Header({ scrolled }: HeaderProps) {
           <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Testimonials</button>
           <button onClick={() => handleNavClick("blog")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Blog</button>
+          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Book Consultation</button>
           <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Contact</button>
           <Button 
             className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white w-full"
-            onClick={() => handleNavClick("contact")}
+            onClick={() => handleNavClick("booking")}
           >
-            Get Started
+            Book Free Consultation
           </Button>
         </div>
       </div>
