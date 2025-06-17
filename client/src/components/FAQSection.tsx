@@ -25,7 +25,7 @@ const faqItems = [
   {
     id: "faq-4",
     question: "How long does it take to develop and launch a new website?",
-    answer: "Our website development timeline typically ranges from 3-8 weeks depending on complexity. Basic informational sites can be completed in 3-4 weeks, while e-commerce or custom functionality websites may take 6-8 weeks. We follow a structured process including discovery, design approval, development, content integration, testing, and launch. We provide weekly progress updates throughout the process."
+    answer: "Our website development is incredibly fast - we can have your new website live in just 1 to 3 days! This includes a fully automated website design process with professional templates, your branding, content integration, and all the marketing tools you need. Our done-for-you approach means we handle everything while you focus on running your business."
   },
   {
     id: "faq-5",
