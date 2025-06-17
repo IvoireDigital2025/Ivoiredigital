@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import BusinessTargetSection from "@/components/BusinessTargetSection";
+import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
 import ServicesSection from "@/components/ServicesSection";
 import AIShowcaseSection from "@/components/AIShowcaseSection";
 import AboutSection from "@/components/AboutSection";
@@ -39,6 +40,7 @@ export default function Home() {
   const mainContent = [
     { Component: HeroSection, id: "hero" },
     { Component: BusinessTargetSection, id: "business-target" },
+    { Component: AnimatedServiceShowcase, id: "animated-services" },
     { Component: ServicesSection, id: "services" },
     { Component: AIShowcaseSection, id: "ai-showcase" },
     { Component: PortfolioSection, id: "portfolio" },
