@@ -14,6 +14,7 @@ import GuidesSection from "@/components/GuidesSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 
 import CTASection from "@/components/CTASection";
+import BookingSection from "@/components/BookingSection";
 import ContactSection from "@/components/ContactSection";
 import SectionDivider from "@/components/SectionDivider";
 import BackToTop from "@/components/BackToTop";

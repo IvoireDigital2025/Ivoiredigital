@@ -71,12 +71,17 @@ export class MemStorage implements IStorage {
     const id = this.appointmentCurrentId++;
     const createdAt = new Date().toISOString();
     const appointment: Appointment = {
-      ...insertAppointment,
       id,
-      status: "pending",
-      createdAt,
+      name: insertAppointment.name,
+      email: insertAppointment.email,
+      phone: insertAppointment.phone || null,
+      service: insertAppointment.service,
+      preferredDate: insertAppointment.preferredDate,
+      preferredTime: insertAppointment.preferredTime,
+      timezone: insertAppointment.timezone,
       message: insertAppointment.message || null,
-      phone: insertAppointment.phone || null
+      status: "pending",
+      createdAt
     };
     this.appointments.set(id, appointment);
     return appointment;
