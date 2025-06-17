@@ -104,6 +104,7 @@ This is a modern full-stack web application for Ivoire Digital, a Dallas-based A
 
 Changelog:
 - June 17, 2025. Initial setup
+- June 17, 2025. Added Coffee Pro (Astoria Blvd, New York) as client testimonial and case study showcasing coffee shop automation success
 
 ## User Preferences
 

@@ -35,5 +35,14 @@ export const testimonials: Testimonial[] = [
     position: "Marketing Director",
     company: "TechSolutions",
     image: "https://randomuser.me/api/portraits/women/28.jpg"
+  },
+  {
+    id: "4",
+    rating: 5,
+    content: "Ivoire Digital's automation solutions transformed our coffee shop operations. Their AI chatbot handles customer orders and inquiries 24/7, while their automated marketing brings in new customers daily. Our efficiency has doubled since working with them.",
+    author: "Maria Santos",
+    position: "Owner",
+    company: "Coffee Pro",
+    image: "https://randomuser.me/api/portraits/women/45.jpg"
   }
 ];

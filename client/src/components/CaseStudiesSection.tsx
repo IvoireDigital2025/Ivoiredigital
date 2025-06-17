@@ -73,6 +73,21 @@ const caseStudies: CaseStudy[] = [
       "24/7 patient support availability"
     ],
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: "case-5",
+    title: "Coffee Shop Automation Doubles Daily Efficiency",
+    client: "Coffee Pro",
+    industry: "Food & Beverage",
+    challenge: "Coffee Pro on Astoria Blvd in New York was struggling with long wait times, missed orders, and limited staff availability to handle customer inquiries outside business hours.",
+    solution: "We implemented a comprehensive AI-powered ordering system with automated customer support, smart inventory alerts, and targeted digital marketing campaigns to attract local customers in the Astoria area.",
+    results: [
+      "Doubled operational efficiency",
+      "24/7 customer order handling",
+      "Reduced wait times by 60%",
+      "40% increase in daily orders through automation"
+    ],
+    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
