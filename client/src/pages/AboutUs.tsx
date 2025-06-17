@@ -225,8 +225,11 @@ export default function AboutUs() {
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Founded in Dallas, TX in 2022, Ivoire Digital was created with a simple but powerful vision: make advanced digital marketing and AI technologies accessible to every small business, not just Fortune 500 companies.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Our team combines technical expertise with deep understanding of small business challenges. We know what it's like to wear multiple hats, work with tight budgets, and need solutions that work immediately.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                We're proud to work with businesses like Coffee Pro on Astoria Blvd in New York, helping them streamline operations and grow their customer base through smart automation and digital marketing solutions.
               </p>
               
               <div className="space-y-4">

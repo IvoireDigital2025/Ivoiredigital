@@ -6,7 +6,7 @@ export default function BusinessTargetSection() {
     {
       icon: Coffee,
       title: "Coffee Shops & Cafes",
-      description: "Streamline orders, manage inventory, and boost customer loyalty",
+      description: "Streamline orders, manage inventory, and boost customer loyalty. We work with Coffee Pro on Astoria Blvd, New York.",
       benefits: ["24/7 order taking", "Customer retention programs", "Inventory automation"]
     },
     {
