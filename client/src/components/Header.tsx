@@ -68,6 +68,7 @@ export default function Header({ scrolled }: HeaderProps) {
       <div className={`md:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-4">
           <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Home</button>
+          <a href="/about" className="text-[#14532d] hover:text-[#f59e0b] transition-colors">About Us</a>
           <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Services</button>
           <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Portfolio</button>
           <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Testimonials</button>
