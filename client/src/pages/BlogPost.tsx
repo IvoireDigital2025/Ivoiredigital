@@ -78,7 +78,7 @@ const blogPosts: Record<string, BlogPost> = {
         "Integrated marketing funnels convert 40% more leads than standalone campaigns by nurturing prospects systematically"
       ],
       benefits: [
-        "Dominate local search results ahead of Dallas competitors who rely on outdated marketing methods",
+        "Dominate local search results ahead of competitors who rely on outdated marketing methods",
         "Build brand recognition through consistent digital presence across multiple channels",
         "Generate qualified leads that convert into paying customers rather than just website traffic",
         "Maximize marketing budget with data-driven campaign optimization and performance tracking",
@@ -86,14 +86,14 @@ const blogPosts: Record<string, BlogPost> = {
       ],
       actionItems: [
         "Claim and optimize your Google My Business listing with professional photos and complete information",
-        "Research Dallas-specific keywords your target customers are searching for using Google Keyword Planner",
+        "Research location-specific keywords your target customers are searching for using Google Keyword Planner",
         "Set up conversion tracking to measure which marketing channels drive the most qualified leads",
         "Create a content calendar for consistent social media posting that showcases your expertise",
         "Implement email capture forms on your website and social media to build your marketing database",
         "Analyze your top 3 local competitors' digital marketing strategies to identify opportunities"
       ],
-      conclusion: "The most successful Dallas small businesses understand that digital marketing isn't about being everywhere—it's about being strategic. By focusing on these five proven strategies and implementing them systematically, any small business can compete effectively in the Dallas market and achieve sustainable growth.",
-      seoKeywords: ["Dallas digital marketing", "local SEO Dallas", "small business marketing", "Dallas business leads", "digital marketing agency Dallas", "Dallas marketing strategies"]
+      conclusion: "The most successful small businesses understand that digital marketing isn't about being everywhere—it's about being strategic. By focusing on these five proven strategies and implementing them systematically, any small business can compete effectively in their local market and achieve sustainable growth.",
+      seoKeywords: ["digital marketing", "local SEO", "small business marketing", "business leads", "digital marketing agency", "marketing strategies"]
     }
   },
   "ai-business-automation-guide": {
@@ -105,7 +105,7 @@ const blogPosts: Record<string, BlogPost> = {
     category: "Business Automation",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
     content: {
-      introduction: "Service-based businesses face unique challenges: managing appointments, following up with clients, handling payments, and maintaining relationships—all while delivering excellent service. AI business automation solves these challenges by handling routine tasks automatically, allowing business owners to focus on what they do best. This comprehensive guide reveals how Dallas service providers are using GoHighLevel and AI automation to scale their operations without proportionally increasing their workload.",
+      introduction: "Service-based businesses face unique challenges: managing appointments, following up with clients, handling payments, and maintaining relationships—all while delivering excellent service. AI business automation solves these challenges by handling routine tasks automatically, allowing business owners to focus on what they do best. This comprehensive guide reveals how service providers nationwide are using GoHighLevel and AI automation to scale their operations without proportionally increasing their workload.",
       keyPoints: [
         "Automated appointment scheduling reduces no-shows by 80% with intelligent reminder systems and confirmation workflows",
         "Client onboarding sequences create consistent experience and reduce manual administrative work by 70%",

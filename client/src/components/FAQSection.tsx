@@ -10,12 +10,12 @@ const faqItems = [
   {
     id: "faq-1",
     question: "What AI services do you offer for small businesses?",
-    answer: "We offer a comprehensive suite of AI solutions tailored specifically for small businesses in Dallas and beyond. Our services include AI chatbots for 24/7 customer support, automated email responses, AI-powered social media management, voice assistants for appointment scheduling, and personalized customer recommendations systems. Each solution is customized to fit your business needs and budget."
+    answer: "We offer a comprehensive suite of AI solutions tailored specifically for small businesses nationwide. Our services include AI chatbots for 24/7 customer support, automated email responses, AI-powered social media management, voice assistants for appointment scheduling, and personalized customer recommendations systems. Each solution is customized to fit your business needs and budget."
   },
   {
     id: "faq-2",
-    question: "How can digital marketing help my local Dallas business attract more clients?",
-    answer: "Our digital marketing strategies focus on local SEO to boost your Dallas business visibility. We implement targeted keywords, Google My Business optimization, and location-based ad campaigns. Our clients typically see a 40-60% increase in local inquiries within the first three months. We emphasize mobile-first strategies since 78% of local searches result in offline purchases."
+    question: "How can digital marketing help my local business attract more clients?",
+    answer: "Our digital marketing strategies focus on local SEO to boost your business visibility in your target market. We implement targeted keywords, Google My Business optimization, and location-based ad campaigns. Our clients typically see a 40-60% increase in local inquiries within the first three months. We emphasize mobile-first strategies since 78% of local searches result in offline purchases."
   },
   {
     id: "faq-3",
@@ -44,8 +44,8 @@ const faqItems = [
   },
   {
     id: "faq-8",
-    question: "What makes Ivoire Digital different from other agencies in Dallas?",
-    answer: "Ivoire Digital combines deep technical expertise with practical small business knowledge. Unlike larger agencies, we provide personalized attention with dedicated account managers who understand the Dallas market. We focus exclusively on ROI-driven solutions rather than vanity metrics. Our hybrid approach of cutting-edge AI implementation with proven digital marketing strategies creates a comprehensive growth system for your business."
+    question: "What makes Ivoire Digital different from other digital marketing agencies?",
+    answer: "Ivoire Digital combines deep technical expertise with practical small business knowledge. Unlike larger agencies, we provide personalized attention with dedicated account managers who understand local market dynamics. We focus exclusively on ROI-driven solutions rather than vanity metrics. Our hybrid approach of cutting-edge AI implementation with proven digital marketing strategies creates a comprehensive growth system for your business."
   }
 ];
 

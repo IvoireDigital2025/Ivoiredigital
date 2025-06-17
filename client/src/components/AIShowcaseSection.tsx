@@ -73,7 +73,7 @@ export default function AIShowcaseSection() {
             Small Businesses Thriving with AI
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            See how local businesses across Dallas are transforming their operations with AI solutions. 
+            See how small businesses nationwide are transforming their operations with AI solutions. 
             From restaurants to salons, these real success stories show the power of automation.
           </p>
         </motion.div>
