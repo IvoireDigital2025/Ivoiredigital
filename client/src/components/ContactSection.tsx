@@ -80,17 +80,18 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-2 md:order-1"
           >
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d] mb-6">Get in Touch</h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d] mb-4 sm:mb-6">Get in Touch</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8">
               Have questions or ready to discuss your project? Fill out the form and our team will get back to you within 24 hours.
             </p>
             
@@ -128,14 +129,14 @@ export default function ContactSection() {
           </motion.div>
           
           <motion.div 
-            className="bg-gray-50 rounded-xl p-8"
+            className="bg-gray-50 rounded-xl p-4 sm:p-6 md:p-8 order-1 md:order-2"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
                 <FormField
                   control={form.control}
                   name="name"

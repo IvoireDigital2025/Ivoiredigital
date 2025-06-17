@@ -8,22 +8,22 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
+    <footer className="bg-gray-900 text-white pt-12 sm:pt-16 pb-8">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <a href="#" onClick={() => handleNavClick("home")} className="inline-block mb-4">
               <img 
                 src={ivoireLogo} 
                 alt="Ivoire Digital Logo" 
-                className="h-32 object-contain" 
+                className="h-24 sm:h-28 md:h-32 object-contain" 
                 style={{ 
                   filter: 'brightness(1.2) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
                   background: 'transparent' 
                 }} 
               />
             </a>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-6 text-sm sm:text-base">
               Empowering small businesses with AI and digital solutions to attract more clients and automate operations.
             </p>
             <div className="flex space-x-4">
@@ -43,19 +43,19 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Website Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">AI Solutions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Digital Marketing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Business Automation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">SEO Optimization</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">Review Management</a></li>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Website Development</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">AI Solutions</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Digital Marketing</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Business Automation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">SEO Optimization</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Review Management</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Resources</h3>
             <ul className="space-y-3">
               <li>
                 <button 

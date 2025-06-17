@@ -50,7 +50,7 @@ export default function Header({ scrolled }: HeaderProps) {
         
         <Button 
           size="sm"
-          className="hidden md:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white flex-shrink-0 text-sm px-4 py-2"
+          className="hidden lg:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white flex-shrink-0 text-xs lg:text-sm px-3 lg:px-4 py-2"
           onClick={() => handleNavClick("booking")}
         >
           Book Free Consultation
@@ -66,22 +66,24 @@ export default function Header({ scrolled }: HeaderProps) {
       </nav>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col space-y-4">
-          <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Home</button>
-          <a href="/about" className="text-[#14532d] hover:text-[#f59e0b] transition-colors">About Us</a>
-          <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Services</button>
-          <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Portfolio</button>
-          <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Testimonials</button>
-          <button onClick={() => handleNavClick("blog")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Blog</button>
-          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Book Consultation</button>
-          <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors">Contact</button>
-          <Button 
-            className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white w-full"
-            onClick={() => handleNavClick("booking")}
-          >
-            Book Free Consultation
-          </Button>
+      <div className={`md:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="flex flex-col space-y-3">
+          <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Home</button>
+          <a href="/about" className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2">About Us</a>
+          <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Services</button>
+          <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Portfolio</button>
+          <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Testimonials</button>
+          <button onClick={() => handleNavClick("blog")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Blog</button>
+          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left font-medium">Book Consultation</button>
+          <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Contact</button>
+          <div className="pt-2">
+            <Button 
+              className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white w-full py-3"
+              onClick={() => handleNavClick("booking")}
+            >
+              Book Free Consultation
+            </Button>
+          </div>
         </div>
       </div>
     </header>
