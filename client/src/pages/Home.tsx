@@ -94,6 +94,7 @@ export default function Home() {
 
         {/* Call to Action and Contact */}
         <CTASection />
+        <BookingSection />
         <ContactSection />
       </main>
       <Footer />

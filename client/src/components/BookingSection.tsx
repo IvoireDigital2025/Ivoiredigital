@@ -226,8 +226,10 @@ export default function BookingSection() {
                           <Input 
                             type="tel" 
                             placeholder="(555) 123-4567" 
-                            {...field} 
+                            onChange={field.onChange}
+                            onBlur={field.onBlur}
                             value={field.value || ""}
+                            name={field.name}
                             className="border-gray-300 focus:border-[#14532d]"
                           />
                         </FormControl>
@@ -363,7 +365,10 @@ export default function BookingSection() {
                         <Textarea 
                           placeholder="Tell us about your business, current challenges, or specific questions you'd like to discuss during the consultation..."
                           className="min-h-[120px] border-gray-300 focus:border-[#14532d]"
-                          {...field} 
+                          onChange={field.onChange}
+                          onBlur={field.onBlur}
+                          value={field.value || ""}
+                          name={field.name}
                         />
                       </FormControl>
                       <FormMessage />
