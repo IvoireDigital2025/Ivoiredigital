@@ -23,6 +23,20 @@ export const contactMessages = pgTable("contact_messages", {
   createdAt: text("created_at").notNull().default("NOW()"),
 });
 
+export const appointments = pgTable("appointments", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone"),
+  service: text("service").notNull(),
+  preferredDate: text("preferred_date").notNull(),
+  preferredTime: text("preferred_time").notNull(),
+  timezone: text("timezone").notNull(),
+  message: text("message"),
+  status: text("status").notNull().default("pending"),
+  createdAt: text("created_at").notNull().default("NOW()"),
+});
+
 export const insertContactSchema = createInsertSchema(contactMessages).pick({
   name: true,
   email: true,
@@ -31,8 +45,22 @@ export const insertContactSchema = createInsertSchema(contactMessages).pick({
   message: true,
 });
 
+export const insertAppointmentSchema = createInsertSchema(appointments).pick({
+  name: true,
+  email: true,
+  phone: true,
+  service: true,
+  preferredDate: true,
+  preferredTime: true,
+  timezone: true,
+  message: true,
+});
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
 export type InsertContact = z.infer<typeof insertContactSchema>;
 export type ContactMessage = typeof contactMessages.$inferSelect;
+
+export type InsertAppointment = z.infer<typeof insertAppointmentSchema>;
+export type Appointment = typeof appointments.$inferSelect;
