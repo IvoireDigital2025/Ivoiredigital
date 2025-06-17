@@ -16,9 +16,9 @@ export default function FloatingContactButton() {
     if (action === "contact-form") {
       scrollToSection("contact");
     } else if (action === "phone") {
-      window.open("tel:+1-555-123-4567", "_self");
+      window.open("tel:945-223-8799", "_self");
     } else if (action === "email") {
-      window.open("mailto:info@ivoiredigital.com", "_self");
+      window.open("mailto:Koneyassine49@gmail.com", "_self");
     }
   };
 

@@ -101,7 +101,7 @@ export default function ContactSection() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (234) 567-8900</p>
+                  <p className="text-gray-600">(945) 223-8799</p>
                 </div>
               </div>
               
@@ -111,7 +111,7 @@ export default function ContactSection() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">info@ivoiredigital.com</p>
+                  <p className="text-gray-600">Koneyassine49@gmail.com</p>
                 </div>
               </div>
               
