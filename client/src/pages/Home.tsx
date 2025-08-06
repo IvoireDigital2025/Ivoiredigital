@@ -59,7 +59,6 @@ export default function Home() {
   ];
 
   const resourcesContent = [
-    { Component: BlogSection, id: "blog" },
     { Component: CaseStudiesSection, id: "case-studies" },
     { Component: GuidesSection, id: "guides" }
   ];
@@ -89,13 +88,7 @@ export default function Home() {
           <Component key={id} />
         ))}
 
-        {/* Resources Section Divider */}
-        <SectionDivider 
-          title="Resources & Insights" 
-          subtitle="Valuable content to help your business grow with AI and digital marketing"
-        />
-        
-        {/* Resources Section */}
+        {/* Client Success & Resources Section */}
         {resourcesContent.map(({ Component, id }, index) => (
           <Component key={id} />
         ))}
