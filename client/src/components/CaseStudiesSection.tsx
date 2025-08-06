@@ -27,7 +27,7 @@ const caseStudies: CaseStudy[] = [
       "89% customer satisfaction rate with AI interactions",
       "35% decrease in call volume to human agents"
     ],
-    image: "https://images.unsplash.com/photo-1562141961-4c3a2b30fe63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "case-2",
