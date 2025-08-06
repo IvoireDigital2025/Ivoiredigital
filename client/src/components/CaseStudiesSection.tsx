@@ -118,10 +118,6 @@ export default function CaseStudiesSection() {
                     </ul>
                   </div>
                 </div>
-                
-                <a href="#" className="inline-flex items-center text-[#14532d] font-medium hover:text-[#f59e0b] transition-colors">
-                  Read Full Case Study <ArrowRight className="h-4 w-4 ml-1" />
-                </a>
               </div>
             </motion.div>
           ))}
