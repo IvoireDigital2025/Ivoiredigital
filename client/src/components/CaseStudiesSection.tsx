@@ -59,21 +59,7 @@ const caseStudies: CaseStudy[] = [
     ],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
-  {
-    id: "case-4",
-    title: "Medical Practice Automation",
-    client: "Family Health Clinic",
-    industry: "Healthcare",
-    challenge: "A family clinic was struggling with high no-show rates, inefficient appointment scheduling, and staff spending too much time on routine patient communications.",
-    solution: "We implemented AI-powered appointment scheduling, automated patient reminders via SMS and email, and basic health consultation chatbots to handle common patient questions.",
-    results: [
-      "80% fewer missed appointments",
-      "Improved patient flow",
-      "Staff efficiency boost",
-      "24/7 patient support availability"
-    ],
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
+
   {
     id: "case-5",
     title: "Coffee Shop Automation Doubles Daily Efficiency",
