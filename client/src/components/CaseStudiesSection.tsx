@@ -127,19 +127,7 @@ export default function CaseStudiesSection() {
           ))}
         </div>
         
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <Button 
-            className="bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 px-8"
-          >
-            View All Case Studies
-          </Button>
-        </motion.div>
+
         
         {/* Hidden SEO content */}
         <div className="sr-only">
