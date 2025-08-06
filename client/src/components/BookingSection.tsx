@@ -186,12 +186,54 @@ export default function BookingSection() {
           </p>
         </motion.div>
 
+        {/* Quick Book with Calendly */}
+        <motion.div 
+          className="max-w-2xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-center mb-4">
+              <h3 className="text-xl font-semibold text-white mb-2">Quick Booking</h3>
+              <p className="text-white/80 text-sm">Schedule instantly with our calendar</p>
+            </div>
+            <div className="space-y-3">
+              <Button 
+                onClick={() => window.open('https://calendly.com/YOUR_CALENDLY_USERNAME', '_blank')}
+                className="w-full bg-[#f59e0b] hover:bg-[#f59e0b]/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <Calendar className="h-5 w-5 mr-2" />
+                Book Now - Free 30 Min Consultation
+              </Button>
+              <p className="text-white/70 text-xs text-center">
+                Choose your preferred time slot and get instant confirmation
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="text-center mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="flex items-center justify-center space-x-4 text-white/60">
+            <div className="h-px bg-white/20 flex-1"></div>
+            <span className="text-sm">or fill out the form below</span>
+            <div className="h-px bg-white/20 flex-1"></div>
+          </div>
+        </motion.div>
+
         <motion.div 
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12">
             <Form {...form}>
