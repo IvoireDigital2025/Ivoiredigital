@@ -7,7 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AIShowcaseSection from "@/components/AIShowcaseSection";
 import AboutSection from "@/components/AboutSection";
 import PortfolioSection from "@/components/PortfolioSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import ClientShowcaseSection from "@/components/ClientShowcaseSection";
 import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import GuidesSection from "@/components/GuidesSection";
@@ -50,7 +50,7 @@ export default function Home() {
     { Component: ServicesSection, id: "services" },
     { Component: AIShowcaseSection, id: "ai-showcase" },
     { Component: PortfolioSection, id: "portfolio" },
-    { Component: TestimonialsSection, id: "testimonials" }
+    { Component: ClientShowcaseSection, id: "client-showcase" }
   ];
 
   const leadGenContent = [

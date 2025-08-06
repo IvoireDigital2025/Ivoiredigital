@@ -14,12 +14,28 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <div className="mb-4">
+              <span className="inline-block bg-[#f59e0b] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                Dallas-Based SaaS Agency
+              </span>
+            </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-poppins font-bold leading-tight">
-              Empower Your Business with AI & Digital Solutions
+              Transform Your Business with
+              <span className="text-[#f59e0b]"> AI-Powered Software</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              We help small businesses automate operations, attract more clients, and scale effectively with cutting-edge technology.
+              From automated lead generation to intelligent website design - we deliver custom software solutions that drive real results for ambitious businesses nationwide.
             </p>
+            <div className="flex items-center gap-4 text-sm opacity-80 mt-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>Serving 200+ Active Businesses</span>
+              </div>
+              <div className="hidden sm:flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span>Custom AI Solutions</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row sm:space-x-4 md:space-x-8 space-y-3 sm:space-y-0 pt-2 justify-center md:justify-start">
               <Button 
                 size="lg"
