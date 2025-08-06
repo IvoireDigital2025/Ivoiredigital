@@ -77,7 +77,7 @@ export default function CaseStudiesSection() {
                 <img 
                   src={study.image} 
                   alt={study.title}
-                  className="w-full h-64 object-cover"
+                  className={`w-full h-64 ${study.id === 'case-2' ? 'object-cover object-top' : 'object-cover'}`}
                 />
               </div>
               
