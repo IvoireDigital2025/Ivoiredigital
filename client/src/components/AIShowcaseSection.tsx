@@ -21,17 +21,9 @@ export default function AIShowcaseSection() {
       results: ["50% reduction in response time", "40% increase in sales", "Enhanced customer experience"],
       icon: MessageSquare
     },
+
     {
       id: 3,
-      title: "Medical Practice Automation",
-      description: "Family clinic uses AI for appointment scheduling, patient reminders, and basic health consultations.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop&crop=center",
-      industry: "Healthcare",
-      results: ["80% fewer missed appointments", "Improved patient flow", "Staff efficiency boost"],
-      icon: Bot
-    },
-    {
-      id: 4,
       title: "Real Estate AI Assistant",
       description: "Property management company leverages AI for lead qualification, property inquiries, and client follow-ups.",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center",
@@ -40,7 +32,7 @@ export default function AIShowcaseSection() {
       icon: TrendingUp
     },
     {
-      id: 5,
+      id: 4,
       title: "Auto Shop Service Bot",
       description: "Local auto repair shop uses AI to schedule services, provide quotes, and send maintenance reminders.",
       image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=400&fit=crop&crop=center",
@@ -49,7 +41,7 @@ export default function AIShowcaseSection() {
       icon: Star
     },
     {
-      id: 6,
+      id: 5,
       title: "Salon Booking Assistant",
       description: "Beauty salon implemented AI for appointment booking, service recommendations, and customer feedback collection.",
       image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop&crop=center",
