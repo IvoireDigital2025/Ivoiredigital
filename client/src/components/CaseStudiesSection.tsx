@@ -31,47 +31,16 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-2",
-    title: "Local SEO Campaign Generates 152% More Leads for Dallas Law Firm",
-    client: "Texas Family Law Associates",
-    industry: "Legal Services",
-    challenge: "A family law practice in Dallas was struggling to stand out in the highly competitive legal market and wasn't generating enough qualified leads through their website.",
-    solution: "We implemented a comprehensive local SEO strategy focused on Dallas-specific keywords, created neighborhood-targeted landing pages, optimized their Google Business Profile, and built a review generation system.",
-    results: [
-      "152% increase in qualified leads in 4 months",
-      "Top 3 Google Maps ranking for key search terms",
-      "324% increase in website traffic from local searches",
-      "43 new positive Google reviews in 3 months"
-    ],
-    image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: "case-3",
-    title: "Business Process Automation Saves Accounting Firm 25 Hours Per Week",
-    client: "Precision Accounting Services",
-    industry: "Financial Services",
-    challenge: "A growing accounting firm was wasting valuable staff time on repetitive tasks like client onboarding, document collection, appointment scheduling, and follow-up emails.",
-    solution: "We created a customized automation system that streamlined client onboarding, automated document requests and reminders, and integrated their scheduling and CRM systems.",
-    results: [
-      "25+ hours saved per week on administrative tasks",
-      "68% faster client onboarding process",
-      "92% client satisfaction with the new digital experience",
-      "Capacity increased to serve 40% more clients without adding staff"
-    ],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-
-  {
-    id: "case-5",
-    title: "Coffee Shop Automation Doubles Daily Efficiency",
+    title: "Coffee Shop Digital Transformation Doubles Daily Efficiency",
     client: "Coffee Pro",
     industry: "Food & Beverage",
     challenge: "Coffee Pro on Astoria Blvd in New York was struggling with long wait times, missed orders, and limited staff availability to handle customer inquiries outside business hours.",
-    solution: "We implemented a comprehensive AI-powered ordering system with automated customer support, smart inventory alerts, and targeted digital marketing campaigns to attract local customers in the Astoria area.",
+    solution: "We implemented a comprehensive digital transformation including a complete website redesign, AI-powered ordering system with automated customer support, smart inventory alerts, and targeted digital marketing campaigns.",
     results: [
       "Doubled operational efficiency",
       "24/7 customer order handling",
       "Reduced wait times by 60%",
-      "40% increase in daily orders through automation"
+      "300% increase in online engagement"
     ],
     image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   }
