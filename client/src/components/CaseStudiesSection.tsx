@@ -16,18 +16,18 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: "case-1",
-    title: "How an AI Chatbot Reduced Customer Service Costs by 47% for a Dallas Retail Chain",
-    client: "DFW Home Furnishings",
-    industry: "Retail / Home Goods",
-    challenge: "A growing Dallas-based home furnishings chain with 5 locations was struggling to handle the increasing volume of customer inquiries about product availability, delivery schedules, and post-purchase support.",
-    solution: "We implemented a custom AI chatbot solution that integrated with their inventory management system and delivery scheduling platform to provide instant answers to common customer questions.",
+    title: "Toyota Dealership Transforms Customer Experience with AI-Powered Service Platform",
+    client: "Toyota Dealership Network",
+    industry: "Automotive Sales & Service",
+    challenge: "A Toyota dealership was struggling to handle the increasing volume of customer inquiries about vehicle availability, service appointments, financing options, and post-purchase support across their busy service center.",
+    solution: "We implemented a custom AI chatbot solution that integrated with their inventory management system, service scheduling platform, and financing tools to provide instant answers to common customer questions and streamline the entire customer journey.",
     results: [
       "47% reduction in customer service costs",
-      "24/7 availability for customer inquiries",
-      "89% customer satisfaction rate with bot interactions",
+      "24/7 availability for sales and service inquiries",
+      "89% customer satisfaction rate with AI interactions",
       "35% decrease in call volume to human agents"
     ],
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1562141961-4c3a2b30fe63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "case-2",
