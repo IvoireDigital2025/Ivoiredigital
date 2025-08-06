@@ -114,6 +114,13 @@ Changelog:
   * Improved accessibility with better focus states
   * Optimized image sizing and loading for mobile devices
   * Added performance improvements for touch interactions
+- August 6, 2025. Major lead generation and design enhancement:
+  * Added 4 lead generation features: Website Audit Tool, ROI Calculator, Live Chat Widget, Enhanced Consultation Scheduler
+  * Applied Coffee Pro transformation design principles with authentic storytelling
+  * Enhanced hero section with Dallas-based SaaS branding and real metrics
+  * Replaced generic testimonials with focused client showcase section
+  * Streamlined case studies to 2 key clients: Toyota Dealership and Coffee Pro
+  * Implemented professional presentation following successful client transformation examples
 
 ## User Preferences
 
