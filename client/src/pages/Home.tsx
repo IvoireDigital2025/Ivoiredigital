@@ -12,6 +12,9 @@ import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import GuidesSection from "@/components/GuidesSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
+import WebsiteAuditTool from "@/components/WebsiteAuditTool";
+import ROICalculator from "@/components/ROICalculator";
+import LiveChatWidget from "@/components/LiveChatWidget";
 
 import CTASection from "@/components/CTASection";
 import BookingSection from "@/components/BookingSection";
@@ -50,6 +53,11 @@ export default function Home() {
     { Component: TestimonialsSection, id: "testimonials" }
   ];
 
+  const leadGenContent = [
+    { Component: WebsiteAuditTool, id: "website-audit" },
+    { Component: ROICalculator, id: "roi-calculator" }
+  ];
+
   const resourcesContent = [
     { Component: BlogSection, id: "blog" },
     { Component: CaseStudiesSection, id: "case-studies" },
@@ -67,6 +75,17 @@ export default function Home() {
       <main>
         {/* Main Marketing Content */}
         {mainContent.map(({ Component, id }, index) => (
+          <Component key={id} />
+        ))}
+
+        {/* Lead Generation Tools Divider */}
+        <SectionDivider 
+          title="Free Business Tools" 
+          subtitle="Discover your potential with our AI-powered assessment tools"
+        />
+        
+        {/* Lead Generation Tools */}
+        {leadGenContent.map(({ Component, id }, index) => (
           <Component key={id} />
         ))}
 
@@ -99,6 +118,7 @@ export default function Home() {
       </main>
       <Footer />
       <BackToTop />
+      <LiveChatWidget />
     </div>
   );
 }

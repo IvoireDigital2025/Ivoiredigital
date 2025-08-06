@@ -22,9 +22,37 @@ const bookingFormSchema = insertAppointmentSchema.extend({
 
 type BookingFormValues = z.infer<typeof bookingFormSchema>;
 
+const consultationTypes = [
+  {
+    name: "Free AI Strategy Call",
+    duration: "15 minutes",
+    description: "Quick assessment of your AI automation opportunities",
+    icon: "zap",
+    popular: true
+  },
+  {
+    name: "Website Audit & Consultation",
+    duration: "30 minutes", 
+    description: "Comprehensive review of your current website and improvement recommendations",
+    icon: "computer"
+  },
+  {
+    name: "Business Growth Planning",
+    duration: "45 minutes",
+    description: "Strategic planning session for scaling your business with digital solutions",
+    icon: "trending-up"
+  },
+  {
+    name: "Technical Implementation Call",
+    duration: "60 minutes",
+    description: "Detailed technical discussion for complex integrations and custom solutions",
+    icon: "settings"
+  }
+];
+
 const services = [
   "AI Chatbot Implementation",
-  "Website Development & Design",
+  "Website Development & Design", 
   "Digital Marketing Strategy",
   "Business Process Automation",
   "GoHighLevel Setup & Training",
