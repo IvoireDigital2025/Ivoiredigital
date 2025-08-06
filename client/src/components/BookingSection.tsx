@@ -201,7 +201,7 @@ export default function BookingSection() {
             </div>
             <div className="space-y-3">
               <Button 
-                onClick={() => window.open('https://calendly.com/YOUR_CALENDLY_USERNAME', '_blank')}
+                onClick={() => window.open('https://calendly.com/koneyassine49/fitness-consultation', '_blank')}
                 className="w-full bg-[#f59e0b] hover:bg-[#f59e0b]/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Calendar className="h-5 w-5 mr-2" />
