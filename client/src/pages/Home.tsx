@@ -4,7 +4,6 @@ import BusinessTargetSection from "@/components/BusinessTargetSection";
 import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
 import AutomatedWebsiteShowcase from "@/components/AutomatedWebsiteShowcase";
 import ServicesSection from "@/components/ServicesSection";
-import AIShowcaseSection from "@/components/AIShowcaseSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
@@ -41,7 +40,6 @@ export default function Home() {
         <AnimatedServiceShowcase />
         <AutomatedWebsiteShowcase />
         <ServicesSection />
-        <AIShowcaseSection />
         <PortfolioSection />
 
         <ROICalculator />
