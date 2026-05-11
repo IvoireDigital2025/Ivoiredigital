@@ -90,8 +90,8 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=500&fit=crop&crop=center"
-                alt="Dental clinic"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop&crop=faces"
+                alt="Professional dental receptionist"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
