@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import BusinessTargetSection from "@/components/BusinessTargetSection";
 import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
-import AutomatedWebsiteShowcase from "@/components/AutomatedWebsiteShowcase";
 import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
@@ -37,7 +36,6 @@ export default function Home() {
         <HeroSection />
         <BusinessTargetSection />
         <AnimatedServiceShowcase />
-        <AutomatedWebsiteShowcase />
         <ServicesSection />
         <PortfolioSection />
 
