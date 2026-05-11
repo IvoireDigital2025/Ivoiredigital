@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Coffee, Utensils, Store, Building2, Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone,
-  Scissors, Home, Dumbbell, Heart, Car, Wrench, Sparkles, Stethoscope, Camera, HardHat
+  Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone,
+  Smile, Sparkles
 } from "lucide-react";
 
 export default function AnimatedServiceShowcase() {
@@ -10,328 +10,71 @@ export default function AnimatedServiceShowcase() {
 
   const industries = [
     {
-      id: "coffee",
-      name: "Coffee Shops",
-      icon: Coffee,
-      color: "from-amber-500 to-orange-600",
-      services: [
-        {
-          icon: Globe,
-          title: "New Engaging Website",
-          description: "Beautiful, mobile-friendly website that converts visitors into customers",
-          stats: "Professional online presence"
-        },
-        {
-          icon: Phone,
-          title: "Automate Incoming Calls",
-          description: "Never miss a call - customers get instant responses even when you're busy",
-          stats: "24/7 phone coverage"
-        },
-        {
-          icon: Calendar,
-          title: "Appointment Scheduling",
-          description: "Customers book their own appointments online, syncs with your calendar",
-          stats: "Reduces booking time by 80%"
-        },
-        {
-          icon: Users,
-          title: "Customer Loyalty Program",
-          description: "Keep customers coming back with automated rewards and special offers",
-          stats: "85% customer retention"
-        }
-      ]
-    },
-    {
-      id: "restaurant",
-      name: "Restaurants",
-      icon: Utensils,
-      color: "from-red-500 to-pink-600",
-      services: [
-        {
-          icon: Calendar,
-          title: "Online Booking System",
-          description: "Customers can book tables online, automatic confirmations and reminders",
-          stats: "95% table efficiency"
-        },
-        {
-          icon: Star,
-          title: "Google Review Management",
-          description: "Get more 5-star reviews on Google, respond to feedback automatically",
-          stats: "4.8★ average rating"
-        },
-        {
-          icon: Smartphone,
-          title: "Text Message Marketing",
-          description: "Send special offers and updates directly to customers' phones",
-          stats: "95% open rate"
-        },
-        {
-          icon: MessageSquare,
-          title: "Missed Call Text Back",
-          description: "When you can't answer, customers get an instant text with your info",
-          stats: "No lost customers"
-        }
-      ]
-    },
-    {
-      id: "beauty",
-      name: "Beauty & Wellness",
-      icon: Scissors,
-      color: "from-pink-500 to-rose-600",
-      services: [
-        {
-          icon: Calendar,
-          title: "Online Appointment Booking",
-          description: "Let clients book hair, nail, or tattoo appointments 24/7 with automatic reminders",
-          stats: "Reduces no-shows by 90%"
-        },
-        {
-          icon: Star,
-          title: "Beauty Review Management",
-          description: "Get stunning before/after photos shared as reviews to attract new clients",
-          stats: "Beautiful portfolio"
-        },
-        {
-          icon: Smartphone,
-          title: "Client Retention Texts",
-          description: "Automated appointment reminders and follow-ups for rebooking",
-          stats: "80% rebooking rate"
-        },
-        {
-          icon: Users,
-          title: "VIP Client Programs",
-          description: "Reward your best clients with exclusive offers and priority booking",
-          stats: "Premium experience"
-        }
-      ]
-    },
-    {
-      id: "realestate",
-      name: "Real Estate",
-      icon: Home,
+      id: "dental",
+      name: "Dental Clinics",
+      icon: Smile,
       color: "from-blue-500 to-cyan-600",
       services: [
         {
           icon: Globe,
-          title: "Property Showcase Website",
-          description: "Professional website with virtual tours and lead capture forms",
-          stats: "More qualified leads"
+          title: "Professional Dental Website",
+          description: "Beautiful, trust-building website that converts visitors into booked patients",
+          stats: "Professional online presence"
         },
         {
           icon: Phone,
-          title: "Lead Response System",
-          description: "Instant response to property inquiries, even when you're showing homes",
-          stats: "Never miss a buyer"
-        },
-        {
-          icon: Mail,
-          title: "Buyer/Seller Nurturing",
-          description: "Automated email sequences for market updates and property alerts",
-          stats: "Stay top of mind"
+          title: "AI Phone Assistant",
+          description: "Never miss a patient call — AI handles scheduling, questions, and insurance inquiries 24/7",
+          stats: "24/7 phone coverage"
         },
         {
           icon: Calendar,
-          title: "Showing Scheduler",
-          description: "Clients can book property viewings directly from your listings",
-          stats: "Streamlined showings"
-        }
-      ]
-    },
-    {
-      id: "fitness",
-      name: "Fitness & Wellness",
-      icon: Dumbbell,
-      color: "from-emerald-500 to-teal-600",
-      services: [
-        {
-          icon: Calendar,
-          title: "Class Booking System",
-          description: "Members book yoga, pilates, or personal training sessions online",
-          stats: "Maximize class capacity"
-        },
-        {
-          icon: Users,
-          title: "Membership Management",
-          description: "Automated billing, renewals, and member communication",
-          stats: "Reduce churn by 60%"
-        },
-        {
-          icon: Smartphone,
-          title: "Workout Reminders",
-          description: "Motivational texts and class reminders to keep members engaged",
-          stats: "Higher attendance"
+          title: "Online Appointment Booking",
+          description: "Patients book, reschedule, or cancel appointments online anytime — syncs to your calendar",
+          stats: "Reduces no-shows by 70%"
         },
         {
           icon: Star,
-          title: "Transformation Stories",
-          description: "Showcase member success stories and before/after photos",
-          stats: "Social proof"
+          title: "Automated Review Collection",
+          description: "Post-visit texts ask happy patients for Google reviews automatically, growing your reputation",
+          stats: "4.9★ average rating"
         }
       ]
     },
     {
-      id: "automotive",
-      name: "Automotive Services",
-      icon: Car,
-      color: "from-gray-500 to-slate-600",
-      services: [
-        {
-          icon: Calendar,
-          title: "Service Scheduling",
-          description: "Customers book car detailing, repairs, or maintenance appointments",
-          stats: "Organized schedule"
-        },
-        {
-          icon: Phone,
-          title: "Emergency Response",
-          description: "24/7 mobile mechanic dispatch and customer communication",
-          stats: "Always available"
-        },
-        {
-          icon: Mail,
-          title: "Maintenance Reminders",
-          description: "Automated service reminders based on mileage and time",
-          stats: "Repeat customers"
-        },
-        {
-          icon: Star,
-          title: "Work Portfolio",
-          description: "Before/after photos of detailing and repair work",
-          stats: "Visual credibility"
-        }
-      ]
-    },
-    {
-      id: "healthcare",
-      name: "Healthcare & Wellness",
-      icon: Stethoscope,
-      color: "from-indigo-500 to-purple-600",
-      services: [
-        {
-          icon: Calendar,
-          title: "Patient Scheduling",
-          description: "Online booking for chiropractic, dental, or therapy appointments",
-          stats: "Efficient scheduling"
-        },
-        {
-          icon: MessageSquare,
-          title: "Appointment Reminders",
-          description: "Reduce no-shows with automated SMS and email reminders",
-          stats: "98% attendance rate"
-        },
-        {
-          icon: Star,
-          title: "Patient Testimonials",
-          description: "Collect and showcase patient success stories and reviews",
-          stats: "Build trust"
-        },
-        {
-          icon: Users,
-          title: "Patient Follow-up",
-          description: "Automated wellness check-ins and treatment reminders",
-          stats: "Better outcomes"
-        }
-      ]
-    },
-    {
-      id: "events",
-      name: "Event Services",
-      icon: Camera,
-      color: "from-violet-500 to-purple-600",
-      services: [
-        {
-          icon: Globe,
-          title: "Portfolio Website",
-          description: "Stunning galleries for photographers, DJs, and event planners",
-          stats: "Professional showcase"
-        },
-        {
-          icon: Calendar,
-          title: "Event Booking",
-          description: "Clients can check availability and book events online",
-          stats: "Streamlined booking"
-        },
-        {
-          icon: Mail,
-          title: "Client Communication",
-          description: "Automated contracts, invoices, and event timeline updates",
-          stats: "Professional process"
-        },
-        {
-          icon: Star,
-          title: "Event Testimonials",
-          description: "Showcase happy couples and successful events",
-          stats: "Social validation"
-        }
-      ]
-    },
-    {
-      id: "homeservices",
-      name: "Home Services",
-      icon: HardHat,
-      color: "from-orange-500 to-red-600",
-      services: [
-        {
-          icon: Phone,
-          title: "Emergency Dispatch",
-          description: "24/7 plumbing, HVAC, and cleaning service requests",
-          stats: "Always responsive"
-        },
-        {
-          icon: Calendar,
-          title: "Service Scheduling",
-          description: "Customers book maintenance and repair appointments online",
-          stats: "Organized workflow"
-        },
-        {
-          icon: Star,
-          title: "Work Documentation",
-          description: "Before/after photos and customer testimonials",
-          stats: "Proven results"
-        },
-        {
-          icon: Users,
-          title: "Service Reminders",
-          description: "Automated follow-ups for seasonal maintenance",
-          stats: "Recurring revenue"
-        }
-      ]
-    },
-    {
-      id: "medspas",
-      name: "Med Spas & Clinics",
+      id: "spa",
+      name: "Spas & Wellness",
       icon: Sparkles,
       color: "from-rose-500 to-pink-600",
       services: [
         {
+          icon: Globe,
+          title: "Luxury Spa Website",
+          description: "Stunning, high-converting website that showcases your treatments and books clients instantly",
+          stats: "Premium brand experience"
+        },
+        {
           icon: Calendar,
-          title: "Treatment Booking",
-          description: "Online scheduling for cosmetic treatments and consultations",
-          stats: "Premium experience"
+          title: "Smart Booking System",
+          description: "Clients book treatments online 24/7 with automatic confirmations and reminders sent to their phone",
+          stats: "Fill your schedule automatically"
         },
         {
-          icon: MessageSquare,
-          title: "Pre/Post Care",
-          description: "Automated treatment instructions and follow-up care",
-          stats: "Better results"
-        },
-        {
-          icon: Star,
-          title: "Transformation Gallery",
-          description: "Showcase beautiful before/after treatment results",
-          stats: "Visual proof"
+          icon: Smartphone,
+          title: "Client Retention Texts",
+          description: "Automated follow-up messages, rebooking reminders, and special offers sent to past clients",
+          stats: "80% rebooking rate"
         },
         {
           icon: Users,
-          title: "VIP Client Program",
-          description: "Exclusive offers for repeat clients and referrals",
-          stats: "Client loyalty"
+          title: "VIP Loyalty Program",
+          description: "Reward your best clients with exclusive offers, early access, and personalized treatment upsells",
+          stats: "40% increase in revenue"
         }
       ]
     }
   ];
 
-  // Auto-rotate through industries
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndustry((prev) => (prev + 1) % industries.length);
@@ -357,8 +100,8 @@ export default function AnimatedServiceShowcase() {
             Branded, Done-For-You Marketing Solutions
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Complete marketing systems customized for your industry. We set everything up for you - 
-            websites, booking systems, review management, and customer communication tools.
+            Complete marketing systems built specifically for dental clinics and spas. 
+            We set everything up for you — websites, booking systems, review management, and client communication tools.
           </p>
         </motion.div>
 
@@ -370,7 +113,7 @@ export default function AnimatedServiceShowcase() {
               <button
                 key={industry.id}
                 onClick={() => setActiveIndustry(index)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 ${
                   activeIndustry === index
                     ? 'bg-[#14532d] text-white shadow-lg'
                     : 'bg-white text-gray-600 hover:bg-gray-100'
@@ -394,7 +137,6 @@ export default function AnimatedServiceShowcase() {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-2xl shadow-2xl overflow-hidden"
             >
-              {/* Header with Industry Info */}
               <div className={`bg-gradient-to-r ${currentIndustry.color} p-8 text-white`}>
                 <div className="flex items-center justify-center space-x-4 mb-4">
                   <div className="bg-white/20 p-3 rounded-full">
@@ -407,7 +149,6 @@ export default function AnimatedServiceShowcase() {
                 </div>
               </div>
 
-              {/* Services Grid */}
               <div className="p-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {currentIndustry.services.map((service, serviceIndex) => {
@@ -452,7 +193,6 @@ export default function AnimatedServiceShowcase() {
           ))}
         </div>
 
-        {/* Call to Action */}
         <motion.div 
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -461,8 +201,8 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            Ready to get a complete branded marketing system for your business? 
-            We handle everything - setup, customization, and training so you can focus on serving customers.
+            Ready to get a complete branded marketing system for your dental clinic or spa? 
+            We handle everything — setup, customization, and training so you can focus on your patients and clients.
           </p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

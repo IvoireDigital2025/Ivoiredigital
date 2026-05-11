@@ -5,49 +5,39 @@ export default function AIShowcaseSection() {
   const aiImplementations = [
     {
       id: 1,
-      title: "Restaurant AI Phone Assistant",
-      description: "Local restaurant uses AI to handle reservations and takeout orders 24/7, reducing wait times and increasing customer satisfaction.",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop&crop=center",
-      industry: "Restaurant",
-      results: ["300% increase in orders", "24/7 availability", "95% customer satisfaction"],
-      icon: Phone
-    },
-    {
-      id: 2,
-      title: "Retail Store Chatbot",
-      description: "Small clothing boutique implemented AI chatbot for customer inquiries, product recommendations, and inventory checks.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&crop=center",
-      industry: "Retail",
-      results: ["50% reduction in response time", "40% increase in sales", "Enhanced customer experience"],
-      icon: MessageSquare
-    },
-
-    {
-      id: 3,
-      title: "Real Estate AI Assistant",
-      description: "Property management company leverages AI for lead qualification, property inquiries, and client follow-ups.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center",
-      industry: "Real Estate",
-      results: ["60% more qualified leads", "Faster response times", "Higher conversion rates"],
-      icon: TrendingUp
-    },
-    {
-      id: 4,
-      title: "Dental Clinic AI Assistant",
-      description: "Dental practice uses AI to handle appointment scheduling, patient reminders, and insurance inquiries around the clock.",
+      title: "Dental Clinic AI Phone Assistant",
+      description: "Dental practice uses AI to handle appointment scheduling, patient reminders, and insurance inquiries around the clock — no receptionist needed.",
       image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop&crop=center",
       industry: "Dental Clinic",
       results: ["70% fewer missed appointments", "24/7 patient support", "50% less front-desk workload"],
       icon: Phone
     },
     {
-      id: 5,
-      title: "Spa & Wellness Booking Bot",
-      description: "Luxury spa uses AI to automate bookings, upsell treatments, and send personalized follow-up messages to clients.",
+      id: 2,
+      title: "Dental Practice Review Builder",
+      description: "Automated follow-up texts after each visit encourage satisfied patients to leave 5-star Google reviews, building trust and attracting new patients.",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop&crop=center",
+      industry: "Dental Clinic",
+      results: ["4.9★ average Google rating", "3x more new patient inquiries", "Fully automated outreach"],
+      icon: Star
+    },
+    {
+      id: 3,
+      title: "Spa Online Booking Automation",
+      description: "Luxury spa uses AI to automate bookings, upsell treatments, and send personalized follow-up messages to clients after every visit.",
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop&crop=center",
       industry: "Spa & Wellness",
       results: ["90% booking automation", "Reduced no-shows by 60%", "Increased repeat clients"],
-      icon: Star
+      icon: MessageSquare
+    },
+    {
+      id: 4,
+      title: "Spa Client Retention System",
+      description: "Wellness center uses automated SMS campaigns and VIP loyalty programs to bring clients back more frequently and increase average spend.",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop&crop=center",
+      industry: "Spa & Wellness",
+      results: ["80% client rebooking rate", "40% increase in revenue", "VIP loyalty program"],
+      icon: TrendingUp
     }
   ];
 
@@ -62,11 +52,11 @@ export default function AIShowcaseSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d] mb-4">
-            Small Businesses Thriving with AI
+            Dental Clinics & Spas Thriving with AI
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            See how small businesses nationwide are transforming their operations with AI solutions. 
-            From restaurants to salons, these real success stories show the power of automation.
+            See how dental clinics and spas are transforming their operations with AI. 
+            Real results from real practices — more bookings, fewer no-shows, and happier clients.
           </p>
         </motion.div>
 

@@ -1,20 +1,8 @@
 import { motion } from "framer-motion";
-import { Coffee, Utensils, Smile, Sparkles, TrendingUp, Clock, Users, Zap } from "lucide-react";
+import { Smile, Sparkles, TrendingUp, Clock, Users, Zap } from "lucide-react";
 
 export default function BusinessTargetSection() {
   const businessTypes = [
-    {
-      icon: Coffee,
-      title: "Coffee Shops & Cafes",
-      description: "Streamline orders, manage inventory, and boost customer loyalty. We work with Coffee Pro on Astoria Blvd, New York.",
-      benefits: ["24/7 order taking", "Customer retention programs", "Inventory automation"]
-    },
-    {
-      icon: Utensils,
-      title: "Restaurants & Eateries",
-      description: "Automate reservations, handle takeout orders, and manage reviews",
-      benefits: ["Reservation management", "Online ordering systems", "Review automation"]
-    },
     {
       icon: Smile,
       title: "Dental Clinics",
@@ -66,13 +54,13 @@ export default function BusinessTargetSection() {
             We Partner with Businesses Like Yours
           </h2>
           <p className="text-base text-green-100 max-w-3xl mx-auto">
-            From local coffee shops and restaurants to dental clinics and spas, we help businesses 
-            automate operations and attract more customers through smart AI technology.
+            We specialize in helping dental clinics and spas automate operations, fill their schedules, 
+            and attract more patients and clients through smart AI technology.
           </p>
         </motion.div>
 
         {/* Business Types */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-20">
           {businessTypes.map((business, index) => {
             const IconComponent = business.icon;
             return (

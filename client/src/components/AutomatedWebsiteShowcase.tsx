@@ -5,31 +5,31 @@ export default function AutomatedWebsiteShowcase() {
   const websiteExamples = [
     {
       id: 1,
-      title: "Restaurant Website",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=center",
-      features: ["Online Menu", "Table Reservations", "Order Online", "Customer Reviews"],
-      conversionRate: "Convert 40% more visitors"
+      title: "Dental Clinic Website",
+      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop&crop=center",
+      features: ["Online Appointment Booking", "Patient Intake Forms", "Insurance Info", "Before & After Gallery"],
+      conversionRate: "Convert 50% more new patients"
     },
     {
       id: 2,
-      title: "Beauty Salon Website",
-      image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop&crop=center",
-      features: ["Book Appointments", "Service Gallery", "Price Lists", "Client Testimonials"],
-      conversionRate: "Book 60% more appointments"
+      title: "Dental Practice Profile",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop&crop=center",
+      features: ["Meet the Dentist", "Services & Pricing", "Patient Testimonials", "Google Review Feed"],
+      conversionRate: "Build trust with new patients"
     },
     {
       id: 3,
-      title: "Fitness Studio Website",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
-      features: ["Class Schedules", "Member Portal", "Training Programs", "Success Stories"],
-      conversionRate: "Increase memberships by 50%"
+      title: "Luxury Spa Website",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop&crop=center",
+      features: ["Treatment Menu", "Online Booking", "Gift Cards", "Client Testimonials"],
+      conversionRate: "Book 60% more appointments"
     },
     {
       id: 4,
-      title: "Home Services Website",
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop&crop=center",
-      features: ["Service Booking", "Emergency Contact", "Work Portfolio", "Service Areas"],
-      conversionRate: "Generate 3x more leads"
+      title: "Wellness Center Website",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop&crop=center",
+      features: ["Service Gallery", "Membership Plans", "Loyalty Program", "Client Reviews"],
+      conversionRate: "Increase repeat visits by 80%"
     }
   ];
 

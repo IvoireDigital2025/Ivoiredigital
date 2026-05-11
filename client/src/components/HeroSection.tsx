@@ -24,7 +24,7 @@ export default function HeroSection() {
               <span className="text-[#f59e0b]"> AI-Powered Software</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              From automated lead generation to intelligent website design - we deliver custom software solutions that drive real results for ambitious businesses nationwide.
+              We help dental clinics and spas attract more patients and clients with automated booking, AI phone assistants, and smart marketing — all done for you.
             </p>
             <div className="flex items-center gap-4 text-sm opacity-80 mt-4">
               <div className="flex items-center gap-2">
