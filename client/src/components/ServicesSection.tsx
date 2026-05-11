@@ -13,9 +13,9 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">How We Help Your Business Grow</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">AI Systems Built for Dental Clinics & Spas</h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            Simple marketing tools that bring you more customers and help you keep them coming back.
+            Everything your clinic needs to operate more efficiently, save staff time, and grow — fully automated and done for you.
           </p>
         </motion.div>
         

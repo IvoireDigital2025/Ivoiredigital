@@ -1,4 +1,4 @@
-import { LucideIcon, Monitor, Phone, Mail, Calendar, Star, Users, Smartphone, MessageSquare } from "lucide-react";
+import { LucideIcon, Phone, Calendar, MessageSquare, Star, Globe, FileText, ClipboardList, Zap, UserCheck } from "lucide-react";
 
 interface DetailedInfo {
   features: string[];
@@ -17,211 +17,237 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "website",
-    icon: Monitor,
-    title: "New Professional Website",
-    description: "Beautiful, mobile-friendly websites that turn visitors into customers and help you get found on Google.",
-    detailedInfo: {
-      features: [
-        "Mobile-responsive design optimized for all devices",
-        "Fast-loading pages with Google Core Web Vitals optimization",
-        "SEO-ready structure with meta tags and schema markup",
-        "Contact forms with lead capture and CRM integration",
-        "Google Analytics and conversion tracking setup",
-        "SSL certificate and security features included"
-      ],
-      benefits: [
-        "Rank higher on Google search results for Dallas businesses",
-        "Convert 40% more visitors into customers with proven layouts",
-        "Mobile-first design captures 78% of local searches",
-        "Professional credibility that builds customer trust",
-        "24/7 online presence that works while you sleep",
-        "Local SEO optimization for Dallas market visibility"
-      ],
-      process: "We start with your brand analysis, create custom designs using high-converting templates, integrate your content and business information, optimize for search engines, test on all devices, and launch with full training on content management.",
-      timeline: "Complete website delivered in 1-3 days with hosting, domain, and training included."
-    }
-  },
-  {
-    id: "calls",
+    id: "receptionist",
     icon: Phone,
-    title: "Never Miss a Call Again",
-    description: "Automatic call handling and missed call text-back so you never lose a potential customer.",
+    title: "AI Dental Receptionist",
+    description: "A 24/7 AI receptionist that answers patient calls, schedules appointments, handles FAQs, and manages your front desk — so your staff can focus on patients in the chair.",
     detailedInfo: {
       features: [
-        "AI-powered call answering with natural conversation",
-        "Automatic missed call text-back within 30 seconds",
-        "Call routing to your mobile or office phone",
-        "Voicemail transcription sent via text and email",
-        "Business hours customization and after-hours handling",
-        "Call recording and analytics for quality improvement"
+        "Answers incoming calls 24/7 with a natural, human-like voice",
+        "Schedules, reschedules, and cancels appointments automatically",
+        "Answers common patient questions about services, insurance, and hours",
+        "Sends instant confirmation texts and emails after every booking",
+        "Seamlessly hands off complex calls to your human staff",
+        "Full call recordings and transcripts for review"
       ],
       benefits: [
-        "Capture 95% more leads from phone inquiries",
-        "Professional image even when you're busy with customers",
-        "Reduce customer frustration from unanswered calls",
-        "Instant lead response improves conversion by 60%",
-        "Work-life balance with automated after-hours coverage",
-        "Dallas market competitive advantage with 24/7 availability"
+        "Never miss a new patient call again — even after hours",
+        "Reduce front desk workload by up to 50%",
+        "Capture more bookings without adding staff",
+        "Professional patient experience every time",
+        "Lower operational costs with automated call handling",
+        "Works while your team focuses on in-clinic care"
       ],
-      process: "We configure your virtual phone assistant with your business information, customize response messages, set up call routing preferences, train the AI on your services, and integrate with your existing phone system.",
-      timeline: "Phone automation system activated within 24 hours of setup completion."
+      process: "We train the AI on your clinic's services, pricing, FAQs, and calendar — then integrate it with your phone system and scheduling platform.",
+      timeline: "Live and answering calls within 3–5 business days."
     }
   },
   {
-    id: "appointments",
+    id: "booking",
     icon: Calendar,
-    title: "Online Booking & Scheduling",
-    description: "Let customers book appointments online 24/7. Automatic reminders reduce no-shows by 80%.",
+    title: "AI Appointment Booking System",
+    description: "Let patients book, reschedule, or cancel appointments online 24/7. Automated reminders slash no-show rates and keep your schedule full.",
     detailedInfo: {
       features: [
-        "24/7 online booking calendar synchronized with your schedule",
-        "Automatic SMS and email appointment reminders",
-        "Payment processing with deposits and full payments",
-        "Service menu with pricing and duration settings",
-        "Staff scheduling for multi-employee businesses",
-        "Cancellation and rescheduling management"
+        "24/7 online booking synced to your live calendar",
+        "Automated SMS and email appointment reminders",
+        "Two-way appointment confirmation via text",
+        "New patient intake forms collected before the visit",
+        "Waitlist management to fill last-minute cancellations",
+        "Multi-provider scheduling for group practices"
       ],
       benefits: [
-        "Reduce no-shows by 80% with automated reminder system",
-        "Fill schedule gaps with last-minute online bookings",
-        "Increase revenue with 24/7 booking availability",
+        "Reduce no-shows by up to 70% with automated reminders",
+        "Fill your schedule around the clock without staff involvement",
+        "Eliminate double-bookings and scheduling conflicts",
         "Reduce phone time spent on scheduling by 70%",
-        "Professional booking experience improves customer satisfaction",
-        "Real-time calendar updates prevent double-bookings"
+        "Collect intake information before arrival to save chair time",
+        "Happier patients with a seamless booking experience"
       ],
-      process: "We customize your booking calendar with services and pricing, integrate payment processing, set up automated reminders, configure your availability preferences, sync with your existing calendar, and train your team on management.",
-      timeline: "Booking system live and taking appointments within 48 hours of implementation."
+      process: "We set up your booking system with your services, providers, and availability — then integrate reminders and intake forms.",
+      timeline: "Booking system live within 48 hours."
     }
   },
   {
-    id: "marketing",
-    icon: Mail,
-    title: "Email & Text Marketing",
-    description: "Send promotions and stay in touch with customers through email campaigns and text messages.",
+    id: "missed-call",
+    icon: MessageSquare,
+    title: "AI Missed-Call Text Back",
+    description: "Every missed call instantly gets an automatic text reply, keeping potential patients engaged and converting missed calls into booked appointments.",
     detailedInfo: {
       features: [
-        "Automated welcome series for new customers",
-        "Promotional campaigns with professional design templates",
-        "Customer segmentation for targeted messaging",
-        "SMS marketing with 95% open rates",
-        "Birthday and anniversary automated campaigns",
-        "Abandoned cart recovery for e-commerce businesses"
+        "Instant text reply sent within seconds of a missed call",
+        "Personalized message with your clinic's name and services",
+        "AI follows up with a booking link automatically",
+        "Works after hours, weekends, and holidays",
+        "Tracks and logs all missed call conversations",
+        "Seamless handoff to staff when needed"
       ],
       benefits: [
-        "Increase repeat business by 40% with targeted campaigns",
-        "Build customer relationships with personalized messaging",
-        "Drive immediate sales with text message promotions",
-        "Cost-effective marketing with high ROI (4200% average)",
-        "Stay top-of-mind between customer visits",
-        "Compete with larger Dallas businesses using automation"
+        "Convert missed calls into appointments instead of lost patients",
+        "Respond to patients faster than any competitor",
+        "Capture leads even when your team is unavailable",
+        "Reduce patient frustration from unanswered calls",
+        "Increase new patient acquisition without extra staff",
+        "No missed opportunity — every call gets a response"
       ],
-      process: "We import your customer database, create branded email templates, set up automated campaigns, configure text messaging compliance, design promotional campaigns, and provide campaign management training.",
-      timeline: "First marketing campaign launched within 2-3 days of customer data import."
+      process: "We configure the system with your clinic's information, craft the perfect reply messages, and connect it to your phone number.",
+      timeline: "Active and responding to missed calls within 24 hours."
+    }
+  },
+  {
+    id: "followup",
+    icon: UserCheck,
+    title: "AI Patient Follow-Up & Reactivation",
+    description: "Automatically follow up with patients after visits and re-engage patients who haven't returned in months — bringing back lost revenue effortlessly.",
+    detailedInfo: {
+      features: [
+        "Post-visit follow-up messages for care and rebooking",
+        "Automated reactivation campaigns for lapsed patients",
+        "Personalized messages based on last treatment type",
+        "Multi-step sequences via SMS and email",
+        "Appointment reminders for upcoming recall visits",
+        "Tracks responses and books appointments automatically"
+      ],
+      benefits: [
+        "Bring back patients who haven't visited in 6–12 months",
+        "Increase patient lifetime value with consistent follow-up",
+        "Fill schedule gaps with reactivated existing patients",
+        "Reduce churn without any manual outreach from staff",
+        "Improve patient outcomes with post-care check-ins",
+        "Generate revenue from your existing patient database"
+      ],
+      process: "We segment your patient list, create personalized follow-up sequences, and automate outreach based on visit history and treatment type.",
+      timeline: "First reactivation campaign launched within 3–5 days."
+    }
+  },
+  {
+    id: "webchat",
+    icon: Globe,
+    title: "AI Web Chat Assistant",
+    description: "An intelligent chat widget on your website that answers patient questions, captures leads, and books appointments — 24/7, without any staff involvement.",
+    detailedInfo: {
+      features: [
+        "Conversational AI chat embedded on your website",
+        "Answers FAQs about services, insurance, pricing, and hours",
+        "Captures visitor contact information for follow-up",
+        "Books appointments directly from the chat window",
+        "Hands off to human staff for complex conversations",
+        "Branded to match your clinic's look and feel"
+      ],
+      benefits: [
+        "Turn website visitors into booked patients automatically",
+        "Provide instant answers without tying up your front desk",
+        "Capture leads from visitors who don't want to call",
+        "Available 24/7 — never lose an after-hours inquiry",
+        "Professional first impression that builds patient trust",
+        "Increase website conversion rates significantly"
+      ],
+      process: "We train the AI on your services and FAQs, embed it on your website, and connect it to your booking system.",
+      timeline: "Chat assistant live on your website within 48 hours."
     }
   },
   {
     id: "reviews",
     icon: Star,
-    title: "Get More Google Reviews",
-    description: "Automatically ask happy customers for reviews and respond to feedback to boost your online reputation.",
+    title: "AI Review Generation System",
+    description: "Automatically request Google reviews from satisfied patients after every visit — growing your 5-star reputation on autopilot.",
     detailedInfo: {
       features: [
-        "Automated review requests sent after service completion",
-        "Google My Business optimization for local Dallas searches",
-        "Review response automation for positive and negative feedback",
-        "Review monitoring across Google, Yelp, and Facebook",
-        "Customer feedback collection before public reviews",
+        "Automated review request texts sent after each appointment",
+        "Smart timing to maximize positive review submissions",
+        "Direct link to your Google Business Profile for easy posting",
+        "Filters unhappy patients before they leave public reviews",
+        "Monitors and alerts for new reviews across platforms",
         "Review display widgets for your website"
       ],
       benefits: [
-        "Increase Google reviews by 300% with systematic requests",
-        "Improve local search rankings with fresh review content",
-        "Build trust with potential customers through social proof",
-        "Address negative feedback before it becomes public",
-        "Compete effectively in Dallas market with strong reputation",
-        "Higher conversion rates with 4.5+ star average rating"
+        "Grow Google reviews 3x faster without manual effort",
+        "Rank higher in local Google searches with fresh reviews",
+        "Build trust with new patients through social proof",
+        "Address patient concerns privately before they go public",
+        "Consistently maintain a 4.8–5.0 star rating",
+        "Attract more new patients with a strong online reputation"
       ],
-      process: "We optimize your Google My Business profile, set up automated review request campaigns, create response templates for different review types, configure monitoring dashboards, and train your team on reputation management.",
-      timeline: "Review system activated and first requests sent within 24-48 hours."
+      process: "We connect the system to your appointment software, configure review request timing, craft your personalized request messages, and set up monitoring.",
+      timeline: "First review requests sent within 24–48 hours of setup."
     }
   },
   {
-    id: "loyalty",
-    icon: Users,
-    title: "Customer Loyalty Programs",
-    description: "Keep customers coming back with automated rewards, special offers, and personalized follow-ups.",
+    id: "transcription",
+    icon: FileText,
+    title: "AI Doctor Note Transcription",
+    description: "Doctors speak naturally during or after a patient visit — AI transcribes everything into accurate, structured notes instantly, saving hours every day.",
     detailedInfo: {
       features: [
-        "Points-based reward system with automatic tracking",
-        "VIP customer tier recognition and exclusive offers",
-        "Birthday and anniversary special promotions",
-        "Referral program with rewards for both parties",
-        "Purchase history tracking for personalized offers",
-        "Mobile app integration for easy point redemption"
+        "Real-time voice-to-text transcription for clinical conversations",
+        "High accuracy with dental and medical terminology",
+        "Automatic formatting into structured note format",
+        "Integrates with your existing EHR or practice management system",
+        "Secure, HIPAA-compliant data handling",
+        "Available on mobile for on-the-go dictation"
       ],
       benefits: [
-        "Increase customer retention by 65% with reward incentives",
-        "Higher average transaction value through tier upgrades",
-        "Reduce customer acquisition costs with referral programs",
-        "Build emotional connection with personalized recognition",
-        "Compete with franchise chains using professional loyalty systems",
-        "Generate predictable repeat revenue from loyal customers"
+        "Save 1–2 hours per doctor per day on documentation",
+        "Reduce after-hours charting and burnout for providers",
+        "More accurate notes captured in real time",
+        "Doctors spend more time with patients, less on paperwork",
+        "Faster chart completion improves billing cycles",
+        "Works with any smartphone or microphone"
       ],
-      process: "We design your loyalty program structure, set up automated point tracking, create reward redemption systems, configure personalized campaign triggers, integrate with your POS system, and launch with customer enrollment campaigns.",
-      timeline: "Loyalty program launched with existing customer enrollment within 3-5 days."
+      process: "We configure the transcription system for your terminology, integrate it with your EHR, and train your providers on the simple recording workflow.",
+      timeline: "System configured and providers trained within 3–5 days."
     }
   },
   {
-    id: "communication",
-    icon: MessageSquare,
-    title: "Customer Communication Hub",
-    description: "Manage all customer conversations in one place - SMS, email, calls, and voicemails.",
+    id: "soap",
+    icon: ClipboardList,
+    title: "AI SOAP / Clinical Note Generation",
+    description: "From a brief voice summary or transcript, AI generates complete SOAP notes and clinical documentation — ready to review and sign in seconds.",
     detailedInfo: {
       features: [
-        "Unified inbox for SMS, email, and voicemail messages",
-        "Automated conversation routing to appropriate team members",
-        "Template responses for common customer inquiries",
-        "Customer conversation history and interaction tracking",
-        "Team collaboration tools for internal communication",
-        "Integration with existing business phone and email systems"
+        "Generates full Subjective, Objective, Assessment, Plan notes",
+        "Tailored templates for dental-specific procedures and visits",
+        "Doctor reviews and approves before finalizing",
+        "Pulls from transcription or brief dictation input",
+        "Consistent, compliant documentation every time",
+        "Reduces copy-paste errors and missing chart elements"
       ],
       benefits: [
-        "Respond to customers 3x faster with centralized communication",
-        "Never lose customer messages across different platforms",
-        "Maintain professional consistency with template responses",
-        "Improve customer service quality with conversation history",
-        "Reduce response time from hours to minutes",
-        "Scale customer service without hiring additional staff"
+        "Cut charting time from 10+ minutes to under 2 minutes per patient",
+        "Consistent, complete documentation for every visit",
+        "Reduce risk of incomplete or non-compliant notes",
+        "Free up doctor time for more patients or earlier sign-off",
+        "Improve billing accuracy with thorough documentation",
+        "Less burnout — providers go home on time"
       ],
-      process: "We integrate your existing communication channels, set up the unified dashboard, create response templates, configure team access permissions, train your staff on the system, and migrate existing conversation history.",
-      timeline: "Communication hub operational with team training completed within 2-3 days."
+      process: "We configure the AI with your SOAP note templates and dental terminology, connect it to your transcription or dictation workflow, and test with your team.",
+      timeline: "Generating clinical notes for your practice within 5–7 days."
     }
   },
   {
-    id: "social",
-    icon: Smartphone,
-    title: "Social Media Management",
-    description: "Professional social media posts and content creation to attract new customers online.",
+    id: "automation",
+    icon: Zap,
+    title: "AI Workflow Automation",
+    description: "Automate the repetitive tasks that drain your staff's time — from insurance verification to patient intake, recalls, and internal notifications.",
     detailedInfo: {
       features: [
-        "Automated posting schedule across Facebook, Instagram, and Google My Business",
-        "Professional content creation with branded graphics and copy",
-        "Local Dallas market content and event promotion",
-        "Customer feature posts and success story highlights",
-        "Engagement monitoring and response management",
-        "Analytics tracking for post performance and audience growth"
+        "Automated patient intake and new patient onboarding",
+        "Insurance verification and eligibility checks",
+        "Recall and hygiene appointment scheduling campaigns",
+        "Internal staff notifications and task assignments",
+        "Billing and payment follow-up automation",
+        "Custom workflows built around your clinic's processes"
       ],
       benefits: [
-        "Maintain consistent online presence without daily time investment",
-        "Attract new Dallas customers through local social media visibility",
-        "Build brand awareness with professional, engaging content",
-        "Showcase customer success stories for social proof",
-        "Compete with larger businesses through strategic content marketing",
-        "Drive website traffic and bookings through social media channels"
+        "Eliminate hours of manual, repetitive administrative work",
+        "Reduce human error in data entry and patient communication",
+        "Staff focuses on high-value patient care tasks",
+        "Faster patient onboarding and pre-appointment preparation",
+        "Improve collections with automated payment follow-ups",
+        "Scale your practice without scaling your overhead"
       ],
-      process: "We analyze your brand voice, create content calendar templates, design branded graphics, set up automated posting schedules, configure engagement monitoring, and provide monthly performance reports.",
-      timeline: "Social media automation active with first posts published within 48 hours."
+      process: "We map your existing workflows, identify the highest-impact automation opportunities, build custom automation sequences, and train your team on the new systems.",
+      timeline: "First automations live within 5–7 days depending on complexity."
     }
   }
 ];

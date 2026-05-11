@@ -37,15 +37,15 @@ export default function HeroSection() {
             <ul className="space-y-2 text-sm opacity-90 text-left max-w-sm mx-auto md:mx-0">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
-                Reduce no-shows with automated patient reminders
+                AI receptionist answers calls & books patients 24/7
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
-                Fill your schedule 24/7 with AI booking systems
+                AI generates SOAP & clinical notes in seconds
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
-                Grow 5-star reviews on Google automatically
+                Automate follow-ups, reviews & missed-call text back
               </li>
             </ul>
 
