@@ -7,7 +7,6 @@ import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import ROICalculator from "@/components/ROICalculator";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import CTASection from "@/components/CTASection";
 import BookingSection from "@/components/BookingSection";
@@ -41,8 +40,6 @@ export default function Home() {
         <AutomatedWebsiteShowcase />
         <ServicesSection />
         <PortfolioSection />
-
-        <ROICalculator />
 
         <CaseStudiesSection />
 
