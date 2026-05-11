@@ -112,7 +112,7 @@ export default function ContactSection() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">Koneyassine49@gmail.com</p>
+                  <p className="text-gray-600">contact@ivoiredigital.com</p>
                 </div>
               </div>
               
