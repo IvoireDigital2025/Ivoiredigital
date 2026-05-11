@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Coffee, Utensils, Store, Building2, TrendingUp, Clock, Users, Zap } from "lucide-react";
+import { Coffee, Utensils, Smile, Sparkles, TrendingUp, Clock, Users, Zap } from "lucide-react";
 
 export default function BusinessTargetSection() {
   const businessTypes = [
@@ -16,16 +16,16 @@ export default function BusinessTargetSection() {
       benefits: ["Reservation management", "Online ordering systems", "Review automation"]
     },
     {
-      icon: Store,
-      title: "Food & Beverage Retailers",
-      description: "Optimize supply chain, automate customer service, and increase sales",
-      benefits: ["Supply chain optimization", "Customer service bots", "Sales analytics"]
+      icon: Smile,
+      title: "Dental Clinics",
+      description: "Reduce no-shows, automate patient reminders, and handle appointment requests 24/7",
+      benefits: ["Automated appointment reminders", "Patient intake automation", "Insurance inquiry handling"]
     },
     {
-      icon: Building2,
-      title: "Mid-Size Companies",
-      description: "Scale operations, automate workflows, and enhance customer experience",
-      benefits: ["Workflow automation", "CRM integration", "Advanced analytics"]
+      icon: Sparkles,
+      title: "Spas & Wellness Centers",
+      description: "Fill your booking calendar, upsell treatments, and keep clients coming back with smart follow-ups",
+      benefits: ["Automated booking system", "Treatment upsell campaigns", "Client retention follow-ups"]
     }
   ];
 
@@ -66,8 +66,8 @@ export default function BusinessTargetSection() {
             We Partner with Businesses Like Yours
           </h2>
           <p className="text-base text-green-100 max-w-3xl mx-auto">
-            From local coffee shops to mid-size companies, we help businesses in the food, beverage, 
-            and service industries automate operations and attract more customers through smart technology.
+            From local coffee shops and restaurants to dental clinics and spas, we help businesses 
+            automate operations and attract more customers through smart AI technology.
           </p>
         </motion.div>
 

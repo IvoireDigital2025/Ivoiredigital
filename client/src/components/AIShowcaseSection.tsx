@@ -33,21 +33,21 @@ export default function AIShowcaseSection() {
     },
     {
       id: 4,
-      title: "Auto Shop Service Bot",
-      description: "Local auto repair shop uses AI to schedule services, provide quotes, and send maintenance reminders.",
-      image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=400&fit=crop&crop=center",
-      industry: "Automotive",
-      results: ["35% increase in bookings", "Reduced phone calls", "Better customer retention"],
-      icon: Star
+      title: "Dental Clinic AI Assistant",
+      description: "Dental practice uses AI to handle appointment scheduling, patient reminders, and insurance inquiries around the clock.",
+      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop&crop=center",
+      industry: "Dental Clinic",
+      results: ["70% fewer missed appointments", "24/7 patient support", "50% less front-desk workload"],
+      icon: Phone
     },
     {
       id: 5,
-      title: "Salon Booking Assistant",
-      description: "Beauty salon implemented AI for appointment booking, service recommendations, and customer feedback collection.",
-      image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop&crop=center",
-      industry: "Beauty & Wellness",
-      results: ["90% booking automation", "Reduced no-shows", "Increased repeat customers"],
-      icon: MessageSquare
+      title: "Spa & Wellness Booking Bot",
+      description: "Luxury spa uses AI to automate bookings, upsell treatments, and send personalized follow-up messages to clients.",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop&crop=center",
+      industry: "Spa & Wellness",
+      results: ["90% booking automation", "Reduced no-shows by 60%", "Increased repeat clients"],
+      icon: Star
     }
   ];
 

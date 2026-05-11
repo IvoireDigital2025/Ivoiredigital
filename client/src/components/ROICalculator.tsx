@@ -30,9 +30,9 @@ export default function ROICalculator() {
   const businessTypes = [
     { value: "retail", label: "Retail/E-commerce", multiplier: 1.2 },
     { value: "professional", label: "Professional Services", multiplier: 1.5 },
-    { value: "healthcare", label: "Healthcare", multiplier: 1.3 },
+    { value: "dental", label: "Dental Clinic", multiplier: 1.4 },
+    { value: "spa", label: "Spa & Wellness", multiplier: 1.3 },
     { value: "real-estate", label: "Real Estate", multiplier: 1.4 },
-    { value: "manufacturing", label: "Manufacturing", multiplier: 1.1 },
     { value: "technology", label: "Technology", multiplier: 1.6 },
     { value: "restaurant", label: "Restaurant/Food", multiplier: 1.0 },
     { value: "consulting", label: "Consulting", multiplier: 1.7 }
