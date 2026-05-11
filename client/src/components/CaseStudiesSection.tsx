@@ -27,7 +27,7 @@ const caseStudies: CaseStudy[] = [
       "50% fewer scheduling calls to front desk",
       "12 new patient bookings captured after hours in first month"
     ],
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=500&fit=crop&crop=center"
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop&crop=center"
   },
   {
     id: "case-2",

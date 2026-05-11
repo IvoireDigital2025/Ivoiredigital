@@ -9,7 +9,7 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     id: "dental-receptionist",
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=600&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&crop=center",
     category: "AI Receptionist",
     title: "Dental Clinic — AI Phone System",
     description: "Implemented a 24/7 AI receptionist that answers calls, books appointments, and handles patient FAQs. Reduced front-desk workload by 50%."
