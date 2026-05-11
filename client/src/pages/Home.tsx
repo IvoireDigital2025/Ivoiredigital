@@ -7,9 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AIShowcaseSection from "@/components/AIShowcaseSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
-import GuidesSection from "@/components/GuidesSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import WebsiteAuditTool from "@/components/WebsiteAuditTool";
 import ROICalculator from "@/components/ROICalculator";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import CTASection from "@/components/CTASection";
@@ -46,15 +44,9 @@ export default function Home() {
         <AIShowcaseSection />
         <PortfolioSection />
 
-        <SectionDivider
-          title="Free Business Tools"
-          subtitle="See what AI could do for your clinic or spa"
-        />
-        <WebsiteAuditTool />
         <ROICalculator />
 
         <CaseStudiesSection />
-        <GuidesSection />
 
         <SectionDivider
           title="About Our Services"
