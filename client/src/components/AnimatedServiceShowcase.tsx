@@ -1,214 +1,167 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Globe, Phone, MessageSquare, Calendar, Star, Users, Mail, Smartphone,
-  Smile, Sparkles
+import { motion } from "framer-motion";
+import {
+  Phone, Calendar, MessageSquare, Star, Globe, FileText,
+  ClipboardList, Zap, UserCheck, Target, Search, Mail,
+  BarChart2, Share2, Megaphone
 } from "lucide-react";
 
+const aiServices = [
+  { icon: Phone, title: "AI Dental Receptionist", desc: "Answers calls, books appointments & handles FAQs 24/7" },
+  { icon: Calendar, title: "AI Appointment Booking", desc: "Online booking with automated reminders to cut no-shows" },
+  { icon: MessageSquare, title: "Missed-Call Text Back", desc: "Every missed call gets an instant text reply with a booking link" },
+  { icon: UserCheck, title: "Patient Follow-Up & Reactivation", desc: "Re-engages lapsed patients and spa clients automatically" },
+  { icon: Globe, title: "AI Web Chat Assistant", desc: "24/7 chat on your website that books appointments for you" },
+  { icon: Star, title: "AI Review Generation", desc: "Auto-requests Google reviews after every visit" },
+  { icon: FileText, title: "AI Doctor Note Transcription", desc: "Voice-to-text transcription for clinical notes in real time" },
+  { icon: ClipboardList, title: "AI SOAP Note Generation", desc: "Complete SOAP notes from a brief dictation — ready to sign" },
+  { icon: Zap, title: "AI Workflow Automation", desc: "Automates intake, insurance checks, recalls & staff notifications" },
+];
+
+const marketingServices = [
+  { icon: Search, title: "Local SEO", desc: "Rank at the top of Google when patients search for clinics or spas near them" },
+  { icon: Target, title: "Google & Meta Ads", desc: "Paid ad campaigns that bring in new dental patients and spa clients" },
+  { icon: Share2, title: "Social Media Management", desc: "Consistent, branded posts that build trust and attract new clients" },
+  { icon: Mail, title: "Email & SMS Marketing", desc: "Targeted campaigns to keep patients and clients engaged and rebooking" },
+  { icon: BarChart2, title: "Reputation Management", desc: "Monitor, respond to, and grow your reviews across all platforms" },
+  { icon: Megaphone, title: "Content Marketing", desc: "Blog posts, before/after content, and educational material that converts" },
+];
+
 export default function AnimatedServiceShowcase() {
-  const [activeIndustry, setActiveIndustry] = useState(0);
-
-  const industries = [
-    {
-      id: "dental",
-      name: "Dental Clinics",
-      icon: Smile,
-      color: "from-blue-500 to-cyan-600",
-      services: [
-        {
-          icon: Globe,
-          title: "Professional Dental Website",
-          description: "Beautiful, trust-building website that converts visitors into booked patients",
-          stats: "Professional online presence"
-        },
-        {
-          icon: Phone,
-          title: "AI Phone Assistant",
-          description: "Never miss a patient call — AI handles scheduling, questions, and insurance inquiries 24/7",
-          stats: "24/7 phone coverage"
-        },
-        {
-          icon: Calendar,
-          title: "Online Appointment Booking",
-          description: "Patients book, reschedule, or cancel appointments online anytime — syncs to your calendar",
-          stats: "Reduces no-shows by 70%"
-        },
-        {
-          icon: Star,
-          title: "Automated Review Collection",
-          description: "Post-visit texts ask happy patients for Google reviews automatically, growing your reputation",
-          stats: "4.9★ average rating"
-        }
-      ]
-    },
-    {
-      id: "spa",
-      name: "Spas & Wellness",
-      icon: Sparkles,
-      color: "from-rose-500 to-pink-600",
-      services: [
-        {
-          icon: Globe,
-          title: "Luxury Spa Website",
-          description: "Stunning, high-converting website that showcases your treatments and books clients instantly",
-          stats: "Premium brand experience"
-        },
-        {
-          icon: Calendar,
-          title: "Smart Booking System",
-          description: "Clients book treatments online 24/7 with automatic confirmations and reminders sent to their phone",
-          stats: "Fill your schedule automatically"
-        },
-        {
-          icon: Smartphone,
-          title: "Client Retention Texts",
-          description: "Automated follow-up messages, rebooking reminders, and special offers sent to past clients",
-          stats: "80% rebooking rate"
-        },
-        {
-          icon: Users,
-          title: "VIP Loyalty Program",
-          description: "Reward your best clients with exclusive offers, early access, and personalized treatment upsells",
-          stats: "40% increase in revenue"
-        }
-      ]
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndustry((prev) => (prev + 1) % industries.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentIndustry = industries[activeIndustry];
-  const IconComponent = currentIndustry.icon;
-
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <motion.div 
-          className="text-center mb-16"
+        <motion.div
+          className="text-center mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl md:text-3xl font-poppins font-bold text-[#14532d] mb-4">
-            Branded, Done-For-You Marketing Solutions
+          <span className="inline-block bg-[#14532d]/10 text-[#14532d] text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">
+            What We Offer
+          </span>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">
+            AI Automation <span className="text-[#14532d]">+</span> Digital Marketing<br />
+            <span className="text-[#14532d]">Exclusively for Dental Clinics & Spas</span>
           </h2>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto">
-            Complete marketing systems built specifically for dental clinics and spas. 
-            We set everything up for you — websites, booking systems, review management, and client communication tools.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Two powerful pillars working together — intelligent automation to run your operations, and targeted marketing to grow your patient and client base.
           </p>
         </motion.div>
 
-        {/* Industry Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {industries.map((industry, index) => {
-            const IndustryIcon = industry.icon;
-            return (
-              <button
-                key={industry.id}
-                onClick={() => setActiveIndustry(index)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 ${
-                  activeIndustry === index
-                    ? 'bg-[#14532d] text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100'
-                }`}
-              >
-                <IndustryIcon className="w-4 h-4" />
-                <span className="text-sm font-medium">{industry.name}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Animated Service Showcase */}
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndustry}
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl shadow-2xl overflow-hidden"
-            >
-              <div className={`bg-gradient-to-r ${currentIndustry.color} p-8 text-white`}>
-                <div className="flex items-center justify-center space-x-4 mb-4">
-                  <div className="bg-white/20 p-3 rounded-full">
-                    <IconComponent className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">{currentIndustry.name}</h3>
-                    <p className="text-white/90">Marketing & Growth Solutions</p>
-                  </div>
-                </div>
+        <div className="grid lg:grid-cols-2 gap-10">
+          {/* AI Automation */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-gradient-to-br from-[#14532d] to-[#166534] rounded-2xl p-8 text-white"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="bg-white/20 p-2.5 rounded-xl">
+                <Zap className="w-6 h-6 text-[#f59e0b]" />
               </div>
-
-              <div className="p-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {currentIndustry.services.map((service, serviceIndex) => {
-                    const ServiceIcon = service.icon;
-                    return (
-                      <motion.div
-                        key={serviceIndex}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: serviceIndex * 0.1 }}
-                        className="text-center group hover:bg-gray-50 p-4 rounded-xl transition-all duration-300"
-                      >
-                        <div className={`bg-gradient-to-r ${currentIndustry.color} p-3 rounded-full w-fit mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                          <ServiceIcon className="w-6 h-6 text-white" />
-                        </div>
-                        <h4 className="font-bold text-[#14532d] mb-2">{service.title}</h4>
-                        <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                          {service.description}
-                        </p>
-                        <div className={`bg-gradient-to-r ${currentIndustry.color} text-white px-3 py-1 rounded-full text-xs font-medium inline-block`}>
-                          {service.stats}
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
+              <div>
+                <h3 className="text-xl font-bold">AI Automation Services</h3>
+                <p className="text-white/70 text-sm">Let AI handle the work — you focus on patients</p>
               </div>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+            <div className="space-y-3">
+              {aiServices.map((service, i) => {
+                const Icon = service.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    className="flex items-start gap-3 bg-white/10 hover:bg-white/15 rounded-xl p-4 transition-all duration-200"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                  >
+                    <div className="bg-[#f59e0b] p-2 rounded-lg flex-shrink-0">
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm leading-tight">{service.title}</p>
+                      <p className="text-white/65 text-xs mt-0.5 leading-relaxed">{service.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Digital Marketing */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-2xl p-8 text-white"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="bg-white/20 p-2.5 rounded-xl">
+                <Megaphone className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Digital Marketing Services</h3>
+                <p className="text-white/80 text-sm">Attract more patients and clients consistently</p>
+              </div>
+            </div>
+            <div className="space-y-3">
+              {marketingServices.map((service, i) => {
+                const Icon = service.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    className="flex items-start gap-3 bg-white/15 hover:bg-white/20 rounded-xl p-4 transition-all duration-200"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                  >
+                    <div className="bg-white/30 p-2 rounded-lg flex-shrink-0">
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm leading-tight">{service.title}</p>
+                      <p className="text-white/75 text-xs mt-0.5 leading-relaxed">{service.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Filler padding to match height */}
+            <div className="mt-3 bg-white/10 rounded-xl p-4 flex items-center gap-3">
+              <div className="bg-white/30 p-2 rounded-lg flex-shrink-0">
+                <Target className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <p className="font-semibold text-sm">Custom Growth Strategy</p>
+                <p className="text-white/75 text-xs mt-0.5">Tailored marketing plan built specifically for your clinic or spa</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
-        {/* Progress Indicators */}
-        <div className="flex justify-center space-x-2 mt-8">
-          {industries.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndustry(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeIndustry === index ? 'bg-[#14532d] scale-125' : 'bg-gray-300'
-              }`}
-            />
-          ))}
-        </div>
-
-        <motion.div 
+        {/* Bottom CTA */}
+        <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <p className="text-base text-gray-700 mb-6 max-w-2xl mx-auto">
-            Ready to get a complete branded marketing system for your dental clinic or spa? 
-            We handle everything — setup, customization, and training so you can focus on your patients and clients.
+          <p className="text-gray-600 mb-5 text-base max-w-xl mx-auto">
+            Not sure which services you need? Book a free consultation and we'll build a custom plan for your practice.
           </p>
-          <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
+          <button
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-[#14532d] hover:bg-[#166534] text-white px-8 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
-            Get Your Done-For-You Solution
+            Get a Free Custom Plan
           </button>
         </motion.div>
       </div>

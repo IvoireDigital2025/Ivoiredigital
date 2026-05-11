@@ -51,16 +51,22 @@ const consultationTypes = [
 ];
 
 const services = [
-  "AI Chatbot Implementation",
-  "Website Development & Design", 
-  "Digital Marketing Strategy",
-  "Business Process Automation",
-  "GoHighLevel Setup & Training",
+  "AI Dental Receptionist",
+  "AI Appointment Booking System",
+  "Missed-Call Text Back",
+  "Patient / Client Follow-Up & Reactivation",
+  "AI Web Chat Assistant",
+  "AI Review Generation",
+  "AI Doctor Note Transcription",
+  "AI SOAP / Clinical Note Generation",
+  "AI Workflow Automation",
+  "Local SEO",
+  "Google & Meta Ads",
   "Social Media Management",
-  "Local SEO Optimization",
-  "Email Marketing Automation",
-  "Lead Generation Systems",
-  "General Consultation"
+  "Email & SMS Marketing",
+  "Reputation Management",
+  "Full AI + Marketing Package",
+  "Not Sure — Need Advice",
 ];
 
 const timeSlots = [

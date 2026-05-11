@@ -13,18 +13,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <a href="#" onClick={() => handleNavClick("home")} className="inline-block mb-4">
-              <img 
-                src={ivoireLogo} 
-                alt="Ivoire Digital Logo" 
-                className="h-24 sm:h-28 md:h-32 object-contain" 
-                style={{ 
+              <img
+                src={ivoireLogo}
+                alt="Ivoire Digital Logo"
+                className="h-24 sm:h-28 md:h-32 object-contain"
+                style={{
                   filter: 'brightness(1.2) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
-                  background: 'transparent' 
-                }} 
+                  background: 'transparent'
+                }}
               />
             </a>
             <p className="text-gray-400 mb-6 text-sm sm:text-base">
-              Empowering small businesses with AI and digital solutions to attract more clients and automate operations.
+              AI automation and digital marketing exclusively for dental clinics and spas in Dallas and beyond.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">
@@ -41,101 +41,72 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
+
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Services</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">AI Services</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Website Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">AI Solutions</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Digital Marketing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Business Automation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">SEO Optimization</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Review Management</a></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI Dental Receptionist</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI Appointment Booking</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Missed-Call Text Back</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Patient Follow-Up & Reactivation</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI SOAP Note Generation</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI Review Generation</span></li>
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Resources</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Marketing Services</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li>
-                <button 
-                  onClick={() => handleNavClick("blog")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  Blog
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleNavClick("case-studies")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  Case Studies
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleNavClick("guides")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  Guides
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleNavClick("faq")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  FAQ
-                </button>
-              </li>
-              <li><a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">Support</a></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Local SEO</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Google & Meta Ads</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Social Media Management</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Email & SMS Marketing</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Reputation Management</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Content Marketing</span></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <button 
-                  onClick={() => handleNavClick("about-us")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  About Us
+                <button onClick={() => handleNavClick("home")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                  Home
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick("services")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
+                <button onClick={() => handleNavClick("services")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
                   Services
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick("portfolio")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
-                  Portfolio
+                <button onClick={() => handleNavClick("case-studies")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                  Results
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavClick("contact")} 
-                  className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base"
-                >
+                <button onClick={() => handleNavClick("faq")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick("contact")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
                   Contact
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNavClick("booking")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                  Book Free Consultation
                 </button>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-6 sm:pt-8 border-t border-gray-800 text-xs sm:text-sm text-gray-400">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
             <div className="text-center sm:text-left">
-              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved.
+              &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved. Dallas, TX.
             </div>
             <div className="text-center sm:text-right">
               <a href="#" className="hover:text-[#f59e0b] transition-colors">Privacy Policy</a>
