@@ -26,8 +26,8 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-poppins font-bold leading-tight">
-              More Patients. More Bookings.
-              <span className="text-[#f59e0b]"> On Autopilot.</span>
+              AI-Powered Systems for
+              <span className="text-[#f59e0b]"> Dental Clinics & Spas</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
