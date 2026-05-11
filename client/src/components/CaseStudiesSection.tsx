@@ -16,33 +16,33 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: "case-1",
-    title: "Toyota Dealership Transforms Customer Experience with AI-Powered Service Platform",
-    client: "Toyota Dealership Network",
-    industry: "Automotive Sales & Service",
-    challenge: "A Toyota dealership was struggling to handle the increasing volume of customer inquiries about vehicle availability, service appointments, financing options, and post-purchase support across their busy service center.",
-    solution: "We implemented a custom AI chatbot solution that integrated with their inventory management system, service scheduling platform, and financing tools to provide instant answers to common customer questions and streamline the entire customer journey.",
+    title: "Dental Practice Cuts No-Shows by 70% and Saves 2 Hours Daily with AI",
+    client: "Multi-Provider Dental Clinic",
+    industry: "Dental Clinic",
+    challenge: "A busy multi-provider dental clinic was losing thousands of dollars monthly to no-shows and last-minute cancellations. Their front desk was overwhelmed with scheduling calls and doctors were staying late every evening to finish charting.",
+    solution: "We deployed our AI appointment booking system with automated reminders, an AI receptionist to handle incoming calls 24/7, and our AI SOAP note generation system so doctors could complete charts in minutes instead of hours.",
     results: [
-      "47% reduction in customer service costs",
-      "24/7 availability for sales and service inquiries",
-      "89% customer satisfaction rate with AI interactions",
-      "35% decrease in call volume to human agents"
+      "70% reduction in patient no-shows",
+      "Doctors save 90+ minutes daily on charting",
+      "50% fewer scheduling calls to front desk",
+      "12 new patient bookings captured after hours in first month"
     ],
-    image: "/toyota-image.avif"
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=500&fit=crop&crop=center"
   },
   {
     id: "case-2",
-    title: "Coffee Shop Digital Transformation Doubles Daily Efficiency",
-    client: "Coffee Pro",
-    industry: "Food & Beverage",
-    challenge: "Coffee Pro on Astoria Blvd in New York was struggling with long wait times, missed orders, and limited staff availability to handle customer inquiries outside business hours.",
-    solution: "We implemented a comprehensive digital transformation including a complete website redesign, AI-powered ordering system with automated customer support, smart inventory alerts, and targeted digital marketing campaigns.",
+    title: "Luxury Spa Fills Schedule on Autopilot and Grows to 4.9 Stars on Google",
+    client: "Wellness & Spa Center",
+    industry: "Spa & Wellness",
+    challenge: "A high-end spa was relying entirely on phone calls and manual follow-ups to fill their treatment schedule. Client retention was low, staff spent hours each week on admin tasks, and their Google reviews were sparse despite having happy clients.",
+    solution: "We implemented an AI booking system with automated reminders, a missed-call text-back system, an AI client reactivation campaign targeting lapsed clients, and an automated Google review request system sent after every completed appointment.",
     results: [
-      "Doubled operational efficiency",
-      "24/7 customer order handling",
-      "Reduced wait times by 60%",
-      "300% increase in online engagement"
+      "Calendar 90% full within 6 weeks of launch",
+      "Grew from 3.8 to 4.9 stars on Google",
+      "42% of lapsed clients rebooked via reactivation campaign",
+      "Front desk saves 15+ hours per week on admin"
     ],
-    image: "/coffee-pro-storefront.webp"
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=500&fit=crop&crop=center"
   }
 ];
 

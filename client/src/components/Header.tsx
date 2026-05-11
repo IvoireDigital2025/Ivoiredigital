@@ -39,11 +39,9 @@ export default function Header({ scrolled }: HeaderProps) {
         
         <div className="hidden lg:flex space-x-6 text-white mx-auto text-sm xl:text-base">
           <button onClick={() => handleNavClick("home")} className="hover:text-[#f59e0b] transition-colors">Home</button>
-          <a href="/about" className="hover:text-[#f59e0b] transition-colors">About Us</a>
           <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
-          <button onClick={() => handleNavClick("portfolio")} className="hover:text-[#f59e0b] transition-colors">Portfolio</button>
-          <button onClick={() => handleNavClick("testimonials")} className="hover:text-[#f59e0b] transition-colors">Testimonials</button>
-          <button onClick={() => handleNavClick("blog")} className="hover:text-[#f59e0b] transition-colors">Blog</button>
+          <button onClick={() => handleNavClick("case-studies")} className="hover:text-[#f59e0b] transition-colors">Results</button>
+          <button onClick={() => handleNavClick("faq")} className="hover:text-[#f59e0b] transition-colors">FAQ</button>
           <button onClick={() => handleNavClick("contact")} className="hover:text-[#f59e0b] transition-colors">Contact</button>
         </div>
         
@@ -68,11 +66,9 @@ export default function Header({ scrolled }: HeaderProps) {
       <div className={`lg:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-3">
           <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Home</button>
-          <a href="/about" className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2">About Us</a>
           <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Services</button>
-          <button onClick={() => handleNavClick("portfolio")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Portfolio</button>
-          <button onClick={() => handleNavClick("testimonials")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Testimonials</button>
-          <button onClick={() => handleNavClick("blog")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Blog</button>
+          <button onClick={() => handleNavClick("case-studies")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Results</button>
+          <button onClick={() => handleNavClick("faq")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">FAQ</button>
           <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left font-medium">Book Consultation</button>
           <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Contact</button>
           <div className="pt-2">

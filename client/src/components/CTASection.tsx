@@ -12,9 +12,9 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-4">Ready to Put Your Clinic on Autopilot?</h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            Let's discuss how Ivoire Digital's AI and digital marketing solutions can help you attract more clients and automate your business.
+            Let's talk about how our AI systems can save your staff time, reduce no-shows, and grow your dental clinic or spa — all done for you.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button 

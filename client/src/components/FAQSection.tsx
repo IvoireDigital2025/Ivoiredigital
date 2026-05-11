@@ -9,43 +9,43 @@ import {
 const faqItems = [
   {
     id: "faq-1",
-    question: "What AI services do you offer for small businesses?",
-    answer: "We offer a comprehensive suite of AI solutions tailored specifically for small businesses nationwide. Our services include AI chatbots for 24/7 customer support, automated email responses, AI-powered social media management, voice assistants for appointment scheduling, and personalized customer recommendations systems. Each solution is customized to fit your business needs and budget."
+    question: "What AI services do you offer for dental clinics?",
+    answer: "We offer a full suite of AI systems built specifically for dental practices: an AI receptionist that answers calls and books appointments 24/7, automated appointment reminders to reduce no-shows, a missed-call text-back system, patient follow-up and reactivation campaigns, Google review generation, an AI web chat assistant for your website, AI doctor note transcription, AI SOAP/clinical note generation, and full workflow automation for tasks like patient intake and insurance verification."
   },
   {
     id: "faq-2",
-    question: "How can digital marketing help my local business attract more clients?",
-    answer: "Our digital marketing strategies focus on local SEO to boost your business visibility in your target market. We implement targeted keywords, Google My Business optimization, and location-based ad campaigns. Our clients typically see a 40-60% increase in local inquiries within the first three months. We emphasize mobile-first strategies since 78% of local searches result in offline purchases."
+    question: "Can your AI receptionist handle real patient calls?",
+    answer: "Yes. Our AI receptionist uses natural, human-like voice technology to answer incoming calls, schedule appointments, answer common questions about your services, hours, and insurance — and seamlessly transfer to your staff when needed. It works 24/7, including evenings and weekends, so you never miss a new patient inquiry again."
   },
   {
     id: "faq-3",
-    question: "What's the cost of implementing AI solutions for my small business?",
-    answer: "Our AI solutions start at $299/month for basic implementations. We offer scalable packages based on your specific needs and growth goals. Most clients begin with a focused solution in one area (like customer service or lead generation) and expand as they see ROI. We provide a free consultation to assess your needs and provide transparent pricing with no hidden fees."
+    question: "How much time can your AI SOAP note system save our doctors?",
+    answer: "Most dentists spend 1–2 hours per day on charting and documentation. Our AI transcription and SOAP note generation system can cut that down to just minutes per patient. Doctors speak naturally during or after a visit, the AI transcribes it and generates a structured SOAP note ready to review and sign — saving significant time every single day."
   },
   {
     id: "faq-4",
-    question: "How long does it take to develop and launch a new website?",
-    answer: "Our website development is incredibly fast - we can have your new website live in just 1 to 3 days! This includes a fully automated website design process with professional templates, your branding, content integration, and all the marketing tools you need. Our done-for-you approach means we handle everything while you focus on running your business."
+    question: "Will your systems work with our existing practice management software?",
+    answer: "Yes. We integrate with most major dental practice management platforms including Dentrix, Eaglesoft, Open Dental, Carestream, and others. We also connect with Google Calendar, EHR systems, and phone providers. During your free consultation, we'll assess your current setup and confirm compatibility before we start."
   },
   {
     id: "faq-5",
-    question: "Do you offer maintenance and support after project completion?",
-    answer: "Yes, we offer comprehensive maintenance and support packages. Our standard support includes security updates, performance monitoring, regular backups, and technical assistance. We also provide content updates and feature additions on request. Our support team is available Monday-Friday, 9am-6pm CST with emergency support available 24/7 for critical issues."
+    question: "Do your systems work for spas and wellness centers too?",
+    answer: "Absolutely. We build AI systems for spas, med spas, and wellness centers as well — including automated booking, client follow-up and reactivation campaigns, missed-call text back, AI chat on your website, and Google review generation. The goal is the same: fill your schedule, reduce no-shows, and keep clients coming back without your staff having to do it manually."
   },
   {
     id: "faq-6",
-    question: "How do you measure the success of digital marketing campaigns?",
-    answer: "We establish clear KPIs at the beginning of each campaign based on your business goals. Common metrics include website traffic, conversion rates, lead generation, cost per acquisition, and ROI. We provide monthly detailed reports with data visualization and actionable insights. Our transparent reporting shows exactly what's working and where improvements can be made."
+    question: "How long does it take to get set up?",
+    answer: "Most systems are live within 3–7 business days depending on what you're implementing. Simple systems like missed-call text-back or review generation can go live within 24–48 hours. More complex setups like full AI receptionist integration or SOAP note generation typically take 5–7 days including testing and staff training."
   },
   {
     id: "faq-7",
-    question: "Can you integrate AI with my existing business systems?",
-    answer: "Absolutely. We specialize in seamless integration of AI solutions with your existing business systems including CRMs, email platforms, booking systems, and e-commerce platforms. We've successfully integrated with popular systems like Salesforce, HubSpot, Shopify, and QuickBooks, as well as custom proprietary systems. Our integration process minimizes disruption to your current operations."
+    question: "Is patient data secure and HIPAA compliant?",
+    answer: "Yes. All systems we implement follow HIPAA compliance standards. Patient data is encrypted, access is controlled, and we sign Business Associate Agreements (BAAs) as required. Your patients' information is handled with the same care and security standards expected in a healthcare environment."
   },
   {
     id: "faq-8",
-    question: "What makes Ivoire Digital different from other digital marketing agencies?",
-    answer: "Ivoire Digital combines deep technical expertise with practical small business knowledge. Unlike larger agencies, we provide personalized attention with dedicated account managers who understand local market dynamics. We focus exclusively on ROI-driven solutions rather than vanity metrics. Our hybrid approach of cutting-edge AI implementation with proven digital marketing strategies creates a comprehensive growth system for your business."
+    question: "What makes Ivoire Digital different from other AI agencies?",
+    answer: "We specialize exclusively in dental clinics and spas — we don't try to serve every industry. This means our systems are purpose-built for healthcare and wellness workflows, not adapted from generic templates. We handle everything from setup to training, and we measure our success by the actual outcomes you see: fewer no-shows, more booked appointments, time saved on documentation, and more 5-star reviews."
   }
 ];
 
@@ -62,7 +62,7 @@ export default function FAQSection() {
         >
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Frequently Asked Questions</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Get answers to common questions about our AI solutions, digital marketing services, and how we can help your business grow.
+            Common questions from dental clinics and spas about our AI systems.
           </p>
         </motion.div>
         
@@ -87,24 +87,6 @@ export default function FAQSection() {
               </motion.div>
             ))}
           </Accordion>
-        </div>
-        
-        {/* Hidden SEO content */}
-        <div className="sr-only">
-          <h2>AI Agency FAQ - Common Questions About AI Solutions for Small Business</h2>
-          <p>
-            Find answers to frequently asked questions about artificial intelligence implementation, 
-            digital marketing for local businesses, website development timelines, and business 
-            automation costs. Ivoire Digital provides transparent information about our services, 
-            pricing, and results for Dallas businesses looking to grow with AI and digital solutions.
-          </p>
-          
-          <h2>Dallas Digital Marketing Agency FAQ - Costs, Timeline, and Results</h2>
-          <p>
-            Learn about digital marketing services in Dallas, including SEO, PPC, social media marketing, 
-            and content strategy. Our FAQ covers the most common questions about pricing, expected timelines, 
-            measurable results, and how we tailor our approaches for local Dallas businesses.
-          </p>
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ export default function PortfolioSection() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Our Work</h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            See how we've helped businesses like yours achieve their digital goals.
+            AI systems we've built for dental clinics and spas — delivering real, measurable results.
           </p>
         </motion.div>
         
@@ -34,19 +34,6 @@ export default function PortfolioSection() {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <motion.a 
-            href="#"
-            className="inline-flex items-center text-[#f59e0b] font-medium hover:underline"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            View all case studies
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </motion.a>
-        </div>
       </div>
     </section>
   );

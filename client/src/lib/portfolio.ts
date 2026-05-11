@@ -8,24 +8,24 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: "boutique",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    category: "E-commerce",
-    title: "Boutique Fashion Store",
-    description: "Custom online store with AI-powered product recommendations and automated marketing."
+    id: "dental-receptionist",
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=600&fit=crop&crop=center",
+    category: "AI Receptionist",
+    title: "Dental Clinic — AI Phone System",
+    description: "Implemented a 24/7 AI receptionist that answers calls, books appointments, and handles patient FAQs. Reduced front-desk workload by 50%."
   },
   {
-    id: "service",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    category: "Automation",
-    title: "Local Service Provider",
-    description: "AI-powered booking system and client management solution that increased efficiency by 70%."
+    id: "spa-booking",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop&crop=center",
+    category: "Booking Automation",
+    title: "Luxury Spa — Automated Booking System",
+    description: "Deployed an AI booking system with automated reminders and client follow-up sequences. Reduced no-shows by 65% and increased repeat bookings."
   },
   {
-    id: "professional",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    category: "Marketing",
-    title: "Professional Services Firm",
-    description: "Comprehensive digital marketing strategy that resulted in 150% increase in qualified leads."
+    id: "dental-notes",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=600&fit=crop&crop=center",
+    category: "Clinical Documentation",
+    title: "Dental Practice — AI SOAP Note System",
+    description: "Integrated AI voice transcription and SOAP note generation, saving each dentist over 90 minutes of charting time per day."
   }
 ];
