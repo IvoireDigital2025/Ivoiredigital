@@ -29,10 +29,10 @@ export default function Header({ scrolled }: HeaderProps) {
           <img 
             src={ivoireLogo} 
             alt="Ivoire Digital Logo" 
-            className="h-28 sm:h-32 w-auto object-contain" 
+            className="h-36 sm:h-44 w-auto object-contain" 
             style={{ 
               mixBlendMode: 'screen',
-              maxWidth: '520px'
+              maxWidth: '680px'
             }} 
           />
         </a>
