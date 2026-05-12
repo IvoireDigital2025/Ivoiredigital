@@ -6,24 +6,24 @@ import {
 } from "lucide-react";
 
 const aiServices = [
-  { icon: Phone, title: "AI Dental Receptionist", desc: "Answers calls, books appointments & handles FAQs 24/7" },
+  { icon: Phone, title: "AI Receptionist", desc: "Answers calls, books appointments & handles FAQs 24/7" },
   { icon: Calendar, title: "AI Appointment Booking", desc: "Online booking with automated reminders to cut no-shows" },
   { icon: MessageSquare, title: "Missed-Call Text Back", desc: "Every missed call gets an instant text reply with a booking link" },
-  { icon: UserCheck, title: "Patient Follow-Up & Reactivation", desc: "Re-engages lapsed patients and spa clients automatically" },
+  { icon: UserCheck, title: "Client Follow-Up & Reactivation", desc: "Re-engages lapsed clients automatically to bring back lost revenue" },
   { icon: Globe, title: "AI Web Chat Assistant", desc: "24/7 chat on your website that books appointments for you" },
   { icon: Star, title: "AI Review Generation", desc: "Auto-requests Google reviews after every visit" },
-  { icon: FileText, title: "AI Doctor Note Transcription", desc: "Voice-to-text transcription for clinical notes in real time" },
-  { icon: ClipboardList, title: "AI SOAP Note Generation", desc: "Complete SOAP notes from a brief dictation — ready to sign" },
-  { icon: Zap, title: "AI Workflow Automation", desc: "Automates intake, insurance checks, recalls & staff notifications" },
+  { icon: FileText, title: "AI Note Transcription", desc: "Voice-to-text transcription for meeting notes or clinical notes in real time" },
+  { icon: ClipboardList, title: "AI Report & Note Generation", desc: "Complete structured reports from a brief dictation — ready to review" },
+  { icon: Zap, title: "AI Workflow Automation", desc: "Automates intake, follow-ups, reminders & internal notifications" },
 ];
 
 const marketingServices = [
-  { icon: Search, title: "Local SEO", desc: "Rank at the top of Google when patients search for clinics or spas near them" },
-  { icon: Target, title: "Google & Meta Ads", desc: "Paid ad campaigns that bring in new dental patients and spa clients" },
+  { icon: Search, title: "Local SEO", desc: "Rank at the top of Google when customers search for your services nearby" },
+  { icon: Target, title: "Google & Meta Ads", desc: "Paid ad campaigns that bring in new clients consistently" },
   { icon: Share2, title: "Social Media Management", desc: "Consistent, branded posts that build trust and attract new clients" },
-  { icon: Mail, title: "Email & SMS Marketing", desc: "Targeted campaigns to keep patients and clients engaged and rebooking" },
+  { icon: Mail, title: "Email & SMS Marketing", desc: "Targeted campaigns to keep clients engaged and rebooking" },
   { icon: BarChart2, title: "Reputation Management", desc: "Monitor, respond to, and grow your reviews across all platforms" },
-  { icon: Megaphone, title: "Content Marketing", desc: "Blog posts, before/after content, and educational material that converts" },
+  { icon: Megaphone, title: "Content Marketing", desc: "Blog posts, case studies, and educational material that converts" },
 ];
 
 export default function AnimatedServiceShowcase() {
@@ -42,10 +42,10 @@ export default function AnimatedServiceShowcase() {
           </span>
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">
             AI Automation <span className="text-[#14532d]">+</span> Digital Marketing<br />
-            <span className="text-[#14532d]">Exclusively for Dental Clinics & Spas</span>
+            <span className="text-[#14532d]">For Any Business Ready to Scale</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Two powerful pillars working together — intelligent automation to run your operations, and targeted marketing to grow your patient and client base.
+            Two powerful pillars working together — intelligent automation to run your operations, and targeted marketing to grow your client base.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ export default function AnimatedServiceShowcase() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">AI Automation Services</h3>
-                <p className="text-white/70 text-sm">Let AI handle the work — you focus on patients</p>
+                <p className="text-white/70 text-sm">Let AI handle the work — you focus on your clients</p>
               </div>
             </div>
             <div className="space-y-3">
@@ -106,7 +106,7 @@ export default function AnimatedServiceShowcase() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Digital Marketing Services</h3>
-                <p className="text-white/80 text-sm">Attract more patients and clients consistently</p>
+                <p className="text-white/80 text-sm">Attract more clients consistently and predictably</p>
               </div>
             </div>
             <div className="space-y-3">
@@ -133,14 +133,13 @@ export default function AnimatedServiceShowcase() {
               })}
             </div>
 
-            {/* Filler padding to match height */}
             <div className="mt-3 bg-white/10 rounded-xl p-4 flex items-center gap-3">
               <div className="bg-white/30 p-2 rounded-lg flex-shrink-0">
                 <Target className="w-4 h-4 text-white" />
               </div>
               <div>
                 <p className="font-semibold text-sm">Custom Growth Strategy</p>
-                <p className="text-white/75 text-xs mt-0.5">Tailored marketing plan built specifically for your clinic or spa</p>
+                <p className="text-white/75 text-xs mt-0.5">Tailored marketing plan built specifically for your business</p>
               </div>
             </div>
           </motion.div>
@@ -155,7 +154,7 @@ export default function AnimatedServiceShowcase() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-gray-600 mb-5 text-base max-w-xl mx-auto">
-            Not sure which services you need? Book a free consultation and we'll build a custom plan for your practice.
+            Not sure which services you need? Book a free consultation and we'll build a custom plan for your business.
           </p>
           <button
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}

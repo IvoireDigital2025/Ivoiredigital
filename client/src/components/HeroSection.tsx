@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Smile, Sparkles, CheckCircle, PhoneCall, Calendar, Star } from "lucide-react";
+import { Zap, Megaphone, CheckCircle, PhoneCall, Calendar, Star } from "lucide-react";
 import aiReceptionistImg from "@assets/ChatGPT_Image_May_10,_2026,_11_41_10_PM_1778476129563.png";
 
 const stats = [
   { value: "70%", label: "Fewer No-Shows" },
   { value: "3x", label: "More Google Reviews" },
   { value: "24/7", label: "AI Receptionist" },
-  { value: "90 min", label: "Saved Daily on Charts" },
+  { value: "5 hrs", label: "Saved Weekly on Admin" },
 ];
 
 export default function HeroSection() {
@@ -26,20 +26,20 @@ export default function HeroSection() {
           >
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <span className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-semibold border border-white/30">
-                <Smile className="w-4 h-4" /> Dental Clinics
+                <Zap className="w-4 h-4" /> AI Automation
               </span>
               <span className="inline-flex items-center gap-2 bg-[#b07d2a] text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-                <Sparkles className="w-4 h-4" /> Spas & Wellness
+                <Megaphone className="w-4 h-4" /> Digital Marketing
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
               AI & Marketing<br />
-              <span className="text-[#b07d2a]">Built for Dental<br />Clinics & Spas</span>
+              <span className="text-[#b07d2a]">Built for Your<br />Business Growth</span>
             </h1>
 
             <p className="text-base sm:text-lg opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              We help dental offices and spas fill their schedules, stop losing patients to missed calls, and grow their reputation — using AI automation and targeted digital marketing.
+              We help businesses fill their schedules, stop losing leads to missed calls, and grow their reputation — using AI automation and targeted digital marketing.
             </p>
 
             <ul className="space-y-2.5 text-sm opacity-90 text-left max-w-sm mx-auto md:mx-0">
@@ -49,11 +49,11 @@ export default function HeroSection() {
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                Automated marketing keeps your schedule full
+                Automated marketing keeps your calendar full
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                AI generates clinical notes — doctors save 90 min/day
+                AI handles your workflows — your team focuses on what matters
               </li>
             </ul>
 
@@ -77,7 +77,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right: Dental + Spa Image Cards */}
+          {/* Right: Image Cards */}
           <motion.div
             className="hidden md:grid grid-cols-2 gap-4"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -92,16 +92,15 @@ export default function HeroSection() {
             >
               <img
                 src={aiReceptionistImg}
-                alt="AI Dental Receptionist"
+                alt="AI Receptionist"
                 className="w-full h-72 object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Smile className="w-4 h-4 text-[#b07d2a]" /> Dental Clinics
+                  <Zap className="w-4 h-4 text-[#b07d2a]" /> AI Automation
                 </span>
-                <p className="text-white/80 text-xs mt-1">Automated scheduling & growth</p>
+                <p className="text-white/80 text-xs mt-1">Automated scheduling & operations</p>
               </div>
-              {/* Floating badge */}
               <div className="absolute top-3 right-3 bg-[#b07d2a] text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
                 <PhoneCall className="w-3 h-3" /> AI Receptionist
               </div>
@@ -114,15 +113,15 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=500&fit=crop&crop=center"
-                alt="Spa and wellness"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=500&fit=crop&crop=center"
+                alt="Digital Marketing"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Sparkles className="w-4 h-4 text-[#b07d2a]" /> Spas & Wellness
+                  <Megaphone className="w-4 h-4 text-[#b07d2a]" /> Digital Marketing
                 </span>
-                <p className="text-white/80 text-xs mt-1">Fill your calendar on autopilot</p>
+                <p className="text-white/80 text-xs mt-1">Grow your client base on autopilot</p>
               </div>
               <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
                 <Star className="w-3 h-3" /> 4.9★ Reviews

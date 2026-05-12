@@ -24,7 +24,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-gray-400 mb-6 text-sm sm:text-base">
-              AI automation and digital marketing exclusively for dental clinics and spas in Dallas and beyond.
+              AI automation and digital marketing for ambitious businesses in Dallas and beyond.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-[#b07d2a] transition-colors">
@@ -45,11 +45,11 @@ export default function Footer() {
           <div>
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">AI Services</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li><span className="text-gray-400 text-sm sm:text-base">AI Dental Receptionist</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI Receptionist</span></li>
               <li><span className="text-gray-400 text-sm sm:text-base">AI Appointment Booking</span></li>
               <li><span className="text-gray-400 text-sm sm:text-base">Missed-Call Text Back</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">Patient Follow-Up & Reactivation</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">AI SOAP Note Generation</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Client Follow-Up & Reactivation</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">AI Note Generation</span></li>
               <li><span className="text-gray-400 text-sm sm:text-base">AI Review Generation</span></li>
             </ul>
           </div>
