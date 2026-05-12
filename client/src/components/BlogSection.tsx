@@ -62,7 +62,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
           className="w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 m-4">
-          <span className="bg-[#f59e0b] text-white text-sm px-3 py-1 rounded-full">
+          <span className="bg-[#b07d2a] text-white text-sm px-3 py-1 rounded-full">
             {post.category}
           </span>
         </div>
@@ -90,7 +90,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
         
         <a 
           href={`/blog/${post.slug}`}
-          className="inline-flex items-center text-[#14532d] font-medium hover:text-[#f59e0b] transition-colors"
+          className="inline-flex items-center text-[#14532d] font-medium hover:text-[#b07d2a] transition-colors"
         >
           Read More <ArrowRight className="h-4 w-4 ml-1" />
         </a>

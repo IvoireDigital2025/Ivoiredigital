@@ -14,7 +14,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
-            className={`h-4 w-4 sm:h-5 sm:w-5 ${i < rating ? "text-[#f59e0b] fill-[#f59e0b]" : "text-gray-300"}`}
+            className={`h-4 w-4 sm:h-5 sm:w-5 ${i < rating ? "text-[#b07d2a] fill-[#b07d2a]" : "text-gray-300"}`}
           />
         ))}
       </div>

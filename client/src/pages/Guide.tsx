@@ -415,7 +415,7 @@ export default function Guide() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#f59e0b] text-white text-sm px-3 py-1 rounded-full mb-4 inline-block">
+            <span className="bg-[#b07d2a] text-white text-sm px-3 py-1 rounded-full mb-4 inline-block">
               {guide.category}
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -458,7 +458,7 @@ export default function Guide() {
                 ))}
                 
                 {section.actionItems && (
-                  <div className="bg-[#f59e0b]/10 rounded-lg p-6 mt-6">
+                  <div className="bg-[#b07d2a]/10 rounded-lg p-6 mt-6">
                     <h4 className="font-semibold text-[#14532d] mb-3 flex items-center">
                       <CheckCircle className="h-5 w-5 mr-2" />
                       Action Items
@@ -466,7 +466,7 @@ export default function Guide() {
                     <ul className="space-y-2">
                       {section.actionItems.map((item, itemIndex) => (
                         <li key={itemIndex} className="text-gray-700 flex items-start">
-                          <span className="bg-[#f59e0b] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">
+                          <span className="bg-[#b07d2a] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">
                             {itemIndex + 1}
                           </span>
                           {item}
@@ -487,7 +487,7 @@ export default function Guide() {
               <ul className="space-y-3">
                 {guide.keyTakeaways.map((takeaway, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="bg-[#f59e0b] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="bg-[#b07d2a] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
                     <span>{takeaway}</span>
                   </li>
                 ))}
@@ -515,7 +515,7 @@ export default function Guide() {
               <p className="text-lg mb-6 opacity-90">
                 Let Ivoire Digital help you implement these proven strategies for your business.
               </p>
-              <Button size="lg" className="bg-[#f59e0b] hover:bg-[#d97706] text-white">
+              <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white">
                 <a href="/#contact">Get Your Free Consultation</a>
               </Button>
             </div>

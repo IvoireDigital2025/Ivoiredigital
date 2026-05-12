@@ -60,7 +60,7 @@ export default function AnimatedServiceShowcase() {
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="bg-white/20 p-2.5 rounded-xl">
-                <Zap className="w-6 h-6 text-[#f59e0b]" />
+                <Zap className="w-6 h-6 text-[#b07d2a]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">AI Automation Services</h3>
@@ -79,7 +79,7 @@ export default function AnimatedServiceShowcase() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
                   >
-                    <div className="bg-[#f59e0b] p-2 rounded-lg flex-shrink-0">
+                    <div className="bg-[#b07d2a] p-2 rounded-lg flex-shrink-0">
                       <Icon className="w-4 h-4 text-white" />
                     </div>
                     <div>
@@ -98,7 +98,7 @@ export default function AnimatedServiceShowcase() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="bg-gradient-to-br from-[#f59e0b] to-[#d97706] rounded-2xl p-8 text-white"
+            className="bg-gradient-to-br from-[#b07d2a] to-[#d97706] rounded-2xl p-8 text-white"
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="bg-white/20 p-2.5 rounded-xl">

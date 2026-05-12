@@ -64,7 +64,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       
       <button 
         onClick={() => setIsExpanded(!isExpanded)}
-        className="text-[#f59e0b] font-medium hover:underline inline-flex items-center transition-colors"
+        className="text-[#b07d2a] font-medium hover:underline inline-flex items-center transition-colors"
       >
         {isExpanded ? 'Show less' : 'Learn more'}
         {isExpanded ? (

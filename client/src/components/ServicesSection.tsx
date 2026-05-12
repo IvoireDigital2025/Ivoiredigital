@@ -23,7 +23,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block bg-[#f59e0b]/10 text-[#f59e0b] text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">
+          <span className="inline-block bg-[#b07d2a]/10 text-[#b07d2a] text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">
             AI Services
           </span>
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900">
@@ -104,7 +104,7 @@ export default function ServicesSection() {
         >
           <button
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="bg-[#b07d2a] hover:bg-[#c49030] text-white px-8 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Get These Services for Your Practice
           </button>

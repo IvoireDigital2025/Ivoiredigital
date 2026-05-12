@@ -33,7 +33,7 @@ export default function FloatingContactButton() {
       id: "phone",
       icon: Phone,
       label: "Call Us",
-      color: "bg-[#f59e0b] hover:bg-[#fbbf24]"
+      color: "bg-[#b07d2a] hover:bg-[#c49030]"
     },
     {
       id: "email",

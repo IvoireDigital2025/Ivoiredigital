@@ -80,7 +80,7 @@ export default function AboutUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Cpu className="h-12 w-12 text-[#f59e0b] mb-6" />
+            <Cpu className="h-12 w-12 text-[#b07d2a] mb-6" />
             <h4 className="text-xl font-semibold text-gray-900 mb-3">
               AI-First Approach
             </h4>
@@ -96,7 +96,7 @@ export default function AboutUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <Globe className="h-12 w-12 text-[#f59e0b] mb-6" />
+            <Globe className="h-12 w-12 text-[#b07d2a] mb-6" />
             <h4 className="text-xl font-semibold text-gray-900 mb-3">
               Nationwide Business Specialists
             </h4>
@@ -112,7 +112,7 @@ export default function AboutUsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Zap className="h-12 w-12 text-[#f59e0b] mb-6" />
+            <Zap className="h-12 w-12 text-[#b07d2a] mb-6" />
             <h4 className="text-xl font-semibold text-gray-900 mb-3">
               Transparent, Value-Driven Pricing
             </h4>
@@ -180,7 +180,7 @@ export default function AboutUsPage() {
               Let's discuss how Ivoire Digital can help your Dallas business attract more clients, automate repetitive tasks, and leverage AI for sustainable growth.
             </p>
             <Button 
-              className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white py-3 px-8"
+              className="bg-[#b07d2a] hover:bg-[#c49030] text-white py-3 px-8"
               onClick={() => scrollToSection("contact")}
             >
               Schedule a Free Consultation

@@ -83,7 +83,7 @@ export default function CaseStudiesSection() {
               
               <div>
                 <div className="flex items-center space-x-3 mb-3">
-                  <span className="px-3 py-1 bg-[#f59e0b]/20 text-[#f59e0b] rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-[#b07d2a]/20 text-[#b07d2a] rounded-full text-sm font-medium">
                     {study.industry}
                   </span>
                   <span className="text-sm text-gray-500">
@@ -111,7 +111,7 @@ export default function CaseStudiesSection() {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
                       {study.results.map((result, idx) => (
                         <li key={idx} className="flex items-start">
-                          <TrendingUp className="h-5 w-5 text-[#f59e0b] mr-2 flex-shrink-0 mt-0.5" />
+                          <TrendingUp className="h-5 w-5 text-[#b07d2a] mr-2 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-600">{result}</span>
                         </li>
                       ))}

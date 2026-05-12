@@ -28,14 +28,14 @@ export default function HeroSection() {
               <span className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-semibold border border-white/30">
                 <Smile className="w-4 h-4" /> Dental Clinics
               </span>
-              <span className="inline-flex items-center gap-2 bg-[#f59e0b] text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              <span className="inline-flex items-center gap-2 bg-[#b07d2a] text-white px-4 py-1.5 rounded-full text-sm font-semibold">
                 <Sparkles className="w-4 h-4" /> Spas & Wellness
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
               AI & Marketing<br />
-              <span className="text-[#f59e0b]">Built for Dental<br />Clinics & Spas</span>
+              <span className="text-[#b07d2a]">Built for Dental<br />Clinics & Spas</span>
             </h1>
 
             <p className="text-base sm:text-lg opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
@@ -44,15 +44,15 @@ export default function HeroSection() {
 
             <ul className="space-y-2.5 text-sm opacity-90 text-left max-w-sm mx-auto md:mx-0">
               <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
                 AI receptionist answers calls & books appointments 24/7
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
                 Automated marketing keeps your schedule full
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#f59e0b] flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
                 AI generates clinical notes — doctors save 90 min/day
               </li>
             </ul>
@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center md:justify-start">
               <Button
                 size="lg"
-                className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base"
+                className="bg-[#b07d2a] hover:bg-[#c49030] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base"
                 onClick={() => scrollToSection("booking")}
               >
                 <Calendar className="w-4 h-4 mr-2" />
@@ -97,12 +97,12 @@ export default function HeroSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Smile className="w-4 h-4 text-[#f59e0b]" /> Dental Clinics
+                  <Smile className="w-4 h-4 text-[#b07d2a]" /> Dental Clinics
                 </span>
                 <p className="text-white/80 text-xs mt-1">Automated scheduling & growth</p>
               </div>
               {/* Floating badge */}
-              <div className="absolute top-3 right-3 bg-[#f59e0b] text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+              <div className="absolute top-3 right-3 bg-[#b07d2a] text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
                 <PhoneCall className="w-3 h-3" /> AI Receptionist
               </div>
             </motion.div>
@@ -120,7 +120,7 @@ export default function HeroSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Sparkles className="w-4 h-4 text-[#f59e0b]" /> Spas & Wellness
+                  <Sparkles className="w-4 h-4 text-[#b07d2a]" /> Spas & Wellness
                 </span>
                 <p className="text-white/80 text-xs mt-1">Fill your calendar on autopilot</p>
               </div>
@@ -143,7 +143,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-2xl sm:text-3xl font-poppins font-bold text-[#f59e0b]">{stat.value}</div>
+                <div className="text-2xl sm:text-3xl font-poppins font-bold text-[#b07d2a]">{stat.value}</div>
                 <div className="text-xs sm:text-sm text-white/80 mt-0.5">{stat.label}</div>
               </div>
             ))}

@@ -48,7 +48,7 @@ export default function BusinessTargetSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block bg-[#f59e0b]/10 text-[#f59e0b] text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">
+          <span className="inline-block bg-[#b07d2a]/10 text-[#b07d2a] text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">
             Sound Familiar?
           </span>
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">

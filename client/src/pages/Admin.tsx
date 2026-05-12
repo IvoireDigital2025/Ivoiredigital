@@ -231,7 +231,7 @@ export default function Admin() {
                         </p>
                       </div>
                     </div>
-                    <div className="bg-[#f59e0b] text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <div className="bg-[#b07d2a] text-white px-3 py-1 rounded-full text-xs font-medium">
                       {contact.service}
                     </div>
                   </div>

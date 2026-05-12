@@ -167,7 +167,7 @@ export default function BlogPost() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="bg-[#f59e0b] text-white text-sm px-3 py-1 rounded-full mb-4 inline-block">
+              <span className="bg-[#b07d2a] text-white text-sm px-3 py-1 rounded-full mb-4 inline-block">
                 {post.category}
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl">
@@ -235,7 +235,7 @@ export default function BlogPost() {
               <ul className="space-y-3">
                 {post.content.benefits.map((benefit, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed">
-                    <span className="font-semibold text-[#f59e0b]">✓</span> {benefit}
+                    <span className="font-semibold text-[#b07d2a]">✓</span> {benefit}
                   </li>
                 ))}
               </ul>
@@ -268,7 +268,7 @@ export default function BlogPost() {
               <p className="text-lg mb-6 opacity-90">
                 Let Ivoire Digital help you implement these strategies for your Dallas business.
               </p>
-              <Button size="lg" className="bg-[#f59e0b] hover:bg-[#d97706] text-white">
+              <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white">
                 <a href="#contact">Get Your Free Consultation</a>
               </Button>
             </div>

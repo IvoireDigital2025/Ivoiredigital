@@ -38,16 +38,16 @@ export default function Header({ scrolled }: HeaderProps) {
         </a>
         
         <div className="hidden lg:flex space-x-6 text-white mx-auto text-sm xl:text-base">
-          <button onClick={() => handleNavClick("home")} className="hover:text-[#f59e0b] transition-colors">Home</button>
-          <button onClick={() => handleNavClick("services")} className="hover:text-[#f59e0b] transition-colors">Services</button>
-          <button onClick={() => handleNavClick("case-studies")} className="hover:text-[#f59e0b] transition-colors">Results</button>
-          <button onClick={() => handleNavClick("faq")} className="hover:text-[#f59e0b] transition-colors">FAQ</button>
-          <button onClick={() => handleNavClick("contact")} className="hover:text-[#f59e0b] transition-colors">Contact</button>
+          <button onClick={() => handleNavClick("home")} className="hover:text-[#b07d2a] transition-colors">Home</button>
+          <button onClick={() => handleNavClick("services")} className="hover:text-[#b07d2a] transition-colors">Services</button>
+          <button onClick={() => handleNavClick("case-studies")} className="hover:text-[#b07d2a] transition-colors">Results</button>
+          <button onClick={() => handleNavClick("faq")} className="hover:text-[#b07d2a] transition-colors">FAQ</button>
+          <button onClick={() => handleNavClick("contact")} className="hover:text-[#b07d2a] transition-colors">Contact</button>
         </div>
         
         <Button 
           size="sm"
-          className="hidden lg:block bg-[#f59e0b] hover:bg-[#fbbf24] text-white flex-shrink-0 text-xs lg:text-sm px-3 lg:px-4 py-2"
+          className="hidden lg:block bg-[#b07d2a] hover:bg-[#c49030] text-white flex-shrink-0 text-xs lg:text-sm px-3 lg:px-4 py-2"
           onClick={() => handleNavClick("booking")}
         >
           Book Free Consultation
@@ -65,15 +65,15 @@ export default function Header({ scrolled }: HeaderProps) {
       {/* Mobile menu */}
       <div className={`lg:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col space-y-3">
-          <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Home</button>
-          <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Services</button>
-          <button onClick={() => handleNavClick("case-studies")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Results</button>
-          <button onClick={() => handleNavClick("faq")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">FAQ</button>
-          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left font-medium">Book Consultation</button>
-          <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#f59e0b] transition-colors py-2 text-left">Contact</button>
+          <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Home</button>
+          <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Services</button>
+          <button onClick={() => handleNavClick("case-studies")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Results</button>
+          <button onClick={() => handleNavClick("faq")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">FAQ</button>
+          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left font-medium">Book Consultation</button>
+          <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Contact</button>
           <div className="pt-2">
             <Button 
-              className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white w-full py-3"
+              className="bg-[#b07d2a] hover:bg-[#c49030] text-white w-full py-3"
               onClick={() => handleNavClick("booking")}
             >
               Book Free Consultation

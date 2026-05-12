@@ -137,7 +137,7 @@ export default function AutomatedWebsiteShowcase() {
                       </li>
                     ))}
                   </ul>
-                  <div className="bg-[#f59e0b] text-white px-3 py-2 rounded-lg text-xs font-medium text-center">
+                  <div className="bg-[#b07d2a] text-white px-3 py-2 rounded-lg text-xs font-medium text-center">
                     {website.conversionRate}
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function AutomatedWebsiteShowcase() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="bg-[#f59e0b] p-4 rounded-full w-fit mx-auto mb-4">
+                  <div className="bg-[#b07d2a] p-4 rounded-full w-fit mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-lg font-bold mb-3">{benefit.title}</h4>
@@ -231,7 +231,7 @@ export default function AutomatedWebsiteShowcase() {
           <div className="text-center mt-12">
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="bg-[#b07d2a] hover:bg-[#c49030] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Get Your Automated Business System
             </button>

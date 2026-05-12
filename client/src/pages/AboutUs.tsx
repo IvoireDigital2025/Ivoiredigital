@@ -105,7 +105,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <Globe className="h-12 w-12 text-[#f59e0b] mb-6" />
+              <Globe className="h-12 w-12 text-[#b07d2a] mb-6" />
               <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Nationwide Business Specialists
               </h4>
@@ -121,7 +121,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Zap className="h-12 w-12 text-[#f59e0b] mb-6" />
+              <Zap className="h-12 w-12 text-[#b07d2a] mb-6" />
               <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Transparent, Value-Driven Pricing
               </h4>
@@ -137,7 +137,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Target className="h-12 w-12 text-[#f59e0b] mb-6" />
+              <Target className="h-12 w-12 text-[#b07d2a] mb-6" />
               <h4 className="text-xl font-semibold text-gray-900 mb-3">
                 Small Business Focus
               </h4>
@@ -172,7 +172,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="text-4xl font-bold text-[#f59e0b] mb-2">50+</div>
+              <div className="text-4xl font-bold text-[#b07d2a] mb-2">50+</div>
               <div className="text-white/80">Businesses Served</div>
             </motion.div>
             
@@ -182,7 +182,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="text-4xl font-bold text-[#f59e0b] mb-2">95%</div>
+              <div className="text-4xl font-bold text-[#b07d2a] mb-2">95%</div>
               <div className="text-white/80">Client Satisfaction</div>
             </motion.div>
             
@@ -192,7 +192,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="text-4xl font-bold text-[#f59e0b] mb-2">2.5x</div>
+              <div className="text-4xl font-bold text-[#b07d2a] mb-2">2.5x</div>
               <div className="text-white/80">Average Lead Increase</div>
             </motion.div>
             
@@ -202,7 +202,7 @@ export default function AboutUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="text-4xl font-bold text-[#f59e0b] mb-2">24/7</div>
+              <div className="text-4xl font-bold text-[#b07d2a] mb-2">24/7</div>
               <div className="text-white/80">Support Available</div>
             </motion.div>
           </div>
@@ -234,15 +234,15 @@ export default function AboutUs() {
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Calendar className="h-6 w-6 text-[#f59e0b] mr-3" />
+                  <Calendar className="h-6 w-6 text-[#b07d2a] mr-3" />
                   <span className="text-gray-700">Founded in Dallas, TX - 2022</span>
                 </div>
                 <div className="flex items-center">
-                  <Users className="h-6 w-6 text-[#f59e0b] mr-3" />
+                  <Users className="h-6 w-6 text-[#b07d2a] mr-3" />
                   <span className="text-gray-700">Serving small businesses across the United States</span>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="h-6 w-6 text-[#f59e0b] mr-3" />
+                  <Trophy className="h-6 w-6 text-[#b07d2a] mr-3" />
                   <span className="text-gray-700">Specialized in AI and digital marketing automation</span>
                 </div>
               </div>
@@ -259,19 +259,19 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold mb-6">Why Choose Ivoire Digital?</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <span className="bg-[#f59e0b] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="bg-[#b07d2a] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
                     <span>Proven track record with 50+ successful implementations</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="bg-[#f59e0b] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="bg-[#b07d2a] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
                     <span>No long-term contracts or hidden fees</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="bg-[#f59e0b] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="bg-[#b07d2a] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
                     <span>Dedicated support team available when you need help</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="bg-[#f59e0b] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="bg-[#b07d2a] rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></span>
                     <span>Results-focused approach with measurable outcomes</span>
                   </li>
                 </ul>
@@ -297,7 +297,7 @@ export default function AboutUs() {
             <p className="text-lg text-gray-600 mb-8">
               Join the businesses that have already discovered the power of AI and digital marketing automation. Let's discuss how we can help you grow.
             </p>
-            <Button size="lg" className="bg-[#f59e0b] hover:bg-[#d97706] text-white font-semibold px-8 py-4">
+            <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white font-semibold px-8 py-4">
               <a href="/#contact">Get Your Free Consultation</a>
             </Button>
           </motion.div>

@@ -20,7 +20,7 @@
   --primary-foreground: 211 100% 99%;
   --secondary: 152 75% 52%;
   --secondary-foreground: 24 9.8% 10%;
-  --accent: 36 100% 50%;
+  --accent: 36 60% 43%;
   --accent-foreground: 24 9.8% 10%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
@@ -44,7 +44,7 @@
   --primary-foreground: 211 100% 99%;
   --secondary: 152 75% 52%;
   --secondary-foreground: 0 0% 98%;
-  --accent: 36 100% 50%;
+  --accent: 36 60% 43%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
@@ -140,7 +140,7 @@ a:focus,
 input:focus, 
 textarea:focus, 
 select:focus {
-  outline: 2px solid #f59e0b;
+  outline: 2px solid #b07d2a;
   outline-offset: 2px;
 }
 

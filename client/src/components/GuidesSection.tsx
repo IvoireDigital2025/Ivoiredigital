@@ -92,7 +92,7 @@ export default function GuidesSection() {
             >
               <div className="flex items-start">
                 <div className="flex-shrink-0 mr-5">
-                  <FileText className="h-8 w-8 text-[#f59e0b]" />
+                  <FileText className="h-8 w-8 text-[#b07d2a]" />
                 </div>
                 <div>
                   <span className="text-sm font-medium px-3 py-1 bg-[#14532d]/10 text-[#14532d] rounded-full inline-block mb-3">

@@ -82,7 +82,7 @@ export default function AIShowcaseSection() {
                     {implementation.industry}
                   </div>
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full">
-                    <IconComponent className="w-5 h-5 text-[#f59e0b]" />
+                    <IconComponent className="w-5 h-5 text-[#b07d2a]" />
                   </div>
                 </div>
                 
@@ -99,7 +99,7 @@ export default function AIShowcaseSection() {
                     <ul className="space-y-1">
                       {implementation.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="text-xs text-gray-600 flex items-center">
-                          <div className="w-1.5 h-1.5 bg-[#f59e0b] rounded-full mr-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-[#b07d2a] rounded-full mr-2 flex-shrink-0"></div>
                           {result}
                         </li>
                       ))}
@@ -123,7 +123,7 @@ export default function AIShowcaseSection() {
           </p>
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#f59e0b] hover:bg-[#fbbf24] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="bg-[#b07d2a] hover:bg-[#c49030] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Start Your AI Journey
           </button>

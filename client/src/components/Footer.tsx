@@ -27,16 +27,16 @@ export default function Footer() {
               AI automation and digital marketing exclusively for dental clinics and spas in Dallas and beyond.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#b07d2a] transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#b07d2a] transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#b07d2a] transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#f59e0b] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#b07d2a] transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -70,32 +70,32 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Company</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <button onClick={() => handleNavClick("home")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("home")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   Home
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick("services")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("services")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   Services
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick("case-studies")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("case-studies")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   Results
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick("faq")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("faq")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   FAQ
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick("contact")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("contact")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   Contact
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick("booking")} className="text-gray-400 hover:text-[#f59e0b] transition-colors text-sm sm:text-base">
+                <button onClick={() => handleNavClick("booking")} className="text-gray-400 hover:text-[#b07d2a] transition-colors text-sm sm:text-base">
                   Book Free Consultation
                 </button>
               </li>
@@ -109,9 +109,9 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved. Dallas, TX.
             </div>
             <div className="text-center sm:text-right">
-              <a href="#" className="hover:text-[#f59e0b] transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-[#b07d2a] transition-colors">Privacy Policy</a>
               <span className="mx-2">|</span>
-              <a href="#" className="hover:text-[#f59e0b] transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-[#b07d2a] transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
