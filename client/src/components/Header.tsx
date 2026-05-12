@@ -2,7 +2,7 @@ import { useState } from "react";
 import { scrollToSection } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import ivoireLogo from "@/assets/ivoire-logo-transparent.png";
+import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
 interface HeaderProps {
   scrolled: boolean;
@@ -29,10 +29,10 @@ export default function Header({ scrolled }: HeaderProps) {
           <img 
             src={ivoireLogo} 
             alt="Ivoire Digital Logo" 
-            className="h-20 sm:h-28 md:h-32 object-contain" 
+            className="h-28 sm:h-32 w-auto object-contain" 
             style={{ 
-              filter: 'drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
-              background: 'transparent' 
+              mixBlendMode: 'screen',
+              maxWidth: '520px'
             }} 
           />
         </a>

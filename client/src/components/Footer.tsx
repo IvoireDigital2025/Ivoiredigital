@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
-import ivoireLogo from "@/assets/ivoire-logo-transparent.png";
+import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
 export default function Footer() {
   const handleNavClick = (id: string) => {
@@ -16,10 +16,10 @@ export default function Footer() {
               <img
                 src={ivoireLogo}
                 alt="Ivoire Digital Logo"
-                className="h-24 sm:h-28 md:h-32 object-contain"
+                className="h-12 w-auto object-contain"
                 style={{
-                  filter: 'brightness(1.2) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3))',
-                  background: 'transparent'
+                  mixBlendMode: 'screen',
+                  maxWidth: '260px'
                 }}
               />
             </a>
