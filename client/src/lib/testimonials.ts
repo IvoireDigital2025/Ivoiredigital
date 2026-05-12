@@ -24,7 +24,7 @@ export const testimonials: Testimonial[] = [
     content: "The team at Ivoire Digital helped us implement an AI-powered booking system that revolutionized our operations. Our clients love the seamless experience, and we've seen a 40% increase in bookings.",
     author: "Michael Rodriguez",
     position: "Owner",
-    company: "Urban Spa",
+    company: "Urban Wellness Co.",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {

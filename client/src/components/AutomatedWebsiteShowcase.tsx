@@ -5,28 +5,28 @@ export default function AutomatedWebsiteShowcase() {
   const websiteExamples = [
     {
       id: 1,
-      title: "Dental Clinic Website",
-      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=400&fit=crop&crop=center",
-      features: ["Online Appointment Booking", "Patient Intake Forms", "Insurance Info", "Before & After Gallery"],
-      conversionRate: "Convert 50% more new patients"
+      title: "Service Business Website",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop&crop=center",
+      features: ["Online Appointment Booking", "Client Intake Forms", "Services & Pricing", "Before & After Gallery"],
+      conversionRate: "Convert 50% more new clients"
     },
     {
       id: 2,
-      title: "Dental Practice Profile",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&h=400&fit=crop&crop=center",
-      features: ["Meet the Dentist", "Services & Pricing", "Patient Testimonials", "Google Review Feed"],
-      conversionRate: "Build trust with new patients"
+      title: "Professional Services Profile",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center",
+      features: ["Meet the Team", "Services & Pricing", "Client Testimonials", "Google Review Feed"],
+      conversionRate: "Build trust with new clients"
     },
     {
       id: 3,
-      title: "Luxury Spa Website",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop&crop=center",
-      features: ["Treatment Menu", "Online Booking", "Gift Cards", "Client Testimonials"],
+      title: "Retail & E-Commerce Website",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
+      features: ["Product Catalog", "Online Booking", "Gift Cards", "Client Testimonials"],
       conversionRate: "Book 60% more appointments"
     },
     {
       id: 4,
-      title: "Wellness Center Website",
+      title: "Local Business Website",
       image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop&crop=center",
       features: ["Service Gallery", "Membership Plans", "Loyalty Program", "Client Reviews"],
       conversionRate: "Increase repeat visits by 80%"

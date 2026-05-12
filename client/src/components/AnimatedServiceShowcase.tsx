@@ -12,7 +12,7 @@ const aiServices = [
   { icon: UserCheck, title: "Client Follow-Up & Reactivation", desc: "Re-engages lapsed clients automatically to bring back lost revenue" },
   { icon: Globe, title: "AI Web Chat Assistant", desc: "24/7 chat on your website that books appointments for you" },
   { icon: Star, title: "AI Review Generation", desc: "Auto-requests Google reviews after every visit" },
-  { icon: FileText, title: "AI Note Transcription", desc: "Voice-to-text transcription for meeting notes or clinical notes in real time" },
+  { icon: FileText, title: "AI Note Transcription", desc: "Voice-to-text transcription for meeting notes and session summaries in real time" },
   { icon: ClipboardList, title: "AI Report & Note Generation", desc: "Complete structured reports from a brief dictation — ready to review" },
   { icon: Zap, title: "AI Workflow Automation", desc: "Automates intake, follow-ups, reminders & internal notifications" },
 ];
