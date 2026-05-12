@@ -16,10 +16,10 @@ export default function Footer() {
               <img
                 src={ivoireLogo}
                 alt="Ivoire Digital Logo"
-                className="h-12 w-auto object-contain"
+                className="h-32 w-auto object-contain"
                 style={{
                   mixBlendMode: 'screen',
-                  maxWidth: '260px'
+                  maxWidth: '520px'
                 }}
               />
             </a>
