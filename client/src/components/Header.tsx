@@ -2,7 +2,7 @@ import { useState } from "react";
 import { scrollToSection } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import ivoireLogo from "@/assets/ivoire-logo-new.png";
+import ivoireLogo from "@/assets/ivoire-logo-transparent.png";
 
 interface HeaderProps {
   scrolled: boolean;
