@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import BusinessTargetSection from "@/components/BusinessTargetSection";
 import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
 import ServicesSection from "@/components/ServicesSection";
+import WebsiteDesignShowcase from "@/components/WebsiteDesignShowcase";
 import PortfolioSection from "@/components/PortfolioSection";
 import FAQSection from "@/components/FAQSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
@@ -37,6 +38,7 @@ export default function Home() {
         <BusinessTargetSection />
         <AnimatedServiceShowcase />
         <ServicesSection />
+        <WebsiteDesignShowcase />
         <PortfolioSection />
 
         <CaseStudiesSection />

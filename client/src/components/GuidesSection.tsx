@@ -14,35 +14,35 @@ interface Guide {
 const guides: Guide[] = [
   {
     id: "guide-1",
-    title: "How Dental Clinics Can Eliminate No-Shows with AI Appointment Reminders",
-    description: "Learn how automated SMS and email reminder sequences can reduce patient no-shows by up to 70%, keeping your schedule full and your revenue predictable.",
+    title: "How Any Business Can Eliminate No-Shows with AI Appointment Reminders",
+    description: "Learn how automated SMS and email reminder sequences can reduce no-shows by up to 70%, keeping your schedule full and your revenue predictable — for any service-based business.",
     readTime: "8 min read",
     category: "Appointment Automation",
-    slug: "reduce-dental-no-shows"
+    slug: "reduce-no-shows-ai-reminders"
   },
   {
     id: "guide-2",
-    title: "The Complete Guide to AI Receptionists for Dental Practices",
-    description: "Discover how an AI receptionist can answer patient calls 24/7, book appointments, handle FAQs, and cut your front-desk workload in half — without hiring more staff.",
+    title: "The Complete Guide to AI Receptionists for Small Businesses",
+    description: "Discover how an AI receptionist can answer customer calls 24/7, book appointments, handle FAQs, and cut your front-desk workload in half — without hiring more staff.",
     readTime: "10 min read",
     category: "AI Receptionist",
-    slug: "ai-receptionist-dental"
+    slug: "ai-receptionist-small-business"
   },
   {
     id: "guide-3",
     title: "How to Grow Your Google Reviews to 4.9 Stars on Autopilot",
-    description: "Step-by-step guide to automating review requests after every patient visit so your clinic consistently builds a 5-star reputation that attracts new patients.",
+    description: "Step-by-step guide to automating review requests after every customer interaction so your business consistently builds a 5-star reputation that attracts new clients.",
     readTime: "7 min read",
     category: "Review Generation",
-    slug: "grow-google-reviews-dental"
+    slug: "grow-google-reviews-autopilot"
   },
   {
     id: "guide-4",
-    title: "AI SOAP Notes: How Dentists Are Saving 2 Hours a Day on Charting",
-    description: "See how AI clinical note generation and voice transcription are eliminating after-hours charting and helping dentists focus more time on patient care.",
+    title: "Why Your Website Is Losing You Customers (And How to Fix It)",
+    description: "Most small business websites are slow, hard to navigate, and not built to convert. See exactly what's costing you leads — and how a high-converting custom website changes everything.",
     readTime: "9 min read",
-    category: "Clinical Documentation",
-    slug: "ai-soap-notes-dentists"
+    category: "Website Design",
+    slug: "website-losing-customers"
   }
 ];
 
@@ -58,9 +58,9 @@ export default function GuidesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Free Dental & Spa AI Guides</h2>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Free Business Growth Guides</h2>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl lg:max-w-none">
-              Practical guides to help your clinic or spa save time, reduce no-shows, and grow with AI — written specifically for healthcare and wellness practices.
+              Practical guides to help your business save time, win more customers, and grow with AI and digital marketing — written for business owners, not tech experts.
             </p>
           </motion.div>
           
@@ -72,8 +72,8 @@ export default function GuidesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&h=400&fit=crop&crop=center"
-              alt="Dental clinic"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop&crop=center"
+              alt="Business team reviewing growth strategy"
               className="rounded-xl shadow-lg w-full h-64 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>

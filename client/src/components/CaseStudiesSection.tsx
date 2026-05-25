@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { TrendingUp, Users, Clock, ArrowRight } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
 interface CaseStudy {
   id: string;
@@ -16,33 +16,33 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: "case-1",
-    title: "Dental Practice Cuts No-Shows by 70% and Saves 2 Hours Daily with AI",
-    client: "Multi-Provider Dental Clinic",
-    industry: "Dental Clinic",
-    challenge: "A busy multi-provider dental clinic was losing thousands of dollars monthly to no-shows and last-minute cancellations. Their front desk was overwhelmed with scheduling calls and doctors were staying late every evening to finish charting.",
-    solution: "We deployed our AI appointment booking system with automated reminders, an AI receptionist to handle incoming calls 24/7, and our AI SOAP note generation system so doctors could complete charts in minutes instead of hours.",
+    title: "Local Service Business Cuts No-Shows by 70% and Saves 2 Hours Daily with AI",
+    client: "Multi-Location Service Company",
+    industry: "Service Business",
+    challenge: "A busy multi-location service business was losing thousands of dollars monthly to no-shows and last-minute cancellations. Their front desk was overwhelmed with scheduling calls and staff were spending hours on manual follow-ups every day.",
+    solution: "We deployed our AI appointment booking system with automated reminders, an AI receptionist to handle incoming calls 24/7, and a missed-call text-back system so every lead gets an instant response — even after hours.",
     results: [
-      "70% reduction in patient no-shows",
-      "Doctors save 90+ minutes daily on charting",
+      "70% reduction in no-shows",
+      "Staff save 2+ hours daily on admin",
       "50% fewer scheduling calls to front desk",
-      "12 new patient bookings captured after hours in first month"
+      "12 new bookings captured after hours in first month"
     ],
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop&crop=center"
   },
   {
     id: "case-2",
-    title: "Luxury Spa Fills Schedule on Autopilot and Grows to 4.9 Stars on Google",
-    client: "Wellness & Spa Center",
-    industry: "Spa & Wellness",
-    challenge: "A high-end spa was relying entirely on phone calls and manual follow-ups to fill their treatment schedule. Client retention was low, staff spent hours each week on admin tasks, and their Google reviews were sparse despite having happy clients.",
-    solution: "We implemented an AI booking system with automated reminders, a missed-call text-back system, an AI client reactivation campaign targeting lapsed clients, and an automated Google review request system sent after every completed appointment.",
+    title: "Coffee Pro Gets a Complete Digital Transformation — 300% More Engagement",
+    client: "Coffee Pro (Astoria, NY)",
+    industry: "Food & Beverage",
+    challenge: "Coffee Pro had a generic WordPress site that failed to capture the brand's authentic Egyptian coffee heritage. Their online presence didn't reflect the quality of their product, and local customers couldn't find them online.",
+    solution: "We rebuilt their website from the ground up — custom design, authentic brand storytelling, professional mobile-first development, and local SEO optimization to help them dominate local search in Astoria, NY.",
     results: [
-      "Calendar 90% full within 6 weeks of launch",
-      "Grew from 3.8 to 4.9 stars on Google",
-      "42% of lapsed clients rebooked via reactivation campaign",
-      "Front desk saves 15+ hours per week on admin"
+      "300% increase in online engagement",
+      "Modern, mobile-first custom design",
+      "Authentic brand storytelling that converts",
+      "Stronger local community presence"
     ],
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=500&fit=crop&crop=center"
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=500&fit=crop&crop=center"
   }
 ];
 
@@ -59,7 +59,7 @@ export default function CaseStudiesSection() {
         >
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Client Success Stories</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Real results we've achieved for businesses just like yours nationwide.
+            Real results we've achieved for businesses across every industry nationwide.
           </p>
         </motion.div>
         
@@ -77,7 +77,7 @@ export default function CaseStudiesSection() {
                 <img 
                   src={study.image} 
                   alt={study.title}
-                  className={`w-full h-64 ${study.id === 'case-2' ? 'object-cover object-top' : 'object-cover'}`}
+                  className="w-full h-64 object-cover"
                 />
               </div>
               
@@ -122,33 +122,13 @@ export default function CaseStudiesSection() {
             </motion.div>
           ))}
         </div>
-        
 
-        
-        {/* Hidden SEO content */}
         <div className="sr-only">
           <h2>AI Implementation Case Studies for Small Businesses</h2>
           <p>
-            Read how small businesses nationwide are achieving remarkable results with AI implementation. 
-            Our case studies detail specific challenges, solutions, and measurable outcomes for 
-            retail stores, service providers, healthcare practices, and professional services 
-            firms that have implemented artificial intelligence solutions.
-          </p>
-          
-          <h2>Digital Marketing Success Stories and ROI Examples</h2>
-          <p>
-            Explore real results from our digital marketing campaigns for businesses nationwide. 
-            Our case studies show specific metrics like traffic increases, conversion rates, 
-            cost per acquisition, and overall ROI for local SEO, Google Ads, social media, 
-            and content marketing campaigns across various industries.
-          </p>
-          
-          <h2>Business Automation Implementation Results for Small Companies</h2>
-          <p>
-            See the tangible benefits of business automation for small and medium businesses. 
-            Our case studies demonstrate how automation reduces operational costs, saves time, 
-            improves customer experience, and allows businesses to scale without proportionally 
-            increasing headcount or expenses.
+            Read how small businesses nationwide are achieving remarkable results with AI implementation.
+            Our case studies detail specific challenges, solutions, and measurable outcomes for
+            retail stores, service providers, and professional services firms.
           </p>
         </div>
       </div>

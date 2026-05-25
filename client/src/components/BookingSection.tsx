@@ -51,15 +51,16 @@ const consultationTypes = [
 ];
 
 const services = [
-  "AI Dental Receptionist",
+  "AI Phone Receptionist",
   "AI Appointment Booking System",
   "Missed-Call Text Back",
-  "Patient / Client Follow-Up & Reactivation",
+  "Client Follow-Up & Reactivation",
   "AI Web Chat Assistant",
   "AI Review Generation",
-  "AI Doctor Note Transcription",
-  "AI SOAP / Clinical Note Generation",
   "AI Workflow Automation",
+  "Custom Website Design",
+  "E-Commerce Website",
+  "Landing Page Design",
   "Local SEO",
   "Google & Meta Ads",
   "Social Media Management",

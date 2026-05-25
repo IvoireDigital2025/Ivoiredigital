@@ -9,43 +9,43 @@ import {
 const faqItems = [
   {
     id: "faq-1",
-    question: "What AI services do you offer for dental clinics?",
-    answer: "We offer a full suite of AI systems built specifically for dental practices: an AI receptionist that answers calls and books appointments 24/7, automated appointment reminders to reduce no-shows, a missed-call text-back system, patient follow-up and reactivation campaigns, Google review generation, an AI web chat assistant for your website, AI doctor note transcription, AI SOAP/clinical note generation, and full workflow automation for tasks like patient intake and insurance verification."
+    question: "What industries do you work with?",
+    answer: "We work with businesses across every industry — retail, hospitality, real estate, professional services, e-commerce, food & beverage, health & wellness, and more. Our AI automation, digital marketing, and website design solutions are built to fit any business model. If you have customers, we can help you get more of them and serve them better."
   },
   {
     id: "faq-2",
-    question: "Can your AI receptionist handle real patient calls?",
-    answer: "Yes. Our AI receptionist uses natural, human-like voice technology to answer incoming calls, schedule appointments, answer common questions about your services, hours, and insurance — and seamlessly transfer to your staff when needed. It works 24/7, including evenings and weekends, so you never miss a new patient inquiry again."
+    question: "What does an AI receptionist actually do for my business?",
+    answer: "Our AI receptionist answers inbound calls 24/7 using natural, human-like voice technology. It can schedule appointments, answer common questions about your services, hours, and pricing — and seamlessly transfer to your team when needed. This means you never miss a lead, even outside business hours or when your staff is busy."
   },
   {
     id: "faq-3",
-    question: "How much time can your AI SOAP note system save our doctors?",
-    answer: "Most dentists spend 1–2 hours per day on charting and documentation. Our AI transcription and SOAP note generation system can cut that down to just minutes per patient. Doctors speak naturally during or after a visit, the AI transcribes it and generates a structured SOAP note ready to review and sign — saving significant time every single day."
+    question: "How long does it take to build my website?",
+    answer: "Most custom websites are delivered within 2–4 weeks depending on scope and complexity. A landing page or simple business site typically takes 1–2 weeks. A full multi-page website with custom features, e-commerce, or integrations may take 3–4 weeks. We keep you involved throughout the process with clear milestones and revisions included."
   },
   {
     id: "faq-4",
-    question: "Will your systems work with our existing practice management software?",
-    answer: "Yes. We integrate with most major dental practice management platforms including Dentrix, Eaglesoft, Open Dental, Carestream, and others. We also connect with Google Calendar, EHR systems, and phone providers. During your free consultation, we'll assess your current setup and confirm compatibility before we start."
+    question: "Will my website work on mobile devices?",
+    answer: "Absolutely. Every website we build is mobile-first — meaning it's designed to look and perform perfectly on phones and tablets before anything else. Over 60% of web traffic comes from mobile devices, so this is non-negotiable for us. We also optimize for fast load times and Core Web Vitals to help your Google ranking."
   },
   {
     id: "faq-5",
-    question: "Do your systems work for spas and wellness centers too?",
-    answer: "Absolutely. We build AI systems for spas, med spas, and wellness centers as well — including automated booking, client follow-up and reactivation campaigns, missed-call text back, AI chat on your website, and Google review generation. The goal is the same: fill your schedule, reduce no-shows, and keep clients coming back without your staff having to do it manually."
+    question: "How quickly can AI automation be set up?",
+    answer: "Most AI systems go live within 3–7 business days. Simple setups like missed-call text-back or automated review requests can be live within 24–48 hours. More complex systems like full AI receptionist integration or multi-step follow-up campaigns typically take 5–7 days, including testing and a walkthrough with your team."
   },
   {
     id: "faq-6",
-    question: "How long does it take to get set up?",
-    answer: "Most systems are live within 3–7 business days depending on what you're implementing. Simple systems like missed-call text-back or review generation can go live within 24–48 hours. More complex setups like full AI receptionist integration or SOAP note generation typically take 5–7 days including testing and staff training."
+    question: "Do I need to sign a long-term contract?",
+    answer: "No long-term contracts required. We believe in earning your business every month through results. Our services are offered on flexible monthly terms. For website design projects, those are typically a one-time fee. We'll always be upfront about pricing before any work begins — no hidden fees."
   },
   {
     id: "faq-7",
-    question: "Is patient data secure and HIPAA compliant?",
-    answer: "Yes. All systems we implement follow HIPAA compliance standards. Patient data is encrypted, access is controlled, and we sign Business Associate Agreements (BAAs) as required. Your patients' information is handled with the same care and security standards expected in a healthcare environment."
+    question: "Will your systems integrate with the tools I already use?",
+    answer: "Yes. We integrate with most major business tools including Google Calendar, CRMs, booking platforms, e-commerce systems, phone providers, and more. During your free consultation, we'll review your current tech stack and confirm compatibility before we start any implementation."
   },
   {
     id: "faq-8",
-    question: "What makes Ivoire Digital different from other AI agencies?",
-    answer: "We specialize exclusively in dental clinics and spas — we don't try to serve every industry. This means our systems are purpose-built for healthcare and wellness workflows, not adapted from generic templates. We handle everything from setup to training, and we measure our success by the actual outcomes you see: fewer no-shows, more booked appointments, time saved on documentation, and more 5-star reviews."
+    question: "What makes Ivoire Digital different from other agencies?",
+    answer: "We're a small, focused team that treats every client like a partner — not a ticket number. We combine AI automation, digital marketing, and custom website design under one roof so your entire digital strategy works together. We measure success by your actual outcomes: more leads, more bookings, more revenue — and we don't stop until you see them."
   }
 ];
 
@@ -62,7 +62,7 @@ export default function FAQSection() {
         >
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Frequently Asked Questions</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Common questions from dental clinics and spas about our AI systems.
+            Everything you need to know about working with Ivoire Digital.
           </p>
         </motion.div>
         

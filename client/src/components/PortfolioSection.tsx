@@ -16,7 +16,7 @@ export default function PortfolioSection() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d]">Our Work</h2>
           <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            AI systems we've built for dental clinics and spas — delivering real, measurable results.
+            AI automation, digital marketing, and website design solutions we've built for businesses across every industry — delivering real, measurable results.
           </p>
         </motion.div>
         

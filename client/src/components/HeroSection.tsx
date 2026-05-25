@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Zap, Megaphone, CheckCircle, PhoneCall, Calendar, Star, Globe } from "lucide-react";
-import aiReceptionistImg from "@assets/ChatGPT_Image_May_10,_2026,_11_41_10_PM_1778476129563.png";
 
 const stats = [
   { value: "70%", label: "Fewer No-Shows" },
@@ -94,8 +93,8 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src={aiReceptionistImg}
-                alt="AI Receptionist"
+                src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=400&h=500&fit=crop&crop=center"
+                alt="AI Receptionist answering calls for a business"
                 className="w-full h-72 object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">

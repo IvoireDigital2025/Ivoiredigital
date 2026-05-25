@@ -1,39 +1,39 @@
 import { motion } from "framer-motion";
-import { Smile, Sparkles, PhoneOff, CalendarX, Clock, MessageSquareOff, TrendingDown, UserX } from "lucide-react";
+import { PhoneOff, CalendarX, MessageSquareOff, TrendingDown, UserX, Globe, Zap, BarChart } from "lucide-react";
 
-const dentalProblems = [
+const leftProblems = [
   {
     icon: PhoneOff,
-    problem: "Calls Going Unanswered",
-    description: "New patients call after hours and get voicemail — then book with a competitor instead.",
+    problem: "Leads Slipping Through the Cracks",
+    description: "Potential customers call after hours or fill out a form and never hear back — so they go to a competitor.",
   },
   {
     icon: CalendarX,
-    problem: "Patients Not Showing Up",
-    description: "No-shows and last-minute cancellations leave empty chairs and lost revenue every week.",
+    problem: "No-Shows & Last-Minute Cancellations",
+    description: "Empty appointment slots and wasted time cost you real money every single week.",
   },
   {
-    icon: Clock,
-    problem: "Doctors Buried in Paperwork",
-    description: "Dentists spend 1–2 hours per day on SOAP notes and charting instead of treating patients.",
+    icon: TrendingDown,
+    problem: "Marketing That Doesn't Deliver",
+    description: "You're spending on ads or social media but can't tell what's actually working or driving revenue.",
   },
 ];
 
-const spaProblems = [
-  {
-    icon: TrendingDown,
-    problem: "Empty Spots on the Calendar",
-    description: "Your treatment rooms sit empty because clients don't self-book and staff can't follow up manually.",
-  },
+const rightProblems = [
   {
     icon: UserX,
-    problem: "Clients Not Coming Back",
-    description: "First-time clients never hear from you again — and quietly rebook with a competitor.",
+    problem: "Customers Not Coming Back",
+    description: "You work hard to win a customer, but with no follow-up system they quietly disappear and rebook elsewhere.",
   },
   {
     icon: MessageSquareOff,
-    problem: "No Google Reviews",
-    description: "Happy clients walk out and never leave a review because nobody asks them at the right moment.",
+    problem: "Few or No Online Reviews",
+    description: "Happy customers leave and never post a review because no one asks at the right moment — hurting your reputation.",
+  },
+  {
+    icon: Globe,
+    problem: "A Website That Doesn't Convert",
+    description: "Your site looks outdated, loads slowly, or fails to clearly explain what you do — so visitors bounce without contacting you.",
   },
 ];
 
@@ -53,15 +53,15 @@ export default function BusinessTargetSection() {
           </span>
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">
             The Problems We Solve for<br />
-            <span className="text-[#14532d]">Dental Clinics & Spas</span>
+            <span className="text-[#14532d]">Businesses Like Yours</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            These are the everyday frustrations that cost clinics and spas real revenue — and exactly why our clients come to us.
+            These are the everyday frustrations that cost businesses real revenue — and exactly why our clients come to us.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-          {/* Dental Column */}
+          {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -70,12 +70,12 @@ export default function BusinessTargetSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-blue-100 p-2.5 rounded-xl">
-                <Smile className="w-6 h-6 text-blue-600" />
+                <Zap className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Dental Clinics</h3>
+              <h3 className="text-xl font-bold text-gray-900">Losing Time & Leads</h3>
             </div>
             <div className="space-y-4">
-              {dentalProblems.map((item, i) => {
+              {leftProblems.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <motion.div
@@ -99,7 +99,7 @@ export default function BusinessTargetSection() {
             </div>
           </motion.div>
 
-          {/* Spa Column */}
+          {/* Right Column */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -107,13 +107,13 @@ export default function BusinessTargetSection() {
             transition={{ duration: 0.7 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-rose-100 p-2.5 rounded-xl">
-                <Sparkles className="w-6 h-6 text-rose-500" />
+              <div className="bg-amber-100 p-2.5 rounded-xl">
+                <BarChart className="w-6 h-6 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">Spas & Wellness Centers</h3>
+              <h3 className="text-xl font-bold text-gray-900">Losing Growth & Revenue</h3>
             </div>
             <div className="space-y-4">
-              {spaProblems.map((item, i) => {
+              {rightProblems.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <motion.div
@@ -147,7 +147,7 @@ export default function BusinessTargetSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-gray-600 mb-5 text-lg max-w-xl mx-auto">
-            We fix all of this with AI automation and targeted marketing — fully set up and managed for you.
+            We fix all of this with AI automation, targeted marketing, and high-converting websites — fully set up and managed for you.
           </p>
           <button
             onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
