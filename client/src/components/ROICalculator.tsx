@@ -28,8 +28,13 @@ export default function ROICalculator() {
   const [results, setResults] = useState<ROIMetrics | null>(null);
 
   const businessTypes = [
-    { value: "dental", label: "Dental Clinic", multiplier: 1.4 },
-    { value: "spa", label: "Spa & Wellness", multiplier: 1.3 }
+    { value: "service", label: "Service Business", multiplier: 1.3 },
+    { value: "retail", label: "Retail / E-Commerce", multiplier: 1.2 },
+    { value: "professional", label: "Professional Services", multiplier: 1.4 },
+    { value: "hospitality", label: "Hospitality & Food", multiplier: 1.25 },
+    { value: "health", label: "Health & Wellness", multiplier: 1.35 },
+    { value: "real_estate", label: "Real Estate", multiplier: 1.3 },
+    { value: "other", label: "Other Industry", multiplier: 1.2 },
   ];
 
   const calculateROI = () => {
