@@ -1,4 +1,4 @@
-import { LucideIcon, Phone, Calendar, MessageSquare, Star, Globe, FileText, ClipboardList, Zap, UserCheck } from "lucide-react";
+import { LucideIcon, Phone, Calendar, MessageSquare, Star, Globe, FileText, ClipboardList, Zap, UserCheck, Layout } from "lucide-react";
 
 interface DetailedInfo {
   features: string[];
@@ -16,6 +16,32 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  {
+    id: "website-design",
+    icon: Layout,
+    title: "Website Design & Development",
+    description: "We design and build beautiful, high-converting websites that work for your business 24/7 — from custom business sites to e-commerce stores and landing pages.",
+    detailedInfo: {
+      features: [
+        "Custom design tailored to your brand and goals",
+        "Mobile-first, fully responsive across all devices",
+        "Built-in booking, contact forms, and lead capture",
+        "Fast load times and SEO-optimized structure",
+        "E-commerce ready with product and payment integration",
+        "Ongoing maintenance and performance monitoring"
+      ],
+      benefits: [
+        "Turn your website into your best-performing sales rep",
+        "Make a great first impression with a professional design",
+        "Capture more leads with clear calls-to-action",
+        "Rank higher on Google with SEO-ready architecture",
+        "Works on any device — mobile, tablet, or desktop",
+        "Free yourself from outdated, DIY website headaches"
+      ],
+      process: "We start with a discovery call to understand your brand, goals, and competitors — then design, build, and launch your site with revisions included.",
+      timeline: "Most websites go live within 2–3 weeks."
+    }
+  },
   {
     id: "receptionist",
     icon: Phone,

@@ -43,14 +43,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">AI Services</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Website Design</h3>
             <ul className="space-y-2 sm:space-y-3">
-              <li><span className="text-gray-400 text-sm sm:text-base">AI Receptionist</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">AI Appointment Booking</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">Missed-Call Text Back</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">Client Follow-Up & Reactivation</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">AI Note Generation</span></li>
-              <li><span className="text-gray-400 text-sm sm:text-base">AI Review Generation</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Custom Website Design</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Mobile-First Development</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">E-Commerce Websites</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Landing Page Design</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Website Maintenance</span></li>
+              <li><span className="text-gray-400 text-sm sm:text-base">Conversion Rate Optimization</span></li>
             </ul>
           </div>
 

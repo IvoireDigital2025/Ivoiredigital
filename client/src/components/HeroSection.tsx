@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Zap, Megaphone, CheckCircle, PhoneCall, Calendar, Star } from "lucide-react";
+import { Zap, Megaphone, CheckCircle, PhoneCall, Calendar, Star, Globe } from "lucide-react";
 import aiReceptionistImg from "@assets/ChatGPT_Image_May_10,_2026,_11_41_10_PM_1778476129563.png";
 
 const stats = [
@@ -24,12 +24,15 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <span className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-semibold border border-white/30">
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <span className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1.5 rounded-full text-sm font-semibold border border-white/30">
                 <Zap className="w-4 h-4" /> AI Automation
               </span>
-              <span className="inline-flex items-center gap-2 bg-[#b07d2a] text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              <span className="inline-flex items-center gap-2 bg-[#b07d2a] text-white px-3 py-1.5 rounded-full text-sm font-semibold">
                 <Megaphone className="w-4 h-4" /> Digital Marketing
+              </span>
+              <span className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1.5 rounded-full text-sm font-semibold border border-white/30">
+                <Globe className="w-4 h-4" /> Website Design
               </span>
             </div>
 
@@ -39,7 +42,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              We help businesses fill their schedules, stop losing leads to missed calls, and grow their reputation — using AI automation and targeted digital marketing.
+              We help businesses fill their schedules, stop losing leads to missed calls, and grow their reputation — using AI automation, targeted digital marketing, and high-converting website design.
             </p>
 
             <ul className="space-y-2.5 text-sm opacity-90 text-left max-w-sm mx-auto md:mx-0">
@@ -49,11 +52,11 @@ export default function HeroSection() {
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                Automated marketing keeps your calendar full
+                Beautiful websites designed to turn visitors into clients
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                AI handles your workflows — your team focuses on what matters
+                Automated marketing keeps your calendar full
               </li>
             </ul>
 
@@ -114,12 +117,12 @@ export default function HeroSection() {
             >
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=500&fit=crop&crop=center"
-                alt="Digital Marketing"
+                alt="Digital Marketing & Website Design"
                 className="w-full h-72 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                 <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Megaphone className="w-4 h-4 text-[#b07d2a]" /> Digital Marketing
+                  <Globe className="w-4 h-4 text-[#b07d2a]" /> Websites & Marketing
                 </span>
                 <p className="text-white/80 text-xs mt-1">Grow your client base on autopilot</p>
               </div>

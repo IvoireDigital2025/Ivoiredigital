@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import {
   Phone, Calendar, MessageSquare, Star, Globe, FileText,
   ClipboardList, Zap, UserCheck, Target, Search, Mail,
-  BarChart2, Share2, Megaphone
+  BarChart2, Share2, Megaphone, Layout, Smartphone, ShoppingCart,
+  PenTool, RefreshCw, TrendingUp
 } from "lucide-react";
 
 const aiServices = [
@@ -26,6 +27,15 @@ const marketingServices = [
   { icon: Megaphone, title: "Content Marketing", desc: "Blog posts, case studies, and educational material that converts" },
 ];
 
+const websiteServices = [
+  { icon: Layout, title: "Custom Website Design", desc: "Professionally designed websites built to convert visitors into paying clients" },
+  { icon: Smartphone, title: "Mobile-First Development", desc: "Fully responsive designs that look perfect on every device" },
+  { icon: ShoppingCart, title: "E-Commerce Websites", desc: "Online stores with seamless checkout and product management" },
+  { icon: PenTool, title: "Landing Page Design", desc: "High-converting landing pages built specifically for your campaigns" },
+  { icon: RefreshCw, title: "Website Maintenance", desc: "Ongoing updates, security monitoring, and performance optimization" },
+  { icon: TrendingUp, title: "Conversion Rate Optimization", desc: "We redesign and test your site to turn more visitors into leads" },
+];
+
 export default function AnimatedServiceShowcase() {
   return (
     <section className="py-20 bg-white">
@@ -41,21 +51,63 @@ export default function AnimatedServiceShowcase() {
             What We Offer
           </span>
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">
-            AI Automation <span className="text-[#14532d]">+</span> Digital Marketing<br />
-            <span className="text-[#14532d]">For Any Business Ready to Scale</span>
+            Three Pillars to Grow Any Business
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Two powerful pillars working together — intelligent automation to run your operations, and targeted marketing to grow your client base.
+            Website Design, AI Automation, and Digital Marketing — working together to attract more clients, convert them faster, and keep them coming back.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
-          {/* AI Automation */}
+        <div className="grid lg:grid-cols-3 gap-8">
+
+          {/* Website Design */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="bg-gradient-to-br from-[#1e3a5f] to-[#2563eb] rounded-2xl p-8 text-white"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="bg-white/20 p-2.5 rounded-xl">
+                <Layout className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Website Design</h3>
+                <p className="text-white/70 text-sm">Beautiful sites built to convert</p>
+              </div>
+            </div>
+            <div className="space-y-3">
+              {websiteServices.map((service, i) => {
+                const Icon = service.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    className="flex items-start gap-3 bg-white/10 hover:bg-white/15 rounded-xl p-4 transition-all duration-200"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                  >
+                    <div className="bg-white/25 p-2 rounded-lg flex-shrink-0">
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm leading-tight">{service.title}</p>
+                      <p className="text-white/65 text-xs mt-0.5 leading-relaxed">{service.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* AI Automation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="bg-gradient-to-br from-[#14532d] to-[#166534] rounded-2xl p-8 text-white"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -63,8 +115,8 @@ export default function AnimatedServiceShowcase() {
                 <Zap className="w-6 h-6 text-[#b07d2a]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">AI Automation Services</h3>
-                <p className="text-white/70 text-sm">Let AI handle the work — you focus on your clients</p>
+                <h3 className="text-xl font-bold">AI Automation</h3>
+                <p className="text-white/70 text-sm">Let AI handle the work — you focus on clients</p>
               </div>
             </div>
             <div className="space-y-3">
@@ -94,10 +146,10 @@ export default function AnimatedServiceShowcase() {
 
           {/* Digital Marketing */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
             className="bg-gradient-to-br from-[#b07d2a] to-[#d97706] rounded-2xl p-8 text-white"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -105,8 +157,8 @@ export default function AnimatedServiceShowcase() {
                 <Megaphone className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Digital Marketing Services</h3>
-                <p className="text-white/80 text-sm">Attract more clients consistently and predictably</p>
+                <h3 className="text-xl font-bold">Digital Marketing</h3>
+                <p className="text-white/80 text-sm">Attract more clients consistently</p>
               </div>
             </div>
             <div className="space-y-3">
