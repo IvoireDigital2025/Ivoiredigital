@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -140,9 +140,57 @@ a:focus,
 input:focus, 
 textarea:focus, 
 select:focus {
-  outline: 2px solid #b07d2a;
+  outline: 2px solid #f0a832;
   outline-offset: 2px;
 }
+
+/* ===== Ivoire dark/gold design system ===== */
+:root {
+  --ivoire-navy: #1b2138;
+  --ivoire-navy-deep: #141931;
+  --ivoire-navy-card: #232a47;
+  --ivoire-gold: #f0a832;
+  --ivoire-gold-dark: #d8941f;
+}
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-ivoire-navy { background-color: var(--ivoire-navy); }
+.bg-ivoire-navy-deep { background-color: var(--ivoire-navy-deep); }
+.bg-ivoire-navy-card { background-color: var(--ivoire-navy-card); }
+.text-ivoire-gold { color: var(--ivoire-gold); }
+.bg-ivoire-gold { background-color: var(--ivoire-gold); }
+.border-ivoire-gold { border-color: var(--ivoire-gold); }
+
+.btn-gold {
+  background-color: var(--ivoire-gold);
+  color: #1b2138;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px -8px rgba(240, 168, 50, 0.6);
+}
+.btn-gold:hover {
+  background-color: var(--ivoire-gold-dark);
+  transform: translateY(-2px);
+}
+
+/* subtle grid / glow accents for dark sections */
+.navy-grid {
+  background-color: var(--ivoire-navy);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.gold-glow {
+  box-shadow: 0 0 80px -10px rgba(240, 168, 50, 0.45);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* Better loading states */
 .animate-pulse {

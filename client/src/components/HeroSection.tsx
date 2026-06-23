@@ -1,156 +1,121 @@
-import { Button } from "@/components/ui/button";
-import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Zap, Megaphone, CheckCircle, PhoneCall, Calendar, Star, Globe } from "lucide-react";
+import { openCalendly } from "@/lib/utils";
+import { Star } from "lucide-react";
+import { SiGoogle, SiFacebook, SiTrustpilot } from "react-icons/si";
+import mascot from "@assets/generated_images/ivoire_mascot.png";
+import avatar1 from "@assets/stock_images/team_avatar_1.jpg";
+import avatar2 from "@assets/stock_images/team_avatar_2.jpg";
+import avatar3 from "@assets/stock_images/team_avatar_3.jpg";
+import avatar4 from "@assets/stock_images/team_avatar_4.jpg";
+import avatar5 from "@assets/stock_images/team_avatar_5.jpg";
 
-const stats = [
-  { value: "70%", label: "Fewer No-Shows" },
-  { value: "3x", label: "More Google Reviews" },
-  { value: "24/7", label: "AI Receptionist" },
-  { value: "5 hrs", label: "Saved Weekly on Admin" },
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
+
+const reviewBadges = [
+  { icon: SiGoogle, label: "Google", color: "#4285F4" },
+  { icon: SiFacebook, label: "Facebook", color: "#1877F2" },
+  { icon: SiTrustpilot, label: "Trustpilot", color: "#00B67A" },
 ];
+
+function Stars() {
+  return (
+    <div className="flex gap-0.5">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="w-3.5 h-3.5 fill-ivoire-gold text-ivoire-gold" />
+      ))}
+    </div>
+  );
+}
 
 export default function HeroSection() {
   return (
-    <section id="home" className="hero-gradient text-white min-h-screen flex flex-col justify-center">
-      <div className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-0">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section id="home" className="navy-grid relative overflow-hidden pt-28 sm:pt-32 pb-12 sm:pb-16">
+      {/* glow accent */}
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-ivoire-gold/10 blur-[120px] pointer-events-none" />
 
-          {/* Left: Text Content */}
+      <div className="container mx-auto px-4 sm:px-6 relative">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left: Text */}
           <motion.div
-            className="space-y-6 text-center md:text-left"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-center lg:text-left"
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-              <span className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1.5 rounded-full text-sm font-semibold border border-white/30">
-                <Zap className="w-4 h-4" /> AI Automation
-              </span>
-              <span className="inline-flex items-center gap-2 bg-[#b07d2a] text-white px-3 py-1.5 rounded-full text-sm font-semibold">
-                <Megaphone className="w-4 h-4" /> Digital Marketing
-              </span>
-              <span className="inline-flex items-center gap-2 bg-white/20 text-white px-3 py-1.5 rounded-full text-sm font-semibold border border-white/30">
-                <Globe className="w-4 h-4" /> Website Design
-              </span>
-            </div>
+            <div className="hidden lg:block w-12 h-1 bg-ivoire-gold mb-6" />
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
-              AI & Marketing<br />
-              <span className="text-[#b07d2a]">Built for Your<br />Business Growth</span>
+            <h1 className="font-display font-extrabold text-white leading-[1.05] text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem]">
+              AI &amp; Marketing
+              <br />
+              Systems For
+              <br />
+              <span className="text-ivoire-gold">Growing Businesses</span>
             </h1>
 
-            <p className="text-base sm:text-lg opacity-90 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              We help businesses fill their schedules, stop losing leads to missed calls, and grow their reputation — using AI automation, targeted digital marketing, and high-converting website design.
+            <p className="mt-6 text-base sm:text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              Cut the fluff. Growth isn't rocket science. We give you the AI
+              automation, websites, and marketing systems to win more
+              customers — you just have to commit to using them.
             </p>
 
-            <ul className="space-y-2.5 text-sm opacity-90 text-left max-w-sm mx-auto md:mx-0">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                AI receptionist answers calls & books appointments 24/7
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                Beautiful websites designed to turn visitors into clients
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-[#b07d2a] flex-shrink-0" />
-                Automated marketing keeps your calendar full
-              </li>
-            </ul>
+            {/* Avatars + CTA */}
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start">
+              <div className="flex -space-x-3">
+                {avatars.map((a, i) => (
+                  <img
+                    key={i}
+                    src={a}
+                    alt="Happy client"
+                    className="w-11 h-11 rounded-full border-2 border-ivoire-navy object-cover"
+                  />
+                ))}
+              </div>
+              <button
+                onClick={openCalendly}
+                className="btn-gold rounded-lg px-8 py-4 text-base w-full sm:w-auto"
+              >
+                Book A Call
+              </button>
+            </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center md:justify-start">
-              <Button
-                size="lg"
-                className="bg-[#b07d2a] hover:bg-[#c49030] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-base"
-                onClick={() => scrollToSection("booking")}
-              >
-                <Calendar className="w-4 h-4 mr-2" />
-                Book a Free Consultation
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 font-semibold px-8 py-4 rounded-lg transition-all duration-300 text-base"
-                onClick={() => scrollToSection("services")}
-              >
-                See Our Services
-              </Button>
+            {/* Review badges */}
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 justify-center lg:justify-start">
+              {reviewBadges.map((b) => (
+                <div key={b.label} className="flex items-center gap-2">
+                  <b.icon className="w-6 h-6" style={{ color: b.color }} />
+                  <div>
+                    <div className="text-white text-sm font-semibold leading-none">
+                      {b.label}
+                    </div>
+                    <div className="mt-1">
+                      <Stars />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Right: Image Cards */}
+          {/* Right: Mascot */}
           <motion.div
-            className="hidden md:grid grid-cols-2 gap-4"
+            className="relative flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.div
-              className="rounded-2xl overflow-hidden shadow-2xl relative"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=400&h=500&fit=crop&crop=center"
-                alt="AI Receptionist answering calls for a business"
-                className="w-full h-72 object-cover object-top"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Zap className="w-4 h-4 text-[#b07d2a]" /> AI Automation
-                </span>
-                <p className="text-white/80 text-xs mt-1">Automated scheduling & operations</p>
-              </div>
-              <div className="absolute top-3 right-3 bg-[#b07d2a] text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                <PhoneCall className="w-3 h-3" /> AI Receptionist
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="rounded-2xl overflow-hidden shadow-2xl relative mt-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=500&fit=crop&crop=center"
-                alt="Digital Marketing & Website Design"
-                className="w-full h-72 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <span className="flex items-center gap-2 text-white font-semibold text-sm">
-                  <Globe className="w-4 h-4 text-[#b07d2a]" /> Websites & Marketing
-                </span>
-                <p className="text-white/80 text-xs mt-1">Grow your client base on autopilot</p>
-              </div>
-              <div className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                <Star className="w-3 h-3" /> 4.9★ Reviews
-              </div>
-            </motion.div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-ivoire-gold/15 blur-3xl" />
+            </div>
+            <motion.img
+              src={mascot}
+              alt="Ivoire Digital mascot"
+              className="relative z-10 w-64 sm:w-80 lg:w-[26rem] h-auto object-contain drop-shadow-2xl"
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            />
           </motion.div>
         </div>
       </div>
-
-      {/* Stats Strip */}
-      <motion.div
-        className="mt-12 border-t border-white/20 bg-black/20 backdrop-blur-sm"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 py-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl sm:text-3xl font-poppins font-bold text-[#b07d2a]">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-white/80 mt-0.5">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

@@ -80,7 +80,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-ivoire-navy-deep">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">
           <motion.div
@@ -90,46 +90,46 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             className="order-2 md:order-1"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-[#14532d] mb-4 sm:mb-6">Get in Touch</h2>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-white mb-4 sm:mb-6">Get in Touch</h2>
+            <p className="text-base sm:text-lg text-white/60 mb-6 sm:mb-8 leading-relaxed">
               Have questions or ready to discuss your project? Fill out the form and our team will get back to you within 24 hours.
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 p-2 bg-[#14532d]/10 rounded">
-                  <Phone className="h-6 w-6 text-[#14532d]" />
+                <div className="flex-shrink-0 p-2 bg-ivoire-gold/15 rounded">
+                  <Phone className="h-6 w-6 text-ivoire-gold" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">(945) 223-8799</p>
+                  <h3 className="text-lg font-medium text-white">Phone</h3>
+                  <p className="text-white/60">(945) 223-8799</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 p-2 bg-[#14532d]/10 rounded">
-                  <Mail className="h-6 w-6 text-[#14532d]" />
+                <div className="flex-shrink-0 p-2 bg-ivoire-gold/15 rounded">
+                  <Mail className="h-6 w-6 text-ivoire-gold" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@ivoiredigital.com</p>
+                  <h3 className="text-lg font-medium text-white">Email</h3>
+                  <p className="text-white/60">contact@ivoiredigital.com</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 p-2 bg-[#14532d]/10 rounded">
-                  <MapPin className="h-6 w-6 text-[#14532d]" />
+                <div className="flex-shrink-0 p-2 bg-ivoire-gold/15 rounded">
+                  <MapPin className="h-6 w-6 text-ivoire-gold" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Location</h3>
-                  <p className="text-gray-600">Dallas, TX</p>
+                  <h3 className="text-lg font-medium text-white">Location</h3>
+                  <p className="text-white/60">Dallas, TX</p>
                 </div>
               </div>
             </div>
           </motion.div>
           
           <motion.div 
-            className="bg-gray-50 rounded-xl p-4 sm:p-6 md:p-8 order-1 md:order-2"
+            className="bg-white rounded-xl p-4 sm:p-6 md:p-8 order-1 md:order-2"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -228,7 +228,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="w-full bg-[#14532d] hover:bg-[#166534] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50"
+                  className="w-full btn-gold py-3 px-6 rounded-lg disabled:opacity-50"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

@@ -1,19 +1,22 @@
 import { useState } from "react";
-import { scrollToSection } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { scrollToSection, openCalendly } from "@/lib/utils";
+import { Menu, X, Phone } from "lucide-react";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
 interface HeaderProps {
   scrolled: boolean;
 }
 
+const navLinks = [
+  { id: "services", label: "Services" },
+  { id: "industries", label: "Industries" },
+  { id: "process", label: "How It Works" },
+  { id: "testimonials", label: "Reviews" },
+  { id: "contact", label: "Contact" },
+];
+
 export default function Header({ scrolled }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
 
   const handleNavClick = (id: string) => {
     scrollToSection(id);
@@ -21,64 +24,84 @@ export default function Header({ scrolled }: HeaderProps) {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? "bg-[#14532d] shadow-md" : "bg-transparent"
-    }`}>
-      <nav className="container mx-auto px-4 sm:px-6 py-2 sm:py-3 flex items-center">
-        <a href="#" className="flex items-center flex-shrink-0" onClick={() => handleNavClick("home")}>
-          <img 
-            src={ivoireLogo} 
-            alt="Ivoire Digital Logo" 
-            className="h-36 sm:h-44 w-auto object-contain" 
-            style={{ 
-              mixBlendMode: 'screen',
-              maxWidth: '680px'
-            }} 
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-ivoire-navy-deep/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <nav className="container mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+        <a
+          href="#"
+          className="flex items-center flex-shrink-0"
+          onClick={() => handleNavClick("home")}
+        >
+          <img
+            src={ivoireLogo}
+            alt="Ivoire Digital Logo"
+            className="h-20 sm:h-24 w-auto object-contain"
+            style={{ mixBlendMode: "screen", maxWidth: "360px" }}
           />
         </a>
-        
-        <div className="hidden lg:flex space-x-6 text-white mx-auto text-sm xl:text-base">
-          <button onClick={() => handleNavClick("home")} className="hover:text-[#b07d2a] transition-colors">Home</button>
-          <button onClick={() => handleNavClick("services")} className="hover:text-[#b07d2a] transition-colors">Services</button>
-          <button onClick={() => handleNavClick("case-studies")} className="hover:text-[#b07d2a] transition-colors">Results</button>
-          <button onClick={() => handleNavClick("faq")} className="hover:text-[#b07d2a] transition-colors">FAQ</button>
-          <button onClick={() => handleNavClick("contact")} className="hover:text-[#b07d2a] transition-colors">Contact</button>
+
+        <div className="hidden lg:flex items-center gap-7 text-white/90 text-sm font-medium">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleNavClick(link.id)}
+              className="hover:text-ivoire-gold transition-colors"
+            >
+              {link.label}
+            </button>
+          ))}
         </div>
-        
-        <Button 
-          size="sm"
-          className="hidden lg:block bg-[#b07d2a] hover:bg-[#c49030] text-white flex-shrink-0 text-xs lg:text-sm px-3 lg:px-4 py-2"
-          onClick={() => handleNavClick("booking")}
-        >
-          Book Free Consultation
-        </Button>
-        
+
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="tel:+19452238799"
+            className="flex items-center gap-2 text-white/80 hover:text-ivoire-gold transition-colors text-sm font-semibold"
+          >
+            <Phone className="w-4 h-4" />
+            (945) 223-8799
+          </a>
+          <button
+            onClick={openCalendly}
+            className="btn-gold rounded-lg px-5 py-2.5 text-sm"
+          >
+            Book A Call
+          </button>
+        </div>
+
         <button
-          onClick={toggleMobileMenu}
-          className="lg:hidden text-white text-2xl focus:outline-none ml-auto"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden text-white focus:outline-none"
           aria-label="Toggle mobile menu"
         >
-          <Menu className="h-6 w-6" />
+          {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </nav>
-      
+
       {/* Mobile menu */}
-      <div className={`lg:hidden bg-white p-4 rounded-b-lg shadow-lg absolute w-full left-0 right-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col space-y-3">
-          <button onClick={() => handleNavClick("home")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Home</button>
-          <button onClick={() => handleNavClick("services")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Services</button>
-          <button onClick={() => handleNavClick("case-studies")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Results</button>
-          <button onClick={() => handleNavClick("faq")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">FAQ</button>
-          <button onClick={() => handleNavClick("booking")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left font-medium">Book Consultation</button>
-          <button onClick={() => handleNavClick("contact")} className="text-[#14532d] hover:text-[#b07d2a] transition-colors py-2 text-left">Contact</button>
-          <div className="pt-2">
-            <Button 
-              className="bg-[#b07d2a] hover:bg-[#c49030] text-white w-full py-3"
-              onClick={() => handleNavClick("booking")}
+      <div
+        className={`lg:hidden bg-ivoire-navy-deep border-t border-white/10 ${
+          mobileMenuOpen ? "block" : "hidden"
+        }`}
+      >
+        <div className="flex flex-col px-5 py-4 gap-1">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => handleNavClick(link.id)}
+              className="text-white/90 hover:text-ivoire-gold transition-colors py-3 text-left border-b border-white/5"
             >
-              Book Free Consultation
-            </Button>
-          </div>
+              {link.label}
+            </button>
+          ))}
+          <button
+            onClick={openCalendly}
+            className="btn-gold rounded-lg px-5 py-3 mt-3 text-center"
+          >
+            Book A Call
+          </button>
         </div>
       </div>
     </header>

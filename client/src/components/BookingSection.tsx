@@ -147,7 +147,7 @@ export default function BookingSection() {
 
   if (isSubmitted) {
     return (
-      <section id="booking" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
+      <section id="booking" className="py-12 sm:py-16 md:py-20 bg-ivoire-navy-deep">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             className="max-w-2xl mx-auto text-center text-white px-4"
@@ -176,7 +176,7 @@ export default function BookingSection() {
   }
 
   return (
-    <section id="booking" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#14532d] to-[#166534]">
+    <section id="booking" className="py-12 sm:py-16 md:py-20 navy-grid">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div 
           className="text-center mb-8 sm:mb-12"
@@ -456,7 +456,7 @@ export default function BookingSection() {
                 <div className="pt-4 sm:pt-6 border-t border-gray-200">
                   <Button 
                     type="submit" 
-                    className="w-full bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 sm:py-4 text-base sm:text-lg"
+                    className="w-full btn-gold py-3 sm:py-4 text-base sm:text-lg"
                     disabled={mutation.isPending}
                   >
                     {mutation.isPending ? "Booking Your Appointment..." : "Book Free Consultation"}

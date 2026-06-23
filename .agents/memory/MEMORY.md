@@ -1,0 +1,1 @@
+- [Dev server restart behavior](dev-server-restart.md) — Vite HMR is automatic; server/*.ts edits need a manual workflow restart.

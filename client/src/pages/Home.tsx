@@ -1,18 +1,15 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import BusinessTargetSection from "@/components/BusinessTargetSection";
-import AnimatedServiceShowcase from "@/components/AnimatedServiceShowcase";
-import ServicesSection from "@/components/ServicesSection";
-import WebsiteDesignShowcase from "@/components/WebsiteDesignShowcase";
-import PortfolioSection from "@/components/PortfolioSection";
-import FAQSection from "@/components/FAQSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import LiveChatWidget from "@/components/LiveChatWidget";
-import CTASection from "@/components/CTASection";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import FeaturesSection from "@/components/FeaturesSection";
+import IndustriesSection from "@/components/IndustriesSection";
+import ProcessSection from "@/components/ProcessSection";
+import WhyUsSection from "@/components/WhyUsSection";
+import FinalCTA from "@/components/FinalCTA";
 import BookingSection from "@/components/BookingSection";
 import ContactSection from "@/components/ContactSection";
-import SectionDivider from "@/components/SectionDivider";
 import BackToTop from "@/components/BackToTop";
+import LiveChatWidget from "@/components/LiveChatWidget";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
@@ -31,25 +28,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="font-inter text-gray-800 bg-gray-50">
+    <div className="font-sans text-white bg-ivoire-navy">
       <Header scrolled={scrolled} />
       <main>
         <HeroSection />
-        <BusinessTargetSection />
-        <AnimatedServiceShowcase />
-        <ServicesSection />
-        <WebsiteDesignShowcase />
-        <PortfolioSection />
-
-        <CaseStudiesSection />
-
-        <SectionDivider
-          title="About Our Services"
-          subtitle="Learn more about our approach and frequently asked questions"
-        />
-        <FAQSection />
-
-        <CTASection />
+        <TestimonialsCarousel />
+        <FeaturesSection />
+        <IndustriesSection />
+        <ProcessSection />
+        <WhyUsSection />
+        <FinalCTA />
         <BookingSection />
         <ContactSection />
       </main>

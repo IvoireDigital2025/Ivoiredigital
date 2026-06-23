@@ -1,0 +1,37 @@
+uploads = []
+
+[[generated]]
+id = "p7_5C9nUGLnFg2CV8PtOG"
+uri = "file://attached_assets/generated_images/ivoire_mascot.png"
+type = "image"
+title = "ivoire gold AI mascot"
+
+[[outputs]]
+id = "JEn0uHonry95Q7vnu86kj"
+uri = "file://attached_assets/stock_images/team_avatar_1.jpg"
+type = "image"
+title = "professional business person headshot portrait smiling, diverse"
+
+[[outputs]]
+id = "F4InILLALwJUZlai9mvMD"
+uri = "file://attached_assets/stock_images/team_avatar_2.jpg"
+type = "image"
+title = "professional business person headshot portrait smiling, diverse"
+
+[[outputs]]
+id = "1WtQwqnMQZQ9KLRaRHMKl"
+uri = "file://attached_assets/stock_images/team_avatar_3.jpg"
+type = "image"
+title = "professional business person headshot portrait smiling, diverse"
+
+[[outputs]]
+id = "8V2AASl8oHZwnajS5fb7D"
+uri = "file://attached_assets/stock_images/team_avatar_4.jpg"
+type = "image"
+title = "professional business person headshot portrait smiling, diverse"
+
+[[outputs]]
+id = "X5p988nvFT6IX6kn-Bcdo"
+uri = "file://attached_assets/stock_images/team_avatar_5.jpg"
+type = "image"
+title = "professional business person headshot portrait smiling, diverse"
