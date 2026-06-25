@@ -9,6 +9,9 @@ export function scrollToSection(id: string) {
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    // Section isn't on the current page (e.g. a service detail page) — go home and scroll there.
+    window.location.href = `/#${id}`;
   }
 }
 

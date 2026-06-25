@@ -1,9 +1,11 @@
+import { Link } from "wouter";
 import { Facebook, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 import {
   scrollToSection,
   goToBooking,
   CONTACT_EMAIL,
 } from "@/lib/utils";
+import { services } from "@/lib/servicesContent";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
 export default function Footer() {
@@ -47,16 +49,16 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-base font-bold mb-4 text-ivoire-gold">Services</h3>
             <ul className="space-y-2.5 text-sm text-white/60">
-              <li>Website Design & Development</li>
-              <li>Social Media Management</li>
-              <li>Content Creation</li>
-              <li>AI Chatbots & Voice Agents</li>
-              <li>Workflow Automation</li>
-              <li>Lead Generation & Outreach</li>
-              <li>AI Receptionist</li>
-              <li>Missed Call Text Back</li>
-              <li>CRM Setup & Automation</li>
-              <li>Local SEO</li>
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="hover:text-ivoire-gold transition-colors"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
