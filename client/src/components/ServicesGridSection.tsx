@@ -10,10 +10,22 @@ import {
   BarChart3,
   BookOpen,
   GraduationCap,
+  Monitor,
+  Share2,
 } from "lucide-react";
 import { goToBooking } from "@/lib/utils";
 
 const services = [
+  {
+    icon: Monitor,
+    title: "Website Design & Development",
+    desc: "Beautiful, high-converting websites built to work for you 24/7 — custom business sites, e-commerce stores, and landing pages that are fast, mobile-friendly, and SEO-ready.",
+  },
+  {
+    icon: Share2,
+    title: "Social Media Management",
+    desc: "Done-for-you posting, scheduling, and engagement across Instagram, Facebook, TikTok, and more — we keep your brand active and growing without you lifting a finger.",
+  },
   {
     icon: Bot,
     title: "AI Customer Support Chatbots & Voice Agents",

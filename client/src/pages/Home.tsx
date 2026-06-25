@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import FeaturesSection from "@/components/FeaturesSection";
 import ServicesGridSection from "@/components/ServicesGridSection";
+import ContentShowcaseSection from "@/components/ContentShowcaseSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhyUsSection from "@/components/WhyUsSection";
@@ -36,6 +37,7 @@ export default function Home() {
         <TestimonialsCarousel />
         <FeaturesSection />
         <ServicesGridSection />
+        <ContentShowcaseSection />
         <IndustriesSection />
         <ProcessSection />
         <WhyUsSection />
