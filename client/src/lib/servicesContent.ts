@@ -20,6 +20,7 @@ export interface ServiceContent {
   icon: LucideIcon;
   title: string;
   tagline: string;
+  blurb: string;
   cardDesc: string;
   overview: string[];
   features: string[];
@@ -33,6 +34,7 @@ export const services: ServiceContent[] = [
     icon: Monitor,
     title: "Website Design & Development",
     tagline: "Websites that turn visitors into paying customers — built to work for you 24/7.",
+    blurb: "A professional site that turns visitors into customers.",
     cardDesc:
       "Beautiful, high-converting websites built to work for you 24/7 — custom business sites, e-commerce stores, and landing pages that are fast, mobile-friendly, and SEO-ready.",
     overview: [
@@ -67,6 +69,7 @@ export const services: ServiceContent[] = [
     icon: Share2,
     title: "Social Media Management",
     tagline: "Stay active, grow your audience, and win customers — without lifting a finger.",
+    blurb: "We post and grow your social media for you.",
     cardDesc:
       "Done-for-you posting, scheduling, and engagement across Instagram, Facebook, TikTok, and more — we keep your brand active and growing without you lifting a finger.",
     overview: [
@@ -101,6 +104,7 @@ export const services: ServiceContent[] = [
     icon: PenTool,
     title: "Content Creation",
     tagline: "Scroll-stopping content that gets attention and drives action.",
+    blurb: "Scroll-stopping videos, graphics, and posts in your brand voice.",
     cardDesc:
       "Short-form videos, reels, graphics, blog posts, ads, and email campaigns — produced in your brand voice and built to convert.",
     overview: [
@@ -135,6 +139,7 @@ export const services: ServiceContent[] = [
     icon: Bot,
     title: "AI Chatbots & Voice Agents",
     tagline: "Answer every customer instantly, day or night — and never miss a lead.",
+    blurb: "Instant answers for your customers, day or night.",
     cardDesc:
       "Website chatbots, FAQ bots, booking bots, WhatsApp/SMS bots, and AI call answering that handle support and order-status questions so you never miss a lead.",
     overview: [
@@ -169,6 +174,7 @@ export const services: ServiceContent[] = [
     icon: Phone,
     title: "AI Receptionist",
     tagline: "A 24/7 AI receptionist that answers, books, and never takes a day off.",
+    blurb: "Answers your calls and books appointments around the clock.",
     cardDesc:
       "An AI receptionist that answers calls, books appointments, and handles FAQs around the clock — so your team can focus on the work.",
     overview: [
@@ -203,6 +209,7 @@ export const services: ServiceContent[] = [
     icon: PhoneMissed,
     title: "Missed Call Text-Back",
     tagline: "Turn every missed call into a conversation — automatically.",
+    blurb: "Instantly texts back every call you can't answer.",
     cardDesc:
       "When you can't pick up, we instantly text the caller back, start the conversation, and book the appointment for you.",
     overview: [
@@ -237,6 +244,7 @@ export const services: ServiceContent[] = [
     icon: Workflow,
     title: "Workflow Automation",
     tagline: "Connect your tools and automate the busywork that slows you down.",
+    blurb: "Automate the repetitive busywork that eats your time.",
     cardDesc:
       "We connect your tools — Gmail, Slack, HubSpot, GoHighLevel, Airtable, Sheets, CRMs, and invoicing — to automate follow-ups, lead routing, quotes, onboarding, and admin tasks.",
     overview: [
@@ -271,6 +279,7 @@ export const services: ServiceContent[] = [
     icon: Target,
     title: "Lead Generation & Outreach",
     tagline: "Fill your pipeline with qualified leads — on autopilot.",
+    blurb: "Keeps your pipeline full of new, qualified leads.",
     cardDesc:
       "Lead scraping and enrichment, personalized cold email, LinkedIn outreach, CRM updates, appointment setting, and AI sales assistants that keep your pipeline full.",
     overview: [
@@ -305,6 +314,7 @@ export const services: ServiceContent[] = [
     icon: Users,
     title: "CRM Setup & Automation",
     tagline: "Stop letting leads fall through the cracks.",
+    blurb: "Organizes your leads so none slip through the cracks.",
     cardDesc:
       "AI-powered CRM setup — pipelines, automations, nurture campaigns, lead scoring, and dashboards built around your business.",
     overview: [
@@ -339,6 +349,7 @@ export const services: ServiceContent[] = [
     icon: BarChart3,
     title: "Data Analytics & Reporting",
     tagline: "Turn your data into decisions you can act on.",
+    blurb: "Turns your numbers into clear, simple decisions.",
     cardDesc:
       "Dashboards, executive summaries, ad performance reports, and forecasting that turn raw numbers into clear next steps.",
     overview: [
@@ -373,6 +384,7 @@ export const services: ServiceContent[] = [
     icon: BookOpen,
     title: "Knowledge-Base Bots & Copilots",
     tagline: "Instant, accurate answers from your own company knowledge.",
+    blurb: "Gives your team instant answers from your own info.",
     cardDesc:
       "Internal AI copilots trained on your docs, SOPs, and FAQs so your team gets instant answers to repetitive questions.",
     overview: [
@@ -407,6 +419,7 @@ export const services: ServiceContent[] = [
     icon: GraduationCap,
     title: "AI Consulting & Training",
     tagline: "A clear roadmap to put AI to work in your business.",
+    blurb: "A clear, practical plan to put AI to work for you.",
     cardDesc:
       "AI audits, roadmaps, staff training, prompt libraries, and pilot rollouts to help you adopt AI with confidence.",
     overview: [
@@ -441,6 +454,7 @@ export const services: ServiceContent[] = [
     icon: Search,
     title: "Local SEO",
     tagline: "Get found by customers searching for you right now.",
+    blurb: "Helps customers find you first on Google and Maps.",
     cardDesc:
       "Rank higher on Google and Maps so local customers find you first — built to win in DFW and grow anywhere in the U.S.",
     overview: [

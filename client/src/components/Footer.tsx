@@ -48,14 +48,19 @@ export default function Footer() {
 
           <div>
             <h3 className="font-display text-base font-bold mb-4 text-ivoire-gold">Services</h3>
-            <ul className="space-y-2.5 text-sm text-white/60">
+            <ul className="space-y-3 text-sm">
               {services.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="hover:text-ivoire-gold transition-colors"
+                    className="group block"
                   >
-                    {s.title}
+                    <span className="block text-white/80 font-medium group-hover:text-ivoire-gold transition-colors">
+                      {s.title}
+                    </span>
+                    <span className="block text-white/45 text-xs leading-snug mt-0.5">
+                      {s.blurb}
+                    </span>
                   </Link>
                 </li>
               ))}
