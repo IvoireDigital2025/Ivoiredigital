@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { openCalendly, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/utils";
-import { Phone, ArrowRight } from "lucide-react";
+import { openCalendly } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
   return (
@@ -30,12 +30,6 @@ export default function FinalCTA() {
               >
                 Book A Call <ArrowRight className="w-4 h-4" />
               </button>
-              <a
-                href={CONTACT_PHONE_HREF}
-                className="flex items-center gap-2 text-white border-2 border-white/25 hover:border-ivoire-gold rounded-lg px-8 py-4 text-base font-semibold transition-colors w-full sm:w-auto justify-center"
-              >
-                <Phone className="w-4 h-4" /> {CONTACT_PHONE}
-              </a>
             </div>
           </div>
         </motion.div>

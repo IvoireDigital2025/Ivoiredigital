@@ -163,6 +163,7 @@ select:focus {
 .text-ivoire-gold { color: var(--ivoire-gold); }
 .bg-ivoire-gold { background-color: var(--ivoire-gold); }
 .border-ivoire-gold { border-color: var(--ivoire-gold); }
+.fill-ivoire-gold { fill: var(--ivoire-gold); }
 
 .btn-gold {
   background-color: var(--ivoire-gold);

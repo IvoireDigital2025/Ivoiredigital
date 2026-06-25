@@ -6,7 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -96,16 +96,6 @@ export default function ContactSection() {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 p-2 bg-ivoire-gold/15 rounded">
-                  <Phone className="h-6 w-6 text-ivoire-gold" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-white">Phone</h3>
-                  <p className="text-white/60">(945) 223-8799</p>
-                </div>
-              </div>
-              
               <div className="flex items-start">
                 <div className="flex-shrink-0 p-2 bg-ivoire-gold/15 rounded">
                   <Mail className="h-6 w-6 text-ivoire-gold" />

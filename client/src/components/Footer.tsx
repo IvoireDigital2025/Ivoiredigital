@@ -1,10 +1,8 @@
-import { Facebook, Linkedin, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 import {
   scrollToSection,
   openCalendly,
   CONTACT_EMAIL,
-  CONTACT_PHONE,
-  CONTACT_PHONE_HREF,
 } from "@/lib/utils";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
@@ -83,11 +81,6 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-base font-bold mb-4 text-ivoire-gold">Get In Touch</h3>
             <ul className="space-y-3 text-sm text-white/60">
-              <li>
-                <a href={CONTACT_PHONE_HREF} className="flex items-center gap-2 hover:text-ivoire-gold transition-colors">
-                  <Phone className="h-4 w-4 text-ivoire-gold" /> {CONTACT_PHONE}
-                </a>
-              </li>
               <li>
                 <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center gap-2 hover:text-ivoire-gold transition-colors">
                   <Mail className="h-4 w-4 text-ivoire-gold" /> {CONTACT_EMAIL}

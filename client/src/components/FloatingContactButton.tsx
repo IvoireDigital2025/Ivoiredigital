@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, X, Phone, Mail, Calendar } from "lucide-react";
+import { MessageCircle, X, Mail, Calendar } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,8 +15,6 @@ export default function FloatingContactButton() {
     setIsOpen(false);
     if (action === "contact-form") {
       scrollToSection("contact");
-    } else if (action === "phone") {
-      window.open("tel:945-223-8799", "_self");
     } else if (action === "email") {
       window.open("mailto:Koneyassine49@gmail.com", "_self");
     }
@@ -28,12 +26,6 @@ export default function FloatingContactButton() {
       icon: MessageCircle,
       label: "Contact Form",
       color: "bg-[#14532d] hover:bg-[#166534]"
-    },
-    {
-      id: "phone",
-      icon: Phone,
-      label: "Call Us",
-      color: "bg-[#b07d2a] hover:bg-[#c49030]"
     },
     {
       id: "email",

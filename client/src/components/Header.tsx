@@ -56,13 +56,6 @@ export default function Header({ scrolled }: HeaderProps) {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="tel:+19452238799"
-            className="flex items-center gap-2 text-white/80 hover:text-ivoire-gold transition-colors text-sm font-semibold"
-          >
-            <Phone className="w-4 h-4" />
-            (945) 223-8799
-          </a>
           <button
             onClick={openCalendly}
             className="btn-gold rounded-lg px-5 py-2.5 text-sm"
