@@ -1,0 +1,29 @@
+AI customer support chatbots and voice agents
+These are probably the most obvious buyer request: website chatbots, FAQ bots, booking bots, WhatsApp/SMS bots, call answering, support ticket triage, and order-status automation. Businesses like them because they reduce missed leads and support workload.
+
+Workflow automation
+This is the quiet money-maker. Agencies connect tools like Gmail, Slack, HubSpot, GoHighLevel, Airtable, Google Sheets, Zapier/Make, CRMs, calendars, invoicing tools, and internal forms. Common asks: auto-follow-up, lead routing, quote generation, onboarding flows, document extraction, reporting, and admin task automation.
+
+AI lead generation and sales outreach
+Very popular with local service businesses, B2B companies, real estate, agencies, SaaS, and consultants. Offers include lead scraping/enrichment, personalized cold email, LinkedIn outreach, CRM updates, appointment setting, and AI sales assistants. Companies like Artisan have grown around AI sales reps, which reflects real market appetite.
+
+AI content creation and social media systems
+Still heavily requested: blog posts, ads, email campaigns, short-form video scripts, captions, product descriptions, repurposing long-form content, and brand voice systems. Marketing remains one of the most common AI use cases; surveys have repeatedly shown high AI adoption in marketing teams.
+
+AI website chat + lead capture
+Similar to support bots, but focused on conversion. Think: “AI receptionist” for law firms, med spas, contractors, dentists, clinics, coaches, gyms, and home services. The bot qualifies visitors, answers questions, captures info, books calls, and pushes everything into a CRM.
+
+AI appointment booking and missed-call text-back
+Huge for local businesses. A simple AI/SMS system that replies to missed calls, books appointments, confirms visits, and follows up can be easier to sell than a complex “AI transformation” package.
+
+AI CRM / GoHighLevel / HubSpot setup
+Many agencies sell “AI-powered CRM” packages: pipeline setup, automations, nurture campaigns, lead scoring, smart follow-ups, and dashboards. Business owners often do not care that it is AI; they care that leads stop falling through the cracks.
+
+AI data analysis and reporting dashboards
+More common for established businesses. Agencies build dashboards, weekly executive summaries, ad performance reports, sales forecasting, customer segmentation, inventory insights, and spreadsheet automation.
+
+Custom knowledge-base bots / internal copilots
+These are bots trained or connected to company docs, SOPs, policies, product manuals, contracts, FAQs, or support history. Good for teams with repetitive internal questions: HR, operations, support, sales enablement.
+
+AI consulting, training, and implementation roadmaps
+   Many business owners are still confused. Agencies sell audits, AI opportunity maps, staff training, prompt libraries, tool selection, security policies, and pilot implementation.
