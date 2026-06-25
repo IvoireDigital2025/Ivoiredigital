@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle } from "lucide-react";
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +15,10 @@ import { apiRequest } from "@/lib/queryClient";
 import { z } from "zod";
 
 const bookingFormSchema = insertAppointmentSchema.extend({
+  name: z.string().min(2, "Please enter your full name"),
+  email: z.string().email("Please enter a valid email address"),
+  businessType: z.string().min(2, "Please tell us what type of business you run"),
+  service: z.string().min(1, "Please select the service you need"),
   preferredDate: z.string().min(1, "Please select a preferred date"),
   preferredTime: z.string().min(1, "Please select a preferred time"),
   timezone: z.string().min(1, "Please select your timezone"),
@@ -95,6 +99,7 @@ export default function BookingSection() {
       name: "",
       email: "",
       phone: "",
+      businessType: "",
       service: "",
       preferredDate: "",
       preferredTime: "",
@@ -307,6 +312,27 @@ export default function BookingSection() {
                             onBlur={field.onBlur}
                             value={field.value || ""}
                             name={field.name}
+                            className="border-gray-300 focus:border-[#14532d]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="businessType"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="flex items-center text-gray-700 font-medium">
+                          <Briefcase className="h-4 w-4 mr-2" />
+                          Type of Business *
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="e.g. Dental clinic, restaurant, law firm"
+                            {...field}
                             className="border-gray-300 focus:border-[#14532d]"
                           />
                         </FormControl>

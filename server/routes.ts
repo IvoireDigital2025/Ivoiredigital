@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, insertAppointmentSchema } from "@shared/schema";
 import nodemailer from "nodemailer";
+import { z } from "zod";
 
 const NOTIFY_TO = "contact@ivoiredigital.com";
 
@@ -87,6 +88,7 @@ function buildAppointmentEmail(d: {
   name: string;
   email: string;
   phone?: string | null;
+  businessType: string;
   service: string;
   preferredDate: string;
   preferredTime: string;
@@ -104,6 +106,7 @@ function buildAppointmentEmail(d: {
           <tr><td style="padding: 8px 0; color: #6b7280; width: 140px;"><strong>Name:</strong></td><td>${escapeHtml(d.name)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email:</strong></td><td><a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a></td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Phone:</strong></td><td>${escapeHtml(d.phone) || "—"}</td></tr>
+          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Type:</strong></td><td>${escapeHtml(d.businessType)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Time:</strong></td><td>${escapeHtml(d.preferredTime)} ${escapeHtml(d.timezone)}</td></tr>
@@ -167,12 +170,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Appointment booking endpoint
   app.post("/api/appointments", async (req: Request, res: Response) => {
     try {
-      const appointmentData = insertAppointmentSchema.parse(req.body);
+      const appointmentData = insertAppointmentSchema
+        .extend({
+          name: z.string().min(2, "Name is required"),
+          email: z.string().email("A valid email is required"),
+          businessType: z.string().min(2, "Type of business is required"),
+          service: z.string().min(1, "Service is required"),
+          preferredDate: z.string().min(1, "Preferred date is required"),
+          preferredTime: z.string().min(1, "Preferred time is required"),
+          timezone: z.string().min(1, "Timezone is required"),
+        })
+        .parse(req.body);
 
       const appointment = await storage.createAppointment({
         name: appointmentData.name,
         email: appointmentData.email,
         phone: appointmentData.phone || null,
+        businessType: appointmentData.businessType,
         service: appointmentData.service,
         preferredDate: appointmentData.preferredDate,
         preferredTime: appointmentData.preferredTime,
