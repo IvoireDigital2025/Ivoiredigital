@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { scrollToSection, openCalendly } from "@/lib/utils";
+import { scrollToSection, goToBooking } from "@/lib/utils";
 import { Menu, X, Phone } from "lucide-react";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
@@ -57,7 +57,7 @@ export default function Header({ scrolled }: HeaderProps) {
 
         <div className="hidden lg:flex items-center gap-4">
           <button
-            onClick={openCalendly}
+            onClick={goToBooking}
             className="btn-gold rounded-lg px-5 py-2.5 text-sm"
           >
             Book A Call
@@ -90,7 +90,7 @@ export default function Header({ scrolled }: HeaderProps) {
             </button>
           ))}
           <button
-            onClick={openCalendly}
+            onClick={goToBooking}
             className="btn-gold rounded-lg px-5 py-3 mt-3 text-center"
           >
             Book A Call

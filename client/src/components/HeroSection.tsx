@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { openCalendly } from "@/lib/utils";
+import { goToBooking } from "@/lib/utils";
 import { Star } from "lucide-react";
 import { SiGoogle, SiFacebook, SiTrustpilot } from "react-icons/si";
 import mascot from "@assets/generated_images/ivoire_mascot.png";
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 ))}
               </div>
               <button
-                onClick={openCalendly}
+                onClick={goToBooking}
                 className="btn-gold rounded-lg px-8 py-4 text-base w-full sm:w-auto"
               >
                 Book A Call

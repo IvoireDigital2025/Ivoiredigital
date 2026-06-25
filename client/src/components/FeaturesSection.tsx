@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { openCalendly } from "@/lib/utils";
+import { goToBooking } from "@/lib/utils";
 import {
   PhoneCall,
   Globe,
@@ -321,7 +321,7 @@ export default function FeaturesSection() {
                     ))}
                   </ul>
                   <button
-                    onClick={openCalendly}
+                    onClick={goToBooking}
                     className="btn-gold rounded-lg px-6 py-3 mt-8 text-sm"
                   >
                     See It In Action

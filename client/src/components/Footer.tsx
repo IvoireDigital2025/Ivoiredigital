@@ -1,7 +1,7 @@
 import { Facebook, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 import {
   scrollToSection,
-  openCalendly,
+  goToBooking,
   CONTACT_EMAIL,
 } from "@/lib/utils";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
@@ -90,7 +90,7 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 text-ivoire-gold" /> Dallas, TX
               </li>
             </ul>
-            <button onClick={openCalendly} className="btn-gold rounded-lg px-5 py-2.5 mt-5 text-sm">
+            <button onClick={goToBooking} className="btn-gold rounded-lg px-5 py-2.5 mt-5 text-sm">
               Book A Call
             </button>
           </div>

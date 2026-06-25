@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { openCalendly } from "@/lib/utils";
+import { goToBooking } from "@/lib/utils";
 import { PhoneCall, Wrench, Rocket } from "lucide-react";
 
 const steps = [
@@ -75,7 +75,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="text-center mt-14">
-          <button onClick={openCalendly} className="btn-gold rounded-lg px-8 py-4 text-base">
+          <button onClick={goToBooking} className="btn-gold rounded-lg px-8 py-4 text-base">
             Book Your Discovery Call
           </button>
         </div>

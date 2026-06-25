@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { openCalendly } from "@/lib/utils";
+import { goToBooking } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
@@ -25,7 +25,7 @@ export default function FinalCTA() {
             </p>
             <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
-                onClick={openCalendly}
+                onClick={goToBooking}
                 className="btn-gold rounded-lg px-8 py-4 text-base flex items-center gap-2 w-full sm:w-auto justify-center"
               >
                 Book A Call <ArrowRight className="w-4 h-4" />
