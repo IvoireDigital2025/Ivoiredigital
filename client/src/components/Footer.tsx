@@ -47,11 +47,15 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-base font-bold mb-4 text-ivoire-gold">Services</h3>
             <ul className="space-y-2.5 text-sm text-white/60">
+              <li>Website Design & Development</li>
+              <li>Social Media Management</li>
+              <li>Content Creation</li>
+              <li>AI Chatbots & Voice Agents</li>
+              <li>Workflow Automation</li>
+              <li>Lead Generation & Outreach</li>
               <li>AI Receptionist</li>
-              <li>Functional Websites</li>
-              <li>5-Star Review Funnel</li>
               <li>Missed Call Text Back</li>
-              <li>Marketing Campaigns</li>
+              <li>CRM Setup & Automation</li>
               <li>Local SEO</li>
             </ul>
           </div>

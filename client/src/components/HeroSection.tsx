@@ -53,9 +53,10 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Cut the fluff. Growth isn't rocket science. We give you the AI
-              automation, websites, and marketing systems to win more
-              customers — you just have to commit to using them.
+              Cut the fluff. Growth isn't rocket science. We build your website,
+              run your social media, create your content, and set up the AI
+              automation to win more customers — you just have to commit to
+              using them.
             </p>
 
             {/* Avatars + CTA */}
