@@ -35,28 +35,32 @@ export default function ContentShowcaseSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-start max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 items-start max-w-3xl mx-auto">
           {videos.map((video, i) => (
             <motion.div
               key={video.src}
-              className="group bg-ivoire-navy-card rounded-xl overflow-hidden border border-white/5 hover:border-ivoire-gold/40 transition-all"
+              className="group bg-ivoire-navy-card rounded-xl overflow-hidden border border-white/10 hover:border-ivoire-gold/40 transition-all shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (i % 4) * 0.07 }}
             >
-              <video
-                src={video.src}
-                className={`w-full h-auto ${
+              <div
+                className={`relative w-full bg-black ${
                   video.orientation === "portrait" ? "aspect-[9/16]" : "aspect-video"
-                } object-cover bg-black`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls
-                preload="metadata"
-              />
+                }`}
+              >
+                <video
+                  src={video.src}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="auto"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
