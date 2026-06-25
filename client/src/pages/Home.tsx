@@ -12,6 +12,7 @@ import BookingSection from "@/components/BookingSection";
 import ContactSection from "@/components/ContactSection";
 import BackToTop from "@/components/BackToTop";
 import LiveChatWidget from "@/components/LiveChatWidget";
+import LocalSeoSection from "@/components/LocalSeoSection";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { useSeo, businessJsonLd } from "@/lib/seo";
@@ -63,6 +64,7 @@ export default function Home() {
         <IndustriesSection />
         <ProcessSection />
         <WhyUsSection />
+        <LocalSeoSection />
         <FinalCTA />
         <BookingSection />
         <ContactSection />

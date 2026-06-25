@@ -61,8 +61,10 @@ export function useSeo({ title, description, keywords, path, jsonLd }: SeoOption
     upsertMeta("property", "og:title", title);
     upsertMeta("property", "og:description", description);
     upsertMeta("property", "og:url", url);
+    upsertMeta("property", "og:image", `${BUSINESS.url}/og-image.png`);
     upsertMeta("name", "twitter:title", title);
     upsertMeta("name", "twitter:description", description);
+    upsertMeta("name", "twitter:image", `${BUSINESS.url}/og-image.png`);
     upsertLink("canonical", url);
 
     const id = "seo-jsonld";
