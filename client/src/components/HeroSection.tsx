@@ -428,6 +428,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-12 items-start">
           {/* Left: Text + Form */}
           <motion.div
+            className="flex flex-col"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
@@ -444,7 +445,7 @@ export default function HeroSection() {
               <span className="text-ivoire-gold">Growing Businesses</span>
             </h1>
 
-            <p className="mt-4 text-sm sm:text-base text-white/70 max-w-xl leading-relaxed">
+            <p className="order-3 lg:order-none mt-5 lg:mt-4 text-sm sm:text-base text-white/70 max-w-xl leading-relaxed">
               Cut the fluff. Growth isn't rocket science. We build your website,
               run your social media, create your content, and set up the AI
               automation to{" "}
@@ -454,7 +455,7 @@ export default function HeroSection() {
               — you just have to commit to using them.
             </p>
 
-            <div className="mt-7">
+            <div className="order-2 lg:order-none mt-5 lg:mt-7">
               <GrowthPlanForm />
             </div>
           </motion.div>

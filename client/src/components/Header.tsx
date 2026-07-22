@@ -38,8 +38,8 @@ export default function Header({ scrolled }: HeaderProps) {
           <img
             src={ivoireLogo}
             alt="Ivoire Digital Logo"
-            className="h-16 sm:h-20 w-auto object-contain"
-            style={{ mixBlendMode: "screen", maxWidth: "320px" }}
+            className="h-20 sm:h-20 w-auto object-contain max-w-[240px] sm:max-w-[320px]"
+            style={{ mixBlendMode: "screen" }}
           />
         </a>
 
