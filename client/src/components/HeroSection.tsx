@@ -17,9 +17,6 @@ import {
   Building2,
   MapPin,
   MessageSquare,
-  Calendar,
-  Clock,
-  Globe,
   ClipboardList,
   CheckCircle,
 } from "lucide-react";
@@ -54,7 +51,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { insertAppointmentSchema } from "@shared/schema";
 import { z } from "zod";
-import { services, timeSlots, timezones } from "@/components/BookingSection";
+import { services } from "@/components/BookingSection";
 import robot from "@assets/generated_images/ivoire_robot_hero.png";
 import avatar1 from "@assets/stock_images/team_avatar_1.jpg";
 import avatar2 from "@assets/stock_images/team_avatar_2.jpg";
@@ -63,6 +60,8 @@ import avatar4 from "@assets/stock_images/team_avatar_4.jpg";
 import avatar5 from "@assets/stock_images/team_avatar_5.jpg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
+
+const BUSINESS_PHONE = ""; // e.g. "(214) 555-0123" — shown as tap-to-call after submit
 
 const reviewBadges = [
   { icon: SiGoogle, label: "Google", color: "#ffffff" },
@@ -121,9 +120,6 @@ const heroFormSchema = insertAppointmentSchema.extend({
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
   service: z.string().min(1, "Please select the service you need"),
-  preferredDate: z.string().min(1, "Please select a preferred date"),
-  preferredTime: z.string().min(1, "Please select a preferred time"),
-  timezone: z.string().min(1, "Please select your timezone"),
 });
 
 type HeroFormValues = z.infer<typeof heroFormSchema>;
@@ -160,9 +156,6 @@ function GrowthPlanForm() {
       businessName: "",
       location: "",
       service: "",
-      preferredDate: "",
-      preferredTime: "",
-      timezone: "",
       message: "",
     },
   });
@@ -184,8 +177,8 @@ function GrowthPlanForm() {
       setIsSubmitted(true);
       form.reset();
       toast({
-        title: "Consultation Booked!",
-        description: "We'll contact you soon to confirm your consultation time.",
+        title: "Message Sent!",
+        description: "We got your info and will reach out shortly.",
       });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/appointments"] });
     },
@@ -198,8 +191,6 @@ function GrowthPlanForm() {
     },
   });
 
-  const today = new Date().toISOString().split("T")[0];
-
   return (
     <div
       id="growth-plan"
@@ -209,19 +200,30 @@ function GrowthPlanForm() {
         <div className="text-center py-10">
           <CheckCircle className="h-14 w-14 mx-auto mb-5 text-green-400" />
           <h3 className="text-white font-display font-bold text-2xl mb-3">
-            Consultation Booked!
+            We Got Your Info!
           </h3>
           <p className="text-white/70 mb-6 max-w-sm mx-auto">
-            Thank you! We'll contact you within 24 hours to confirm your
-            appointment details.
+            We'll reach out within 24 hours. Don't want to wait? Give us a call
+            right now and let's talk about growing your business.
           </p>
-          <Button
-            onClick={() => setIsSubmitted(false)}
-            variant="outline"
-            className="border-ivoire-gold/40 bg-transparent text-ivoire-gold hover:bg-ivoire-gold/10"
-          >
-            Book Another Consultation
-          </Button>
+          {BUSINESS_PHONE && (
+            <a
+              href={`tel:${BUSINESS_PHONE.replace(/[^+\d]/g, "")}`}
+              className="btn-gold rounded-lg px-8 py-3.5 text-base font-bold inline-flex items-center justify-center gap-2 mb-4"
+            >
+              <Phone className="w-4 h-4" />
+              Call Us Now {BUSINESS_PHONE}
+            </a>
+          )}
+          <div>
+            <Button
+              onClick={() => setIsSubmitted(false)}
+              variant="outline"
+              className="border-ivoire-gold/40 bg-transparent text-ivoire-gold hover:bg-ivoire-gold/10"
+            >
+              Send Another Message
+            </Button>
+          </div>
         </div>
       ) : (
         <>
@@ -230,7 +232,7 @@ function GrowthPlanForm() {
               <ClipboardList className="w-4.5 h-4.5 text-ivoire-gold" />
             </span>
             <h2 className="text-white font-display font-bold text-base sm:text-lg tracking-wide">
-              LET'S BUILD YOUR <span className="text-ivoire-gold">GROWTH PLAN</span>
+              CONNECT <span className="text-ivoire-gold">WITH US</span>
             </h2>
           </div>
 
@@ -366,90 +368,6 @@ function GrowthPlanForm() {
                   </FormItem>
                 )}
               />
-
-              <div className="flex items-center gap-3 pt-1">
-                <span className="h-px flex-1 bg-white/10" />
-                <span className="text-ivoire-gold text-[11px] font-semibold tracking-[0.15em]">
-                  PREFERRED SCHEDULE
-                </span>
-                <span className="h-px flex-1 bg-white/10" />
-              </div>
-
-              <div className="grid sm:grid-cols-3 gap-4">
-                <FormField
-                  control={form.control}
-                  name="preferredDate"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className={labelClass}>
-                        <Calendar className={iconClass} /> Preferred Date *
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="date"
-                          min={today}
-                          {...field}
-                          className={fieldClass}
-                          style={{ colorScheme: "dark" }}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="preferredTime"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className={labelClass}>
-                        <Clock className={iconClass} /> Preferred Time *
-                      </FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className={fieldClass}>
-                            <SelectValue placeholder="Select time" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className={selectContentClass}>
-                          {timeSlots.map((time) => (
-                            <SelectItem key={time} value={time}>
-                              {time}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="timezone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className={labelClass}>
-                        <Globe className={iconClass} /> Timezone *
-                      </FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className={fieldClass}>
-                            <SelectValue placeholder="Select timezone" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className={selectContentClass}>
-                          {timezones.map((timezone) => (
-                            <SelectItem key={timezone} value={timezone}>
-                              {timezone}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
 
               <FormField
                 control={form.control}

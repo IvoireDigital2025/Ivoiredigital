@@ -92,9 +92,9 @@ function buildAppointmentEmail(d: {
   businessName: string;
   location: string;
   service: string;
-  preferredDate: string;
-  preferredTime: string;
-  timezone: string;
+  preferredDate?: string | null;
+  preferredTime?: string | null;
+  timezone?: string | null;
   message?: string | null;
 }): string {
   return `
@@ -112,8 +112,12 @@ function buildAppointmentEmail(d: {
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Type:</strong></td><td>${escapeHtml(d.businessType)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Location:</strong></td><td>${escapeHtml(d.location)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>
-          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
-          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Time:</strong></td><td>${escapeHtml(d.preferredTime)} ${escapeHtml(d.timezone)}</td></tr>
+          ${
+            d.preferredDate
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
+          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Time:</strong></td><td>${escapeHtml(d.preferredTime || "")} ${escapeHtml(d.timezone || "")}</td></tr>`
+              : ""
+          }
         </table>
         ${
           d.message
@@ -182,9 +186,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           businessName: z.string().min(2, "Business name is required"),
           location: z.string().min(2, "Location is required"),
           service: z.string().min(1, "Service is required"),
-          preferredDate: z.string().min(1, "Preferred date is required"),
-          preferredTime: z.string().min(1, "Preferred time is required"),
-          timezone: z.string().min(1, "Timezone is required"),
         })
         .parse(req.body);
 
@@ -196,9 +197,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         businessName: appointmentData.businessName,
         location: appointmentData.location,
         service: appointmentData.service,
-        preferredDate: appointmentData.preferredDate,
-        preferredTime: appointmentData.preferredTime,
-        timezone: appointmentData.timezone,
+        preferredDate: appointmentData.preferredDate || null,
+        preferredTime: appointmentData.preferredTime || null,
+        timezone: appointmentData.timezone || null,
         message: appointmentData.message || null,
       });
 
@@ -212,7 +213,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Fire-and-forget email notification
       sendNotification(
-        `New Booking: ${appointmentData.name} — ${appointmentData.preferredDate} ${appointmentData.preferredTime}`,
+        appointmentData.preferredDate
+          ? `New Booking: ${appointmentData.name} — ${appointmentData.preferredDate} ${appointmentData.preferredTime}`
+          : `New Lead: ${appointmentData.name} — ${appointmentData.businessName} (${appointmentData.location})`,
         buildAppointmentEmail(appointmentData),
         appointmentData.email
       );
