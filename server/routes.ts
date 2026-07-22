@@ -91,7 +91,7 @@ function buildAppointmentEmail(d: {
   businessType: string;
   businessName: string;
   location: string;
-  service: string;
+  service?: string | null;
   preferredDate?: string | null;
   preferredTime?: string | null;
   timezone?: string | null;
@@ -111,7 +111,11 @@ function buildAppointmentEmail(d: {
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Name:</strong></td><td>${escapeHtml(d.businessName)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Type:</strong></td><td>${escapeHtml(d.businessType)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Location:</strong></td><td>${escapeHtml(d.location)}</td></tr>
-          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>
+          ${
+            d.service
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>`
+              : ""
+          }
           ${
             d.preferredDate
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
@@ -186,7 +190,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
           businessType: z.string().min(2, "Type of business is required"),
           businessName: z.string().min(2, "Business name is required"),
           location: z.string().min(2, "Location is required"),
-          service: z.string().min(1, "Service is required"),
         })
         .parse(req.body);
 
@@ -197,7 +200,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         businessType: appointmentData.businessType,
         businessName: appointmentData.businessName,
         location: appointmentData.location,
-        service: appointmentData.service,
+        service: appointmentData.service || null,
         preferredDate: appointmentData.preferredDate || null,
         preferredTime: appointmentData.preferredTime || null,
         timezone: appointmentData.timezone || null,

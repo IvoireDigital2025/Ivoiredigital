@@ -16,7 +16,6 @@ import {
   Briefcase,
   Building2,
   MapPin,
-  MessageSquare,
   ClipboardList,
   CheckCircle,
 } from "lucide-react";
@@ -34,13 +33,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   Form,
   FormControl,
   FormField,
@@ -51,7 +43,6 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { insertAppointmentSchema } from "@shared/schema";
 import { z } from "zod";
-import { services } from "@/components/BookingSection";
 import robot from "@assets/generated_images/ivoire_robot_hero.png";
 import avatar1 from "@assets/stock_images/team_avatar_1.jpg";
 import avatar2 from "@assets/stock_images/team_avatar_2.jpg";
@@ -120,7 +111,6 @@ const heroFormSchema = insertAppointmentSchema.extend({
   businessType: z.string().min(2, "Please tell us what type of business you run"),
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
-  service: z.string().min(1, "Please select the service you need"),
 });
 
 type HeroFormValues = z.infer<typeof heroFormSchema>;
@@ -130,7 +120,6 @@ const fieldClass =
 const labelClass =
   "flex items-center gap-1.5 text-white/80 text-xs font-medium";
 const iconClass = "h-3.5 w-3.5 text-ivoire-gold";
-const selectContentClass = "bg-[#181b26] border-white/10 text-white";
 
 function Stars() {
   return (
@@ -156,7 +145,6 @@ function GrowthPlanForm() {
       businessType: "",
       businessName: "",
       location: "",
-      service: "",
       message: "",
     },
   });
@@ -342,33 +330,6 @@ function GrowthPlanForm() {
                   )}
                 />
               </div>
-
-              <FormField
-                control={form.control}
-                name="service"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={labelClass}>
-                      <MessageSquare className={iconClass} /> Service Interest *
-                    </FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger className={fieldClass}>
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent className={selectContentClass}>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
 
               <FormField
                 control={form.control}

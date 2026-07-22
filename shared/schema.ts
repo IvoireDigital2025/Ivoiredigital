@@ -31,7 +31,7 @@ export const appointments = pgTable("appointments", {
   businessType: text("business_type").notNull(),
   businessName: text("business_name").notNull(),
   location: text("location").notNull(),
-  service: text("service").notNull(),
+  service: text("service"),
   preferredDate: text("preferred_date"),
   preferredTime: text("preferred_time"),
   timezone: text("timezone"),
