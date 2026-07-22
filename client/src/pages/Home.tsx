@@ -8,7 +8,6 @@ import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FinalCTA from "@/components/FinalCTA";
-import BookingSection from "@/components/BookingSection";
 import BackToTop from "@/components/BackToTop";
 import LiveChatWidget from "@/components/LiveChatWidget";
 import LocalSeoSection from "@/components/LocalSeoSection";
@@ -65,7 +64,6 @@ export default function Home() {
         <WhyUsSection />
         <LocalSeoSection />
         <FinalCTA />
-        <BookingSection />
       </main>
       <Footer />
       <BackToTop />
