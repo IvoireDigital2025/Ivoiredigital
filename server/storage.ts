@@ -76,6 +76,8 @@ export class MemStorage implements IStorage {
       email: insertAppointment.email,
       phone: insertAppointment.phone || null,
       businessType: insertAppointment.businessType,
+      businessName: insertAppointment.businessName,
+      location: insertAppointment.location,
       service: insertAppointment.service,
       preferredDate: insertAppointment.preferredDate,
       preferredTime: insertAppointment.preferredTime,

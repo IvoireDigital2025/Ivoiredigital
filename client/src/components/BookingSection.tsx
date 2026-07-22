@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Briefcase } from "lucide-react";
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, Briefcase, Building2, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,6 +18,8 @@ const bookingFormSchema = insertAppointmentSchema.extend({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Please enter a valid email address"),
   businessType: z.string().min(2, "Please tell us what type of business you run"),
+  businessName: z.string().min(2, "Please enter your business name"),
+  location: z.string().min(2, "Please enter your city and state"),
   service: z.string().min(1, "Please select the service you need"),
   preferredDate: z.string().min(1, "Please select a preferred date"),
   preferredTime: z.string().min(1, "Please select a preferred time"),
@@ -100,6 +102,8 @@ export default function BookingSection() {
       email: "",
       phone: "",
       businessType: "",
+      businessName: "",
+      location: "",
       service: "",
       preferredDate: "",
       preferredTime: "",
@@ -290,6 +294,48 @@ export default function BookingSection() {
                         <FormControl>
                           <Input
                             placeholder="e.g. Dental clinic, restaurant, law firm"
+                            {...field}
+                            className="border-gray-300 focus:border-[#14532d]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="businessName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="flex items-center text-gray-700 font-medium">
+                          <Building2 className="h-4 w-4 mr-2" />
+                          Business Name *
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter your business name"
+                            {...field}
+                            className="border-gray-300 focus:border-[#14532d]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="location"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="flex items-center text-gray-700 font-medium">
+                          <MapPin className="h-4 w-4 mr-2" />
+                          Location *
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="City, State (e.g. Dallas, TX)"
                             {...field}
                             className="border-gray-300 focus:border-[#14532d]"
                           />

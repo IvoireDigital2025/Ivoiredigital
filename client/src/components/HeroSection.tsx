@@ -14,6 +14,8 @@ import {
   Mail,
   Phone,
   Briefcase,
+  Building2,
+  MapPin,
   MessageSquare,
   Calendar,
   Clock,
@@ -116,6 +118,8 @@ const heroFormSchema = insertAppointmentSchema.extend({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Please enter a valid email address"),
   businessType: z.string().min(2, "Please tell us what type of business you run"),
+  businessName: z.string().min(2, "Please enter your business name"),
+  location: z.string().min(2, "Please enter your city and state"),
   service: z.string().min(1, "Please select the service you need"),
   preferredDate: z.string().min(1, "Please select a preferred date"),
   preferredTime: z.string().min(1, "Please select a preferred time"),
@@ -153,6 +157,8 @@ function GrowthPlanForm() {
       email: "",
       phone: "",
       businessType: "",
+      businessName: "",
+      location: "",
       service: "",
       preferredDate: "",
       preferredTime: "",
@@ -297,6 +303,36 @@ function GrowthPlanForm() {
                       </FormLabel>
                       <FormControl>
                         <Input placeholder="e.g. Dental clinic, restaurant, law firm" {...field} className={fieldClass} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="businessName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>
+                        <Building2 className={iconClass} /> Business Name *
+                      </FormLabel>
+                      <FormControl>
+                        <Input placeholder="Enter your business name" {...field} className={fieldClass} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="location"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>
+                        <MapPin className={iconClass} /> Location *
+                      </FormLabel>
+                      <FormControl>
+                        <Input placeholder="City, State (e.g. Dallas, TX)" {...field} className={fieldClass} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

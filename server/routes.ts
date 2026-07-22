@@ -89,6 +89,8 @@ function buildAppointmentEmail(d: {
   email: string;
   phone?: string | null;
   businessType: string;
+  businessName: string;
+  location: string;
   service: string;
   preferredDate: string;
   preferredTime: string;
@@ -106,7 +108,9 @@ function buildAppointmentEmail(d: {
           <tr><td style="padding: 8px 0; color: #6b7280; width: 140px;"><strong>Name:</strong></td><td>${escapeHtml(d.name)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Email:</strong></td><td><a href="mailto:${escapeHtml(d.email)}">${escapeHtml(d.email)}</a></td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Phone:</strong></td><td>${escapeHtml(d.phone) || "—"}</td></tr>
+          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Name:</strong></td><td>${escapeHtml(d.businessName)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Business Type:</strong></td><td>${escapeHtml(d.businessType)}</td></tr>
+          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Location:</strong></td><td>${escapeHtml(d.location)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Time:</strong></td><td>${escapeHtml(d.preferredTime)} ${escapeHtml(d.timezone)}</td></tr>
@@ -175,6 +179,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           name: z.string().min(2, "Name is required"),
           email: z.string().email("A valid email is required"),
           businessType: z.string().min(2, "Type of business is required"),
+          businessName: z.string().min(2, "Business name is required"),
+          location: z.string().min(2, "Location is required"),
           service: z.string().min(1, "Service is required"),
           preferredDate: z.string().min(1, "Preferred date is required"),
           preferredTime: z.string().min(1, "Preferred time is required"),
@@ -187,6 +193,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         email: appointmentData.email,
         phone: appointmentData.phone || null,
         businessType: appointmentData.businessType,
+        businessName: appointmentData.businessName,
+        location: appointmentData.location,
         service: appointmentData.service,
         preferredDate: appointmentData.preferredDate,
         preferredTime: appointmentData.preferredTime,
