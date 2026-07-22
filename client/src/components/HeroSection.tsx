@@ -535,15 +535,15 @@ export default function HeroSection() {
 
         {/* Reviews + avatars strip */}
         <div className="mt-10 sm:mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-8">
-          <div className="inline-flex flex-col sm:flex-row sm:flex-wrap items-center gap-x-8 gap-y-3 rounded-xl border border-white/10 bg-white/[0.03] px-6 py-4 backdrop-blur-sm">
+          <div className="inline-flex flex-row flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-sm">
             {reviewBadges.map((b, i) => (
-              <div key={b.label} className="flex items-center gap-2.5">
+              <div key={b.label} className="flex items-center gap-1.5 sm:gap-2.5">
                 {i > 0 && (
-                  <span className="hidden sm:block h-8 w-px bg-white/10 -ml-5 mr-3" />
+                  <span className="block h-8 w-px bg-white/10 -ml-2 mr-1 sm:-ml-5 sm:mr-3" />
                 )}
-                <b.icon className="w-6 h-6 shrink-0" style={{ color: b.color }} />
+                <b.icon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" style={{ color: b.color }} />
                 <div className="text-left">
-                  <div className="text-white text-sm font-semibold leading-none">
+                  <div className="text-white text-xs sm:text-sm font-semibold leading-none">
                     {b.label} <span className="text-white/60 font-normal">5.0</span>
                   </div>
                   <div className="mt-1.5">
