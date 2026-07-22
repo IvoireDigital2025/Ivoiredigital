@@ -87,7 +87,7 @@ function buildContactEmail(d: {
 function buildAppointmentEmail(d: {
   name: string;
   email: string;
-  phone?: string | null;
+  phone: string;
   businessType: string;
   businessName: string;
   location: string;
@@ -182,6 +182,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         .extend({
           name: z.string().min(2, "Name is required"),
           email: z.string().email("A valid email is required"),
+          phone: z.string().min(7, "Phone number is required"),
           businessType: z.string().min(2, "Type of business is required"),
           businessName: z.string().min(2, "Business name is required"),
           location: z.string().min(2, "Location is required"),
@@ -192,7 +193,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const appointment = await storage.createAppointment({
         name: appointmentData.name,
         email: appointmentData.email,
-        phone: appointmentData.phone || null,
+        phone: appointmentData.phone,
         businessType: appointmentData.businessType,
         businessName: appointmentData.businessName,
         location: appointmentData.location,

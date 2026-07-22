@@ -70,7 +70,7 @@ export default function Footer() {
                 { id: "industries", label: "Industries" },
                 { id: "process", label: "How It Works" },
                 { id: "testimonials", label: "Reviews" },
-                { id: "contact", label: "Contact" },
+                { id: "growth-plan", label: "Contact" },
               ].map((l) => (
                 <li key={l.id}>
                   <button

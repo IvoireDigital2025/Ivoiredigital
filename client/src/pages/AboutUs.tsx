@@ -298,7 +298,7 @@ export default function AboutUs() {
               Join the businesses that have already discovered the power of AI and digital marketing automation. Let's discuss how we can help you grow.
             </p>
             <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white font-semibold px-8 py-4">
-              <a href="/#contact">Get Your Free Consultation</a>
+              <a href="/#growth-plan">Get Your Free Consultation</a>
             </Button>
           </motion.div>
         </div>

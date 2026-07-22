@@ -181,7 +181,7 @@ export default function AboutUsPage() {
             </p>
             <Button 
               className="bg-[#b07d2a] hover:bg-[#c49030] text-white py-3 px-8"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("growth-plan")}
             >
               Schedule a Free Consultation
             </Button>

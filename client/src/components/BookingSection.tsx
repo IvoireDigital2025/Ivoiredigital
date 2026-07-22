@@ -17,6 +17,7 @@ import { z } from "zod";
 const bookingFormSchema = insertAppointmentSchema.extend({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(7, "Please enter your phone number"),
   businessType: z.string().min(2, "Please tell us what type of business you run"),
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
@@ -264,7 +265,7 @@ export default function BookingSection() {
                       <FormItem>
                         <FormLabel className="flex items-center text-gray-700 font-medium">
                           <Phone className="h-4 w-4 mr-2" />
-                          Phone Number
+                          Phone Number *
                         </FormLabel>
                         <FormControl>
                           <Input 

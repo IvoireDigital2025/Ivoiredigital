@@ -269,7 +269,7 @@ export default function BlogPost() {
                 Let Ivoire Digital help you implement these strategies for your Dallas business.
               </p>
               <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white">
-                <a href="#contact">Get Your Free Consultation</a>
+                <a href="/#growth-plan">Get Your Free Consultation</a>
               </Button>
             </div>
           </motion.div>

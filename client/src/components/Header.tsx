@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { scrollToSection } from "@/lib/utils";
 import { Menu, X, Send } from "lucide-react";
-import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
+import ivoireLogo from "@assets/ivoire-logo-cropped.png";
 
 interface HeaderProps {
   scrolled: boolean;
@@ -12,7 +12,7 @@ const navLinks = [
   { id: "industries", label: "Industries" },
   { id: "process", label: "How It Works" },
   { id: "testimonials", label: "Reviews" },
-  { id: "contact", label: "Contact" },
+  { id: "growth-plan", label: "Contact" },
 ];
 
 export default function Header({ scrolled }: HeaderProps) {
@@ -38,8 +38,8 @@ export default function Header({ scrolled }: HeaderProps) {
           <img
             src={ivoireLogo}
             alt="Ivoire Digital Logo"
-            className="h-24 sm:h-28 w-auto object-contain"
-            style={{ mixBlendMode: "screen", maxWidth: "420px" }}
+            className="h-16 sm:h-20 w-auto object-contain"
+            style={{ mixBlendMode: "screen", maxWidth: "320px" }}
           />
         </a>
 

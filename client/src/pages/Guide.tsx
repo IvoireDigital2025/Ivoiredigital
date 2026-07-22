@@ -516,7 +516,7 @@ export default function Guide() {
                 Let Ivoire Digital help you implement these proven strategies for your business.
               </p>
               <Button size="lg" className="bg-[#b07d2a] hover:bg-[#d97706] text-white">
-                <a href="/#contact">Get Your Free Consultation</a>
+                <a href="/#growth-plan">Get Your Free Consultation</a>
               </Button>
             </div>
           </motion.div>

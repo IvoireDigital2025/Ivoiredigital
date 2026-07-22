@@ -14,7 +14,7 @@ export default function FloatingContactButton() {
   const handleContactAction = (action: string) => {
     setIsOpen(false);
     if (action === "contact-form") {
-      scrollToSection("contact");
+      scrollToSection("growth-plan");
     } else if (action === "email") {
       window.open("mailto:Koneyassine49@gmail.com", "_self");
     }

@@ -116,6 +116,7 @@ const statCards = [
 const heroFormSchema = insertAppointmentSchema.extend({
   name: z.string().min(2, "Please enter your full name"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(7, "Please enter your phone number"),
   businessType: z.string().min(2, "Please tell us what type of business you run"),
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
@@ -278,7 +279,7 @@ function GrowthPlanForm() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className={labelClass}>
-                        <Phone className={iconClass} /> Phone Number
+                        <Phone className={iconClass} /> Phone Number *
                       </FormLabel>
                       <FormControl>
                         <Input
