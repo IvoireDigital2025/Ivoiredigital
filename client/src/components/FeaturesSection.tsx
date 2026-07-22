@@ -102,9 +102,9 @@ const features: Feature[] = [
 
 function Mockup({ type }: { type: Feature["mockup"] }) {
   const phone = (children: React.ReactNode) => (
-    <div className="relative mx-auto w-[230px] sm:w-[260px]">
-      <div className="rounded-[2.2rem] bg-ivoire-navy-deep border-[6px] border-[#0e1326] shadow-2xl p-3 gold-glow">
-        <div className="rounded-[1.6rem] bg-ivoire-navy overflow-hidden h-[420px] p-4">
+    <div className="relative mx-auto w-[180px] sm:w-[260px]">
+      <div className="rounded-[1.8rem] sm:rounded-[2.2rem] bg-ivoire-navy-deep border-[5px] sm:border-[6px] border-[#0e1326] shadow-2xl p-2.5 sm:p-3 gold-glow">
+        <div className="rounded-[1.3rem] sm:rounded-[1.6rem] bg-ivoire-navy overflow-hidden h-[330px] sm:h-[420px] p-3 sm:p-4">
           {children}
         </div>
       </div>
