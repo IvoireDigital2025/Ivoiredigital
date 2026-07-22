@@ -186,19 +186,19 @@ function GrowthPlanForm() {
       className="scroll-mt-28 rounded-2xl border border-ivoire-gold/30 bg-[#11131c]/85 backdrop-blur-sm p-5 sm:p-7 shadow-2xl"
     >
       {isSubmitted ? (
-        <div className="text-center py-10">
-          <CheckCircle className="h-14 w-14 mx-auto mb-5 text-green-400" />
-          <h3 className="text-white font-display font-bold text-2xl mb-3">
+        <div className="text-center py-6 sm:py-10">
+          <CheckCircle className="h-12 w-12 sm:h-14 sm:w-14 mx-auto mb-4 sm:mb-5 text-green-400" />
+          <h3 className="text-white font-display font-bold text-xl sm:text-2xl mb-2 sm:mb-3">
             We Got Your Info!
           </h3>
-          <p className="text-white/70 mb-6 max-w-sm mx-auto">
+          <p className="text-white/70 text-sm sm:text-base mb-5 sm:mb-6 max-w-sm mx-auto">
             We'll reach out within 24 hours. Don't want to wait? Give us a call
             right now and let's talk about growing your business.
           </p>
           {BUSINESS_PHONE && (
             <a
               href={`tel:${BUSINESS_PHONE.replace(/[^+\d]/g, "")}`}
-              className="btn-gold rounded-lg px-8 py-3.5 text-base font-bold inline-flex items-center justify-center gap-2 mb-4"
+              className="btn-gold rounded-lg px-6 sm:px-8 py-3.5 text-base font-bold flex w-full sm:w-auto sm:inline-flex items-center justify-center gap-2 mb-4 sm:mx-auto sm:max-w-max whitespace-nowrap"
             >
               <Phone className="w-4 h-4" />
               Call Us Now {BUSINESS_PHONE}
