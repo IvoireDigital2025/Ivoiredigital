@@ -495,7 +495,7 @@ export default function HeroSection() {
         </div>
 
         {/* Reviews + avatars strip */}
-        <div className="mt-10 sm:mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-8">
+        <div className="mt-7 sm:mt-12 flex flex-col lg:flex-row items-center gap-5 lg:gap-8">
           <div className="inline-flex flex-row flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 sm:px-6 py-3 sm:py-4 backdrop-blur-sm">
             {reviewBadges.map((b, i) => (
               <div key={b.label} className="flex items-center gap-1.5 sm:gap-2.5">
@@ -538,7 +538,7 @@ export default function HeroSection() {
         </div>
 
         {/* WE WORK WITH strip */}
-        <div className="mt-10 sm:mt-12 border-t border-white/10 pt-7">
+        <div className="mt-7 sm:mt-12 border-t border-white/10 pt-6 sm:pt-7">
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
             <span className="text-ivoire-gold text-xs font-semibold tracking-[0.18em] shrink-0">
               WE WORK WITH

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-ivoire-navy py-16 sm:py-24">
+    <section className="bg-ivoire-navy py-10 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-ivoire-navy-card to-ivoire-navy-deep border border-ivoire-gold/20 px-6 py-12 sm:px-12 sm:py-16 text-center"

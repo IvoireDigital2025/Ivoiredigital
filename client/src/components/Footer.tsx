@@ -12,9 +12,9 @@ export default function Footer() {
   const handleNavClick = (id: string) => scrollToSection(id);
 
   return (
-    <footer className="bg-ivoire-navy-deep text-white pt-16 pb-8 border-t border-white/10">
+    <footer className="bg-ivoire-navy-deep text-white pt-10 sm:pt-16 pb-8 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div className="col-span-2 lg:col-span-1">
             <img
               src={ivoireLogo}

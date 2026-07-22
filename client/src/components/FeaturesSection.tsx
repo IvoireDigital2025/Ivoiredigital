@@ -255,10 +255,10 @@ function Mockup({ type }: { type: Feature["mockup"] }) {
 
 export default function FeaturesSection() {
   return (
-    <section id="services" className="bg-ivoire-navy py-16 sm:py-24">
+    <section id="services" className="bg-ivoire-navy py-10 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-8 sm:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -272,13 +272,13 @@ export default function FeaturesSection() {
           </p>
         </motion.div>
 
-        <div className="space-y-20 sm:space-y-28">
+        <div className="space-y-12 sm:space-y-28">
           {features.map((f, idx) => {
             const reverse = idx % 2 === 1;
             return (
               <div
                 key={f.id}
-                className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+                className="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center"
               >
                 {/* Mockup */}
                 <motion.div

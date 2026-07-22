@@ -5,7 +5,7 @@ import { DFW_CITIES } from "@/lib/seo";
 
 export default function LocalSeoSection() {
   return (
-    <section id="dfw" className="bg-ivoire-navy-deep py-16 sm:py-24 border-t border-white/5">
+    <section id="dfw" className="bg-ivoire-navy-deep py-10 sm:py-24 border-t border-white/5">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div

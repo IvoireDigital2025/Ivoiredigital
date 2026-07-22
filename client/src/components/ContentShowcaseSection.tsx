@@ -14,10 +14,10 @@ const videos = [
 
 export default function ContentShowcaseSection() {
   return (
-    <section id="our-work" className="bg-ivoire-navy-deep py-16 sm:py-24">
+    <section id="our-work" className="bg-ivoire-navy-deep py-10 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
