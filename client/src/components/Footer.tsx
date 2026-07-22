@@ -6,7 +6,7 @@ import {
   CONTACT_EMAIL,
 } from "@/lib/utils";
 import { services } from "@/lib/servicesContent";
-import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
+import ivoireLogo from "@assets/ivoire-logo-cropped.png";
 
 export default function Footer() {
   const handleNavClick = (id: string) => scrollToSection(id);
@@ -14,13 +14,13 @@ export default function Footer() {
   return (
     <footer className="bg-ivoire-navy-deep text-white pt-16 pb-8 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="col-span-2 lg:col-span-1">
             <img
               src={ivoireLogo}
               alt="Ivoire Digital Logo"
-              className="h-24 w-auto object-contain -ml-2 mb-3"
-              style={{ mixBlendMode: "screen", maxWidth: "320px" }}
+              className="h-16 w-auto object-contain mb-3"
+              style={{ mixBlendMode: "screen", maxWidth: "240px" }}
             />
             <p className="text-white/60 mb-6 text-sm leading-relaxed">
               AI automation, websites, and digital marketing systems for
@@ -84,7 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <h3 className="font-display text-base font-bold mb-4 text-ivoire-gold">Get In Touch</h3>
             <ul className="space-y-3 text-sm text-white/60">
               <li>
