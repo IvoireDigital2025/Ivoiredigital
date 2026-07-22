@@ -52,7 +52,7 @@ import avatar5 from "@assets/stock_images/team_avatar_5.jpg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
 
-const BUSINESS_PHONE = ""; // e.g. "(214) 555-0123" — shown as tap-to-call after submit
+const BUSINESS_PHONE = "972-236-4451"; // shown as tap-to-call after submit
 
 const reviewBadges = [
   { icon: SiGoogle, label: "Google", color: "#ffffff" },
