@@ -54,7 +54,7 @@ const consultationTypes = [
   }
 ];
 
-const services = [
+export const services = [
   "AI Phone Receptionist",
   "AI Appointment Booking System",
   "Missed-Call Text Back",
@@ -74,13 +74,13 @@ const services = [
   "Not Sure — Need Advice",
 ];
 
-const timeSlots = [
+export const timeSlots = [
   "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
   "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
   "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM"
 ];
 
-const timezones = [
+export const timezones = [
   "EST (Eastern Standard Time)",
   "CST (Central Standard Time)", 
   "MST (Mountain Standard Time)",

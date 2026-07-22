@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { scrollToSection, goToBooking } from "@/lib/utils";
-import { Menu, X, Phone } from "lucide-react";
+import { scrollToSection } from "@/lib/utils";
+import { Menu, X, Send } from "lucide-react";
 import ivoireLogo from "@assets/ChatGPT_Image_May_11,_2026,_11_13_28_PM_1778559339825.png";
 
 interface HeaderProps {
@@ -38,8 +38,8 @@ export default function Header({ scrolled }: HeaderProps) {
           <img
             src={ivoireLogo}
             alt="Ivoire Digital Logo"
-            className="h-20 sm:h-24 w-auto object-contain"
-            style={{ mixBlendMode: "screen", maxWidth: "360px" }}
+            className="h-24 sm:h-28 w-auto object-contain"
+            style={{ mixBlendMode: "screen", maxWidth: "420px" }}
           />
         </a>
 
@@ -57,10 +57,11 @@ export default function Header({ scrolled }: HeaderProps) {
 
         <div className="hidden lg:flex items-center gap-4">
           <button
-            onClick={goToBooking}
-            className="btn-gold rounded-lg px-5 py-2.5 text-sm"
+            onClick={() => scrollToSection("growth-plan")}
+            className="btn-gold rounded-lg px-5 py-2.5 text-sm inline-flex items-center gap-2"
           >
-            Book A Call
+            <Send className="w-4 h-4" />
+            Send Message
           </button>
         </div>
 
@@ -90,10 +91,14 @@ export default function Header({ scrolled }: HeaderProps) {
             </button>
           ))}
           <button
-            onClick={goToBooking}
-            className="btn-gold rounded-lg px-5 py-3 mt-3 text-center"
+            onClick={() => {
+              scrollToSection("growth-plan");
+              setMobileMenuOpen(false);
+            }}
+            className="btn-gold rounded-lg px-5 py-3 mt-3 text-center inline-flex items-center justify-center gap-2"
           >
-            Book A Call
+            <Send className="w-4 h-4" />
+            Send Message
           </button>
         </div>
       </div>
