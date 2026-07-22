@@ -443,7 +443,7 @@ function GrowthPlanForm() {
                 className="w-full btn-gold py-3.5 text-base font-bold inline-flex items-center justify-center gap-2"
                 disabled={mutation.isPending}
               >
-                {mutation.isPending ? "Booking Your Consultation..." : "Book Free Consultation"}
+                {mutation.isPending ? "Submitting..." : "Submit"}
                 {!mutation.isPending && <ArrowRight className="w-4 h-4" />}
               </Button>
             </form>
