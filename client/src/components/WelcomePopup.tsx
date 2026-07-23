@@ -47,9 +47,7 @@ export default function WelcomePopup() {
             Our <span className="text-ivoire-gold">100% Guarantee</span>
           </DialogTitle>
           <DialogDescription className="text-white/75 text-sm sm:text-base leading-relaxed">
-            We guarantee the systems we offer are exactly what your business
-            needs to win more customers — website, AI automation, and marketing
-            that work together.
+            The service we are offering is 100% needed for your business.
           </DialogDescription>
           <div className="w-full flex items-center gap-3 rounded-xl border border-ivoire-gold/30 bg-ivoire-gold/10 px-4 py-3 text-left">
             <Smartphone className="w-5 h-5 text-ivoire-gold shrink-0" />
