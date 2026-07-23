@@ -92,6 +92,7 @@ function buildAppointmentEmail(d: {
   businessName: string;
   location: string;
   service?: string | null;
+  seriousness?: string | null;
   preferredDate?: string | null;
   preferredTime?: string | null;
   timezone?: string | null;
@@ -114,6 +115,11 @@ function buildAppointmentEmail(d: {
           ${
             d.service
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Service:</strong></td><td>${escapeHtml(d.service)}</td></tr>`
+              : ""
+          }
+          ${
+            d.seriousness
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>How Serious:</strong></td><td><strong>${escapeHtml(d.seriousness)}</strong></td></tr>`
               : ""
           }
           ${
@@ -201,6 +207,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         businessName: appointmentData.businessName,
         location: appointmentData.location,
         service: appointmentData.service || null,
+        seriousness: appointmentData.seriousness || null,
         preferredDate: appointmentData.preferredDate || null,
         preferredTime: appointmentData.preferredTime || null,
         timezone: appointmentData.timezone || null,

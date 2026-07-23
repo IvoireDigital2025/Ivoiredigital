@@ -17,7 +17,15 @@ import {
   Building2,
   MapPin,
   ClipboardList,
+  Flame,
 } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   SiGoogle,
   SiFacebook,
@@ -108,6 +116,7 @@ const heroFormSchema = insertAppointmentSchema.extend({
   businessType: z.string().min(2, "Please tell us what type of business you run"),
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
+  seriousness: z.string().min(1, "Please let us know how ready you are"),
 });
 
 type HeroFormValues = z.infer<typeof heroFormSchema>;
@@ -142,6 +151,7 @@ function GrowthPlanForm() {
       businessType: "",
       businessName: "",
       location: "",
+      seriousness: "",
       message: "",
     },
   });
@@ -293,6 +303,44 @@ function GrowthPlanForm() {
                   )}
                 />
               </div>
+
+              <FormField
+                control={form.control}
+                name="seriousness"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className={labelClass}>
+                      <Flame className={iconClass} /> How Ready Are You To Get
+                      Started? *
+                    </FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
+                      <FormControl>
+                        <SelectTrigger className={fieldClass}>
+                          <SelectValue placeholder="Select one" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent className="bg-[#161926] border-white/10 text-white">
+                        <SelectItem value="Ready to start right away">
+                          Ready to start right away
+                        </SelectItem>
+                        <SelectItem value="Serious — looking to start within 30 days">
+                          Serious — looking to start within 30 days
+                        </SelectItem>
+                        <SelectItem value="Interested, but still comparing options">
+                          Interested, but still comparing options
+                        </SelectItem>
+                        <SelectItem value="Just exploring for now">
+                          Just exploring for now
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <FormField
                 control={form.control}
