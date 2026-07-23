@@ -52,6 +52,9 @@ const benefits = [
 export default function ThankYou() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead");
+    }
   }, []);
 
   return (
