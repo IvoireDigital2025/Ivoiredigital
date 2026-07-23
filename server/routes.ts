@@ -5,7 +5,7 @@ import { insertContactSchema, insertAppointmentSchema } from "@shared/schema";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
-const NOTIFY_TO = "contact@ivoiredigital.com";
+const NOTIFY_TO = "contact@ivoiredigital.com, koneyassine49@gmail.com";
 
 const mailer = process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD
   ? nodemailer.createTransport({
