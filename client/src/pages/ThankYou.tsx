@@ -100,7 +100,7 @@ export default function ThankYou() {
               On your consultation call, we'll show you exactly how these
               systems work together to grow your business — all automated.
             </p>
-            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-ivoire-gold/40 bg-ivoire-gold/10 px-4 sm:px-5 py-2 text-ivoire-gold font-semibold text-sm sm:text-base">
+            <p className="mt-4 inline-flex items-center gap-2 rounded-xl sm:rounded-full border border-ivoire-gold/40 bg-ivoire-gold/10 px-4 sm:px-5 py-2 text-ivoire-gold font-semibold text-sm sm:text-base max-w-full">
               All these features + access to our mobile app — for one very low
               price
             </p>

@@ -196,6 +196,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
           businessType: z.string().min(2, "Type of business is required"),
           businessName: z.string().min(2, "Business name is required"),
           location: z.string().min(2, "Location is required"),
+          seriousness: z
+            .enum([
+              "I'm ready to start right away",
+              "Very serious — I want to start within 30 days",
+              "Serious — I just have a few questions first",
+              "I want to grow, help me choose the right plan",
+            ])
+            .optional()
+            .nullable(),
         })
         .parse(req.body);
 

@@ -322,7 +322,7 @@ function GrowthPlanForm() {
                           <SelectValue placeholder="Select one" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="bg-[#161926] border-white/10 text-white">
+                      <SelectContent className="bg-[#161926] border-white/10 text-white max-w-[calc(100vw-2rem)] [&_*]:whitespace-normal">
                         <SelectItem value="I'm ready to start right away">
                           I'm ready to start right away
                         </SelectItem>
