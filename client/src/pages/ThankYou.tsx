@@ -129,15 +129,7 @@ export default function ThankYou() {
               Real Results Our Clients{" "}
               <span className="text-ivoire-gold">Are Getting</span>
             </h2>
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 text-center">
-              <div>
-                <div className="text-ivoire-gold font-display font-bold text-2xl sm:text-4xl">
-                  +390%
-                </div>
-                <div className="text-white/60 text-xs sm:text-sm mt-1">
-                  More Leads
-                </div>
-              </div>
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 text-center">
               <div>
                 <div className="text-ivoire-gold font-display font-bold text-2xl sm:text-4xl">
                   +250%
@@ -201,13 +193,12 @@ export default function ThankYou() {
           {/* Reassurance + final CTA */}
           <div className="text-center rounded-2xl border border-ivoire-gold/30 bg-ivoire-gold/[0.06] p-6 sm:p-10 mb-10">
             <h2 className="text-white font-display font-bold text-lg sm:text-2xl mb-3">
-              No Pressure. No Long-Term Contracts.{" "}
-              <span className="text-ivoire-gold">Just Results.</span>
+              No Pressure. <span className="text-ivoire-gold">Just Results.</span>
             </h2>
             <p className="text-white/70 text-sm sm:text-base max-w-xl mx-auto mb-6">
-              The consultation is 100% free and there's zero obligation. Worst
-              case, you walk away with a clear plan to get more customers. Best
-              case, we build the whole system for you.
+              The consultation is 100% free and there's zero obligation. Our
+              plans are built to be affordable for small businesses — worst
+              case, you walk away with a clear plan to get more customers.
             </p>
             <a
               href={`tel:${BUSINESS_PHONE.replace(/[^+\d]/g, "")}`}
