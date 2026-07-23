@@ -323,17 +323,17 @@ function GrowthPlanForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent className="bg-[#161926] border-white/10 text-white">
-                        <SelectItem value="Ready to start right away">
-                          Ready to start right away
+                        <SelectItem value="I'm ready to start right away">
+                          I'm ready to start right away
                         </SelectItem>
-                        <SelectItem value="Serious — looking to start within 30 days">
-                          Serious — looking to start within 30 days
+                        <SelectItem value="Very serious — I want to start within 30 days">
+                          Very serious — I want to start within 30 days
                         </SelectItem>
-                        <SelectItem value="Interested, but still comparing options">
-                          Interested, but still comparing options
+                        <SelectItem value="Serious — I just have a few questions first">
+                          Serious — I just have a few questions first
                         </SelectItem>
-                        <SelectItem value="Just exploring for now">
-                          Just exploring for now
+                        <SelectItem value="I want to grow, help me choose the right plan">
+                          I want to grow, help me choose the right plan
                         </SelectItem>
                       </SelectContent>
                     </Select>
