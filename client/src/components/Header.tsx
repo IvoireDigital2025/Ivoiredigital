@@ -61,7 +61,7 @@ export default function Header({ scrolled }: HeaderProps) {
             className="btn-gold rounded-lg px-5 py-2.5 text-sm inline-flex items-center gap-2"
           >
             <Send className="w-4 h-4" />
-            Send Message
+            Free Consultation
           </button>
         </div>
 
@@ -98,7 +98,7 @@ export default function Header({ scrolled }: HeaderProps) {
             className="btn-gold rounded-lg px-5 py-3 mt-3 text-center inline-flex items-center justify-center gap-2"
           >
             <Send className="w-4 h-4" />
-            Send Message
+            Free Consultation
           </button>
         </div>
       </div>
