@@ -10,6 +10,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import FinalCTA from "@/components/FinalCTA";
 import BackToTop from "@/components/BackToTop";
 import LiveChatWidget from "@/components/LiveChatWidget";
+import WelcomePopup from "@/components/WelcomePopup";
 import LocalSeoSection from "@/components/LocalSeoSection";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
@@ -68,6 +69,7 @@ export default function Home() {
       <Footer />
       <BackToTop />
       <LiveChatWidget />
+      <WelcomePopup />
     </div>
   );
 }
