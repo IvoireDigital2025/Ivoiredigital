@@ -11,6 +11,7 @@ import AboutUs from "@/pages/AboutUs";
 import Guide from "@/pages/Guide";
 import Services from "@/pages/Services";
 import ServiceDetail from "@/pages/ServiceDetail";
+import ThankYou from "@/pages/ThankYou";
 import FloatingContactButton from "@/components/FloatingContactButton";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/about" component={AboutUs} />
       <Route path="/services" component={Services} />
       <Route path="/services/:slug" component={ServiceDetail} />
+      <Route path="/thank-you" component={ThankYou} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/guide/:slug" component={Guide} />
       <Route component={NotFound} />

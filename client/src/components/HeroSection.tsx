@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,7 +17,6 @@ import {
   Building2,
   MapPin,
   ClipboardList,
-  CheckCircle,
 } from "lucide-react";
 import {
   SiGoogle,
@@ -51,8 +50,6 @@ import avatar4 from "@assets/stock_images/team_avatar_4.jpg";
 import avatar5 from "@assets/stock_images/team_avatar_5.jpg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
-
-const BUSINESS_PHONE = "972-236-4451"; // shown as tap-to-call after submit
 
 const reviewBadges = [
   { icon: SiGoogle, label: "Google", color: "#ffffff" },
@@ -132,7 +129,7 @@ function Stars() {
 }
 
 function GrowthPlanForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [, setLocation] = useLocation();
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -163,13 +160,9 @@ function GrowthPlanForm() {
       return response.json();
     },
     onSuccess: () => {
-      setIsSubmitted(true);
       form.reset();
-      toast({
-        title: "Message Sent!",
-        description: "We got your info and will reach out shortly.",
-      });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/appointments"] });
+      setLocation("/thank-you");
     },
     onError: (error: any) => {
       toast({
@@ -185,43 +178,13 @@ function GrowthPlanForm() {
       id="growth-plan"
       className="scroll-mt-28 rounded-2xl border border-ivoire-gold/30 bg-[#11131c]/85 backdrop-blur-sm p-5 sm:p-7 shadow-2xl"
     >
-      {isSubmitted ? (
-        <div className="text-center py-6 sm:py-10">
-          <CheckCircle className="h-12 w-12 sm:h-14 sm:w-14 mx-auto mb-4 sm:mb-5 text-green-400" />
-          <h3 className="text-white font-display font-bold text-xl sm:text-2xl mb-2 sm:mb-3">
-            We Got Your Info!
-          </h3>
-          <p className="text-white/70 text-sm sm:text-base mb-5 sm:mb-6 max-w-sm mx-auto">
-            We'll reach out within 24 hours. Don't want to wait? Give us a call
-            right now and let's talk about growing your business.
-          </p>
-          {BUSINESS_PHONE && (
-            <a
-              href={`tel:${BUSINESS_PHONE.replace(/[^+\d]/g, "")}`}
-              className="btn-gold rounded-lg px-6 sm:px-8 py-3.5 text-base font-bold flex w-full sm:w-auto sm:inline-flex items-center justify-center gap-2 mb-4 sm:mx-auto sm:max-w-max whitespace-nowrap"
-            >
-              <Phone className="w-4 h-4" />
-              Call Us Now {BUSINESS_PHONE}
-            </a>
-          )}
-          <div>
-            <Button
-              onClick={() => setIsSubmitted(false)}
-              variant="outline"
-              className="border-ivoire-gold/40 bg-transparent text-ivoire-gold hover:bg-ivoire-gold/10"
-            >
-              Send Another Message
-            </Button>
-          </div>
-        </div>
-      ) : (
-        <>
+      <>
           <div className="flex items-center gap-2.5 mb-5">
             <span className="w-9 h-9 rounded-lg bg-ivoire-gold/15 border border-ivoire-gold/30 flex items-center justify-center">
               <ClipboardList className="w-4.5 h-4.5 text-ivoire-gold" />
             </span>
             <h2 className="text-white font-display font-bold text-base sm:text-lg tracking-wide">
-              CONNECT <span className="text-ivoire-gold">WITH US</span>
+              SCHEDULE A <span className="text-ivoire-gold">FREE CONSULTATION</span>
             </h2>
           </div>
 
@@ -365,7 +328,6 @@ function GrowthPlanForm() {
             </form>
           </Form>
         </>
-      )}
     </div>
   );
 }
