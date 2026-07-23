@@ -123,6 +123,101 @@ export default function ThankYou() {
             ))}
           </div>
 
+          {/* Results stats */}
+          <div className="rounded-2xl border border-ivoire-gold/25 bg-[#11131c]/85 p-6 sm:p-8 mb-10 sm:mb-14">
+            <h2 className="text-white font-display font-bold text-lg sm:text-2xl text-center mb-6">
+              Real Results Our Clients{" "}
+              <span className="text-ivoire-gold">Are Getting</span>
+            </h2>
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 text-center">
+              <div>
+                <div className="text-ivoire-gold font-display font-bold text-2xl sm:text-4xl">
+                  +390%
+                </div>
+                <div className="text-white/60 text-xs sm:text-sm mt-1">
+                  More Leads
+                </div>
+              </div>
+              <div>
+                <div className="text-ivoire-gold font-display font-bold text-2xl sm:text-4xl">
+                  +250%
+                </div>
+                <div className="text-white/60 text-xs sm:text-sm mt-1">
+                  Revenue Growth
+                </div>
+              </div>
+              <div>
+                <div className="text-ivoire-gold font-display font-bold text-2xl sm:text-4xl">
+                  24/7
+                </div>
+                <div className="text-white/60 text-xs sm:text-sm mt-1">
+                  AI Working For You
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* What happens next */}
+          <div className="mb-10 sm:mb-14">
+            <h2 className="text-white font-display font-bold text-lg sm:text-2xl text-center mb-6 sm:mb-8">
+              What Happens <span className="text-ivoire-gold">Next?</span>
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+              {[
+                {
+                  step: "1",
+                  title: "We Call You",
+                  desc: "A member of our team calls you to schedule your free consultation at a time that works for you.",
+                },
+                {
+                  step: "2",
+                  title: "Free Strategy Session",
+                  desc: "We look at your business together and show you exactly where you're losing leads — and how to fix it.",
+                },
+                {
+                  step: "3",
+                  title: "Your System Goes Live",
+                  desc: "If it's a fit, we build and launch everything for you. Most clients are up and running fast.",
+                },
+              ].map((s) => (
+                <div
+                  key={s.step}
+                  className="rounded-xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 text-left"
+                >
+                  <span className="w-9 h-9 rounded-full bg-ivoire-gold text-[#0b0d14] font-bold flex items-center justify-center mb-4">
+                    {s.step}
+                  </span>
+                  <h3 className="text-white font-semibold text-base mb-1.5">
+                    {s.title}
+                  </h3>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {s.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Reassurance + final CTA */}
+          <div className="text-center rounded-2xl border border-ivoire-gold/30 bg-ivoire-gold/[0.06] p-6 sm:p-10 mb-10">
+            <h2 className="text-white font-display font-bold text-lg sm:text-2xl mb-3">
+              No Pressure. No Long-Term Contracts.{" "}
+              <span className="text-ivoire-gold">Just Results.</span>
+            </h2>
+            <p className="text-white/70 text-sm sm:text-base max-w-xl mx-auto mb-6">
+              The consultation is 100% free and there's zero obligation. Worst
+              case, you walk away with a clear plan to get more customers. Best
+              case, we build the whole system for you.
+            </p>
+            <a
+              href={`tel:${BUSINESS_PHONE.replace(/[^+\d]/g, "")}`}
+              className="btn-gold rounded-lg px-6 sm:px-8 py-3.5 text-base font-bold flex w-full sm:w-auto sm:inline-flex items-center justify-center gap-2 sm:mx-auto sm:max-w-max whitespace-nowrap"
+            >
+              <Phone className="w-4 h-4" />
+              Call Us Now {BUSINESS_PHONE}
+            </a>
+          </div>
+
           <div className="text-center">
             <Link
               href="/"
