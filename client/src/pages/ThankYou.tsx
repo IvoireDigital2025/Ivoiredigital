@@ -8,7 +8,7 @@ import {
   Bot,
   MessageSquareText,
   Star,
-  TrendingUp,
+  Smartphone,
   MapPin,
 } from "lucide-react";
 import Header from "@/components/Header";
@@ -43,9 +43,9 @@ const benefits = [
     desc: "Local SEO that puts your business in front of people searching in your area right now.",
   },
   {
-    icon: TrendingUp,
-    title: "More Leads, All Automated",
-    desc: "Everything works together as one system — more leads, more reviews, more growth, less work for you.",
+    icon: Smartphone,
+    title: "Manage Leads From Our Mobile App",
+    desc: "Every lead lands in one simple mobile app — see them, text them, and follow up from your phone, anywhere. All automated: more leads, more reviews, more growth.",
   },
 ];
 
