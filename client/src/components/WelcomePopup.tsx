@@ -13,14 +13,14 @@ export default function WelcomePopup() {
 
   useEffect(() => {
     try {
-      if (sessionStorage.getItem("ivoire-welcome-shown")) return;
+      if (sessionStorage.getItem("ivoire-welcome-shown-v2")) return;
     } catch {
       return;
     }
     const timer = setTimeout(() => {
       setOpen(true);
       try {
-        sessionStorage.setItem("ivoire-welcome-shown", "1");
+        sessionStorage.setItem("ivoire-welcome-shown-v2", "1");
       } catch {
         // ignore storage errors in restrictive privacy modes
       }
