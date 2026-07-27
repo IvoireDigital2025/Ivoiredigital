@@ -12,6 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { insertAppointmentSchema } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
+import { trackLead } from "@/lib/tracking";
 import { z } from "zod";
 
 const bookingFormSchema = insertAppointmentSchema.extend({
@@ -131,6 +132,7 @@ export default function BookingSection() {
       return response.json();
     },
     onSuccess: () => {
+      trackLead();
       setIsSubmitted(true);
       form.reset();
       toast({

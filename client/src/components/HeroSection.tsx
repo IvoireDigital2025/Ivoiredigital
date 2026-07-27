@@ -48,6 +48,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { trackLead } from "@/lib/tracking";
 import { insertAppointmentSchema } from "@shared/schema";
 import { z } from "zod";
 import robot from "@assets/generated_images/ivoire_robot_hero.png";
@@ -170,6 +171,7 @@ function GrowthPlanForm() {
       return response.json();
     },
     onSuccess: () => {
+      trackLead();
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/admin/appointments"] });
       setLocation("/thank-you");

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { trackLead } from "@/lib/tracking";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
@@ -56,6 +57,7 @@ export default function ContactSection() {
       return apiRequest("POST", "/api/contact", data);
     },
     onSuccess: () => {
+      trackLead();
       toast({
         title: "Success!",
         description: "Your message has been sent. We'll get back to you soon.",

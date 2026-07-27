@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { trackLeadOnceOnThankYou } from "@/lib/tracking";
 
 const BUSINESS_PHONE = "972-236-4451";
 
@@ -52,9 +53,7 @@ const benefits = [
 export default function ThankYou() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (typeof (window as any).fbq === "function") {
-      (window as any).fbq("track", "Lead");
-    }
+    trackLeadOnceOnThankYou();
   }, []);
 
   return (
