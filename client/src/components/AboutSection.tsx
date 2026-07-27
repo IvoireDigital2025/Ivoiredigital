@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+import { goToBooking } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const benefits = [
@@ -60,7 +60,7 @@ export default function AboutSection() {
               <Button 
                 size="lg"
                 className="bg-[#14532d] hover:bg-[#166534] text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => scrollToSection("booking")}
+                onClick={() => goToBooking()}
               >
                 Schedule a Consultation
               </Button>

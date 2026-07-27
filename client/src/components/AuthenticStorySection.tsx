@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Zap, Award, MapPin, Calendar } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+import { goToBooking, scrollToSection } from "@/lib/utils";
 
 export default function AuthenticStorySection() {
   const stats = [
@@ -160,7 +160,7 @@ export default function AuthenticStorySection() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold"
-              onClick={() => scrollToSection("booking")}
+              onClick={() => goToBooking()}
             >
               Schedule Strategy Call
             </Button>

@@ -1,3 +1,4 @@
+import { goToBooking } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Globe, Smartphone, ShoppingCart, Zap, Search, TrendingUp, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -156,7 +157,7 @@ export default function WebsiteDesignShowcase() {
             </ul>
             <Button
               className="mt-8 w-full bg-[#b07d2a] hover:bg-[#c49030] text-white font-semibold py-3"
-              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => goToBooking()}
             >
               Get a Free Website Consultation
             </Button>
@@ -238,7 +239,7 @@ export default function WebsiteDesignShowcase() {
             <Button
               size="lg"
               className="bg-[#14532d] hover:bg-[#166534] text-white font-semibold px-8"
-              onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => goToBooking()}
             >
               Start Your Website Project
               <ArrowRight className="ml-2 h-5 w-5" />

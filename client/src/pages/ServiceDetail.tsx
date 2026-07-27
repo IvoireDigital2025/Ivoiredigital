@@ -5,7 +5,6 @@ import { ArrowLeft, Check, ArrowRight, MapPin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
-import BookingSection from "@/components/BookingSection";
 import NotFound from "@/pages/not-found";
 import { goToBooking } from "@/lib/utils";
 import { services, getService } from "@/lib/servicesContent";
@@ -185,7 +184,6 @@ export default function ServiceDetail() {
         </section>
 
         {/* Booking */}
-        <BookingSection />
 
         {/* Related services */}
         <section className="bg-ivoire-navy-deep py-14 sm:py-20 border-t border-white/5">

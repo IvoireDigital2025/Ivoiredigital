@@ -1,3 +1,4 @@
+import { goToBooking } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -234,7 +235,7 @@ export default function ClientShowcaseSection() {
               size="lg"
               variant="outline"
               className="border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold"
-              onClick={() => window.location.href = '#booking'}
+              onClick={() => goToBooking()}
             >
               Schedule Strategy Consultation
             </Button>

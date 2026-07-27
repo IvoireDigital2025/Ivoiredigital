@@ -1,3 +1,4 @@
+import { goToBooking } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { FileText, Clock } from "lucide-react";
@@ -123,7 +124,7 @@ export default function GuidesSection() {
         >
           <Button 
             className="bg-[#14532d] hover:bg-[#166534] text-white font-medium py-3 px-8"
-            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => goToBooking()}
           >
             Book a Free Consultation
           </Button>

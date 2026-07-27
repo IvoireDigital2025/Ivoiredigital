@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
-import BookingSection from "@/components/BookingSection";
 import { services } from "@/lib/servicesContent";
 import { useSeo, businessJsonLd } from "@/lib/seo";
 
@@ -92,7 +91,6 @@ export default function Services() {
           </div>
         </section>
 
-        <BookingSection />
       </main>
 
       <Footer />

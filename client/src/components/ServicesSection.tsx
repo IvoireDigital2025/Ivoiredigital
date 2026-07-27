@@ -1,3 +1,4 @@
+import { goToBooking } from "@/lib/utils";
 import { services } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
 import { motion } from "framer-motion";
@@ -46,7 +47,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
         >
           <button
-            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => goToBooking()}
             className="bg-[#b07d2a] hover:bg-[#c49030] text-white px-8 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Get These Services for Your Business

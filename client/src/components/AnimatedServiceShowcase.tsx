@@ -1,3 +1,4 @@
+import { goToBooking } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   Phone, Calendar, MessageSquare, Star, Globe, FileText,
@@ -209,7 +210,7 @@ export default function AnimatedServiceShowcase() {
             Not sure which services you need? Book a free consultation and we'll build a custom plan for your business.
           </p>
           <button
-            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => goToBooking()}
             className="bg-[#14532d] hover:bg-[#166534] text-white px-8 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Get a Free Custom Plan
