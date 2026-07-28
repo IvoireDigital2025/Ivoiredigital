@@ -17,6 +17,45 @@ import { trackLeadOnceOnThankYou } from "@/lib/tracking";
 
 const BUSINESS_PHONE = "972-236-4451";
 
+const testimonials = [
+  {
+    quote:
+      "I'm getting organic leads now that don't cost me any money. I would recommend them to anyone!",
+    name: "Scott W.",
+    role: "Contractor",
+  },
+  {
+    quote:
+      "They built me a new website and within 10 days I got my first lead I didn't pay for. Best money I've spent.",
+    name: "Armando G.",
+    role: "Local Retailer",
+  },
+  {
+    quote:
+      "If you are looking for someone to get that phone ringing, they're the right fit for you! I'm so happy with them!",
+    name: "Cody R.",
+    role: "Service Business Owner",
+  },
+  {
+    quote:
+      "Ever since they implemented the new website and landing pages our conversions went way up. We started getting calls almost immediately.",
+    name: "Manny D.",
+    role: "Real Estate Agent",
+  },
+  {
+    quote:
+      "Getting 5-star reviews always gave me anxiety. Their system took that away and I've seen a significant increase in business.",
+    name: "Wendy L.",
+    role: "Salon Owner",
+  },
+  {
+    quote:
+      "After going through 2-3 other agencies I finally found someone that told me the truth. Easy to work with and very respectable.",
+    name: "James T.",
+    role: "Clinic Owner",
+  },
+];
+
 const benefits = [
   {
     icon: Globe,
@@ -170,6 +209,51 @@ export default function ThankYou() {
                   AI Working For You
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="mb-10 sm:mb-14">
+            <h2 className="text-white font-display font-bold text-lg sm:text-2xl text-center mb-2">
+              Business Owners <span className="text-ivoire-gold">Like You</span>{" "}
+              Are Saying
+            </h2>
+            <div className="flex items-center justify-center gap-1.5 mb-6 sm:mb-8">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-ivoire-gold fill-ivoire-gold"
+                />
+              ))}
+              <span className="text-white/60 text-xs sm:text-sm ml-2">
+                Rated 5.0 by local business owners
+              </span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {testimonials.map((t) => (
+                <div
+                  key={t.name}
+                  className="rounded-xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 flex flex-col hover:border-ivoire-gold/40 transition-colors"
+                >
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-3.5 h-3.5 text-ivoire-gold fill-ivoire-gold"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-white/75 text-sm leading-relaxed flex-1">
+                    "{t.quote}"
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="text-white font-semibold text-sm">
+                      {t.name}
+                    </div>
+                    <div className="text-ivoire-gold/80 text-xs">{t.role}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
