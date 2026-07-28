@@ -89,6 +89,31 @@ export default function ThankYou() {
             </a>
           </div>
 
+          {/* Services demo video */}
+          <div className="mb-10 sm:mb-14 text-center">
+            <h2 className="text-white font-display font-bold text-xl sm:text-3xl mb-3">
+              Watch How Our System{" "}
+              <span className="text-ivoire-gold">Works For You</span>
+            </h2>
+            <p className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+              This example features a painting business — but the exact same
+              system works for all contractors and small businesses.
+            </p>
+            <div className="rounded-2xl border border-ivoire-gold/30 overflow-hidden shadow-2xl bg-black">
+              <video
+                src="/videos/services-demo.mp4"
+                autoPlay
+                muted
+                playsInline
+                controls
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-white/45 text-xs sm:text-sm mt-3">
+              Tap the speaker icon to turn on sound.
+            </p>
+          </div>
+
           {/* Benefits */}
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-white font-display font-bold text-xl sm:text-3xl mb-3">
