@@ -169,6 +169,42 @@ export default function ThankYou() {
             </p>
           </div>
 
+          {/* Service visuals */}
+          <div className="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
+            {[
+              {
+                src: "/images/service-website.jpg",
+                alt: "Modern website design on laptop and phone",
+                label: "High-Converting Websites",
+              },
+              {
+                src: "/images/service-ai-chat.jpg",
+                alt: "AI chatbot answering customers on a smartphone",
+                label: "AI That Talks To Customers",
+              },
+              {
+                src: "/images/service-reviews.jpg",
+                alt: "Five-star reviews and business growth chart",
+                label: "5-Star Reviews On Autopilot",
+              },
+            ].map((v) => (
+              <div
+                key={v.label}
+                className="rounded-xl border border-white/10 overflow-hidden bg-[#11131c]/85 hover:border-ivoire-gold/40 transition-colors"
+              >
+                <img
+                  src={v.src}
+                  alt={v.alt}
+                  loading="lazy"
+                  className="w-full aspect-video object-cover"
+                />
+                <div className="px-4 py-3 text-center text-white font-semibold text-sm">
+                  {v.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-14">
             {benefits.map((b) => (
               <div
