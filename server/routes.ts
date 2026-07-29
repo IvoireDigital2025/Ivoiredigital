@@ -93,6 +93,7 @@ function buildAppointmentEmail(d: {
   location: string;
   service?: string | null;
   seriousness?: string | null;
+  contactConsent?: boolean;
   preferredDate?: string | null;
   preferredTime?: string | null;
   timezone?: string | null;
@@ -122,6 +123,7 @@ function buildAppointmentEmail(d: {
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>How Serious:</strong></td><td><strong>${escapeHtml(d.seriousness)}</strong></td></tr>`
               : ""
           }
+          <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Contact Consent:</strong></td><td>${d.contactConsent ? "✅ Agreed to be contacted by call & text" : "—"}</td></tr>
           ${
             d.preferredDate
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
@@ -205,6 +207,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
             ])
             .optional()
             .nullable(),
+          contactConsent: z.literal(true, {
+            errorMap: () => ({
+              message:
+                "You must agree to be contacted by phone call and text message to submit this form.",
+            }),
+          }),
         })
         .parse(req.body);
 
@@ -217,6 +225,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         location: appointmentData.location,
         service: appointmentData.service || null,
         seriousness: appointmentData.seriousness || null,
+        contactConsent: appointmentData.contactConsent,
         preferredDate: appointmentData.preferredDate || null,
         preferredTime: appointmentData.preferredTime || null,
         timezone: appointmentData.timezone || null,

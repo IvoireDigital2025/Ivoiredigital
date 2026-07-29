@@ -37,6 +37,7 @@ import {
   SiWordpress,
 } from "react-icons/si";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -118,6 +119,12 @@ const heroFormSchema = insertAppointmentSchema.extend({
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
   seriousness: z.string().min(1, "Please let us know how ready you are"),
+  contactConsent: z.literal(true, {
+    errorMap: () => ({
+      message:
+        "You must agree to be contacted by call and text to submit this form.",
+    }),
+  }),
 });
 
 type HeroFormValues = z.infer<typeof heroFormSchema>;
@@ -153,6 +160,7 @@ function GrowthPlanForm() {
       businessName: "",
       location: "",
       seriousness: "",
+      contactConsent: false as unknown as true,
       message: "",
     },
   });
@@ -362,6 +370,39 @@ function GrowthPlanForm() {
                         name={field.name}
                       />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="contactConsent"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="flex items-start gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-3.5">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value === true}
+                          onCheckedChange={(checked) =>
+                            field.onChange(checked === true)
+                          }
+                          className="mt-0.5 border-white/30 data-[state=checked]:bg-ivoire-gold data-[state=checked]:border-ivoire-gold data-[state=checked]:text-[#0b0d14]"
+                        />
+                      </FormControl>
+                      <label
+                        className="text-white/60 text-xs leading-relaxed cursor-pointer"
+                        onClick={() => field.onChange(!field.value)}
+                      >
+                        By checking this box, I give my express written consent
+                        for Ivoire Digital to contact me at the phone number
+                        provided above by phone call and text message (SMS),
+                        including through automated technology, regarding my
+                        inquiry. Message and data rates may apply. Message
+                        frequency varies. I can opt out at any time by replying
+                        STOP. *
+                      </label>
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}
