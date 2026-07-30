@@ -357,6 +357,32 @@ function GrowthPlanForm() {
                 />
                 <FormField
                   control={form.control}
+                  name="hasBusiness"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>
+                        <Store className={iconClass} /> Do You Have a Business? *
+                      </FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        value={field.value || ""}
+                      >
+                        <FormControl>
+                          <SelectTrigger className={fieldClass}>
+                            <SelectValue placeholder="Select one" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className="bg-[#161926] border-white/10 text-white">
+                          <SelectItem value="yes">Yes</SelectItem>
+                          <SelectItem value="no">No, not yet</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
                   name="businessType"
                   render={({ field }) => (
                     <FormItem>
@@ -440,34 +466,7 @@ function GrowthPlanForm() {
                 )}
               />
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="hasBusiness"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className={labelClass}>
-                        <Store className={iconClass} /> Do You Have a Business? *
-                      </FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        value={field.value || ""}
-                      >
-                        <FormControl>
-                          <SelectTrigger className={fieldClass}>
-                            <SelectValue placeholder="Select one" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className="bg-[#161926] border-white/10 text-white">
-                          <SelectItem value="yes">Yes</SelectItem>
-                          <SelectItem value="no">No, not yet</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
+              <FormField
                   control={form.control}
                   name="monthlyRevenue"
                   render={({ field }) => (
@@ -502,7 +501,6 @@ function GrowthPlanForm() {
                     </FormItem>
                   )}
                 />
-              </div>
 
               <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3.5 space-y-3">
                 <p className={labelClass}>
