@@ -7,6 +7,11 @@ import { z } from "zod";
 
 const NOTIFY_TO = "contact@ivoiredigital.com, koneyassine49@gmail.com";
 
+// Exact consent wording shown next to the checkbox on the website form.
+// Keep in sync with client/src/components/HeroSection.tsx.
+const CONSENT_TEXT =
+  "By checking this box, I give my express written consent for Ivoire Digital to contact me at the phone number provided above by phone call and text message (SMS), including through automated technology, regarding my inquiry. Message and data rates may apply. Message frequency varies. I can opt out at any time by replying STOP.";
+
 const mailer = process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD
   ? nodemailer.createTransport({
       service: "gmail",
@@ -102,6 +107,8 @@ function buildAppointmentEmail(d: {
   interestReactivation?: boolean;
   qualified?: boolean;
   contactConsent?: boolean;
+  consentTimestamp?: string;
+  consentIp?: string;
   preferredDate?: string | null;
   preferredTime?: string | null;
   timezone?: string | null;
@@ -132,6 +139,16 @@ function buildAppointmentEmail(d: {
               : ""
           }
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Contact Consent:</strong></td><td>${d.contactConsent ? "✅ Agreed to be contacted by call & text" : "—"}</td></tr>
+          ${
+            d.consentTimestamp
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Consent Time:</strong></td><td>${escapeHtml(d.consentTimestamp)}</td></tr>`
+              : ""
+          }
+          ${
+            d.consentIp
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Consent IP:</strong></td><td>${escapeHtml(d.consentIp)}</td></tr>`
+              : ""
+          }
           ${
             d.hasBusiness
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Has a Business:</strong></td><td>${d.hasBusiness === "yes" ? "✅ Yes" : "❌ No"}</td></tr>`
@@ -168,6 +185,15 @@ function buildAppointmentEmail(d: {
             ? `<div style="margin-top: 16px; padding: 16px; background: white; border-left: 4px solid #b07d2a; border-radius: 4px;">
                 <strong style="color: #6b7280; display: block; margin-bottom: 6px;">Additional Info:</strong>
                 <div style="white-space: pre-wrap;">${escapeHtml(d.message)}</div>
+              </div>`
+            : ""
+        }
+        ${
+          d.contactConsent
+            ? `<div style="margin-top: 16px; padding: 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; color: #065f46; font-size: 12px;">
+                <strong>📄 Consent Record (keep this email as proof):</strong><br/>
+                The prospect checked a required consent box displaying the following text:<br/>
+                <em>"${escapeHtml(CONSENT_TEXT)}"</em>
               </div>`
             : ""
         }
@@ -315,7 +341,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
           : appointmentData.preferredDate
           ? `New Booking: ${appointmentData.name} — ${appointmentData.preferredDate} ${appointmentData.preferredTime}`
           : `New Lead: ${appointmentData.name} — ${appointmentData.businessName} (${appointmentData.location})`,
-        buildAppointmentEmail({ ...appointmentData, qualified }),
+        buildAppointmentEmail({
+          ...appointmentData,
+          qualified,
+          consentTimestamp: `${new Date().toUTCString()} (${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })} Central)`,
+          consentIp:
+            (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
+            req.socket.remoteAddress ||
+            "unknown",
+        }),
         appointmentData.email
       );
 
