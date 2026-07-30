@@ -14,6 +14,8 @@ import ServiceDetail from "@/pages/ServiceDetail";
 import ThankYou from "@/pages/ThankYou";
 import NotAFit from "@/pages/NotAFit";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 
 function Router() {
   return (
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/services/:slug" component={ServiceDetail} />
       <Route path="/thank-you" component={ThankYou} />
       <Route path="/request-received" component={NotAFit} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms" component={TermsOfService} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/guide/:slug" component={Guide} />
       <Route component={NotFound} />

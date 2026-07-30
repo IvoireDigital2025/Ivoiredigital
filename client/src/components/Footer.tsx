@@ -105,8 +105,8 @@ export default function Footer() {
         <div className="pt-6 border-t border-white/10 text-xs text-white/40 flex flex-col sm:flex-row gap-2 justify-between items-center">
           <div>&copy; {new Date().getFullYear()} Ivoire Digital. All rights reserved. Dallas, TX.</div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-ivoire-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-ivoire-gold transition-colors">Terms of Service</a>
+            <Link href="/privacy-policy" className="hover:text-ivoire-gold transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-ivoire-gold transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

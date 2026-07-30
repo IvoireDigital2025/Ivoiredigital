@@ -580,7 +580,17 @@ function GrowthPlanForm() {
                         including through automated technology, regarding my
                         inquiry. Message and data rates may apply. Message
                         frequency varies. I can opt out at any time by replying
-                        STOP. *
+                        STOP. See our{" "}
+                        <a
+                          href="/privacy-policy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="underline text-white/80 hover:text-ivoire-gold"
+                        >
+                          Privacy Policy
+                        </a>
+                        . *
                       </label>
                     </div>
                     <FormMessage />
