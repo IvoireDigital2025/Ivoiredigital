@@ -18,6 +18,9 @@ import {
   MapPin,
   ClipboardList,
   Flame,
+  Store,
+  DollarSign,
+  Sparkles,
 } from "lucide-react";
 import {
   Select,
@@ -119,6 +122,15 @@ const heroFormSchema = insertAppointmentSchema.extend({
   businessName: z.string().min(2, "Please enter your business name"),
   location: z.string().min(2, "Please enter your city and state"),
   seriousness: z.string().min(1, "Please let us know how ready you are"),
+  hasBusiness: z.enum(["yes", "no"], {
+    errorMap: () => ({ message: "Please let us know if you have a business" }),
+  }),
+  monthlyRevenue: z.string().min(1, "Please select your monthly revenue"),
+  interestWebsite: z.boolean({ required_error: "Please answer yes or no" }),
+  interestReviews: z.boolean({ required_error: "Please answer yes or no" }),
+  interestMissedCall: z.boolean({ required_error: "Please answer yes or no" }),
+  interestAiFollowup: z.boolean({ required_error: "Please answer yes or no" }),
+  interestReactivation: z.boolean({ required_error: "Please answer yes or no" }),
   contactConsent: z.literal(true, {
     errorMap: () => ({
       message:
@@ -134,6 +146,74 @@ const fieldClass =
 const labelClass =
   "flex items-center gap-1.5 text-white/80 text-xs font-medium";
 const iconClass = "h-3.5 w-3.5 text-ivoire-gold";
+
+const INTEREST_QUESTIONS: {
+  name:
+    | "interestWebsite"
+    | "interestReviews"
+    | "interestMissedCall"
+    | "interestAiFollowup"
+    | "interestReactivation";
+  label: string;
+}[] = [
+  {
+    name: "interestWebsite",
+    label: "A new free website with better SEO?",
+  },
+  {
+    name: "interestReviews",
+    label: "Increasing your reviews on autopilot?",
+  },
+  {
+    name: "interestMissedCall",
+    label: "Missed-call text back so you never miss a lead?",
+  },
+  {
+    name: "interestAiFollowup",
+    label: "AI leads follow-up?",
+  },
+  {
+    name: "interestReactivation",
+    label: "A re-activation campaign to bring old clients back?",
+  },
+];
+
+function YesNoToggle({
+  value,
+  onChange,
+}: {
+  value: boolean | undefined;
+  onChange: (v: boolean) => void;
+}) {
+  const base =
+    "px-3.5 py-1.5 rounded-md text-xs font-semibold border transition-colors";
+  return (
+    <div className="flex gap-2 shrink-0">
+      <button
+        type="button"
+        onClick={() => onChange(true)}
+        className={`${base} ${
+          value === true
+            ? "bg-ivoire-gold text-[#0b0d14] border-ivoire-gold"
+            : "bg-white/5 text-white/60 border-white/15 hover:border-ivoire-gold/50"
+        }`}
+      >
+        Yes
+      </button>
+      <button
+        type="button"
+        onClick={() => onChange(false)}
+        className={`${base} ${
+          value === false
+            ? "bg-white/15 text-white border-white/30"
+            : "bg-white/5 text-white/60 border-white/15 hover:border-white/40"
+        }`}
+      >
+        No
+      </button>
+    </div>
+  );
+}
 
 function Stars() {
   return (
@@ -160,6 +240,13 @@ function GrowthPlanForm() {
       businessName: "",
       location: "",
       seriousness: "",
+      hasBusiness: undefined,
+      monthlyRevenue: "",
+      interestWebsite: undefined as unknown as boolean,
+      interestReviews: undefined as unknown as boolean,
+      interestMissedCall: undefined as unknown as boolean,
+      interestAiFollowup: undefined as unknown as boolean,
+      interestReactivation: undefined as unknown as boolean,
       contactConsent: false as unknown as true,
       message: "",
     },
@@ -178,11 +265,12 @@ function GrowthPlanForm() {
       }
       return response.json();
     },
-    onSuccess: () => {
-      trackLead();
+    onSuccess: (data: any) => {
+      const qualified = data?.appointment?.qualified !== false;
+      if (qualified) trackLead();
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/admin/appointments"] });
-      setLocation("/thank-you");
+      setLocation(qualified ? "/thank-you" : "/request-received");
     },
     onError: (error: any) => {
       toast({
@@ -351,6 +439,98 @@ function GrowthPlanForm() {
                   </FormItem>
                 )}
               />
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <FormField
+                  control={form.control}
+                  name="hasBusiness"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>
+                        <Store className={iconClass} /> Do You Have a Business? *
+                      </FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        value={field.value || ""}
+                      >
+                        <FormControl>
+                          <SelectTrigger className={fieldClass}>
+                            <SelectValue placeholder="Select one" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className="bg-[#161926] border-white/10 text-white">
+                          <SelectItem value="yes">Yes</SelectItem>
+                          <SelectItem value="no">No, not yet</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="monthlyRevenue"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelClass}>
+                        <DollarSign className={iconClass} /> Monthly Business
+                        Revenue *
+                      </FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        value={field.value || ""}
+                      >
+                        <FormControl>
+                          <SelectTrigger className={fieldClass}>
+                            <SelectValue placeholder="Select one" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className="bg-[#161926] border-white/10 text-white">
+                          <SelectItem value="$0 – $5,000">
+                            $0 – $5,000
+                          </SelectItem>
+                          <SelectItem value="$5,000 – $10,000">
+                            $5,000 – $10,000
+                          </SelectItem>
+                          <SelectItem value="$10,000 – $25,000">
+                            $10,000 – $25,000
+                          </SelectItem>
+                          <SelectItem value="$25,000+">$25,000+</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3.5 space-y-3">
+                <p className={labelClass}>
+                  <Sparkles className={iconClass} /> Which of these are you
+                  interested in? *
+                </p>
+                {INTEREST_QUESTIONS.map((q) => (
+                  <FormField
+                    key={q.name}
+                    control={form.control}
+                    name={q.name}
+                    render={({ field }) => (
+                      <FormItem>
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-white/70 text-xs leading-snug">
+                            {q.label}
+                          </span>
+                          <YesNoToggle
+                            value={field.value as boolean | undefined}
+                            onChange={field.onChange}
+                          />
+                        </div>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                ))}
+              </div>
 
               <FormField
                 control={form.control}

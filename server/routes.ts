@@ -93,6 +93,14 @@ function buildAppointmentEmail(d: {
   location: string;
   service?: string | null;
   seriousness?: string | null;
+  hasBusiness?: string | null;
+  monthlyRevenue?: string | null;
+  interestWebsite?: boolean;
+  interestReviews?: boolean;
+  interestMissedCall?: boolean;
+  interestAiFollowup?: boolean;
+  interestReactivation?: boolean;
+  qualified?: boolean;
   contactConsent?: boolean;
   preferredDate?: string | null;
   preferredTime?: string | null;
@@ -125,12 +133,36 @@ function buildAppointmentEmail(d: {
           }
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Contact Consent:</strong></td><td>${d.contactConsent ? "✅ Agreed to be contacted by call & text" : "—"}</td></tr>
           ${
+            d.hasBusiness
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Has a Business:</strong></td><td>${d.hasBusiness === "yes" ? "✅ Yes" : "❌ No"}</td></tr>`
+              : ""
+          }
+          ${
+            d.monthlyRevenue
+              ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Monthly Revenue:</strong></td><td><strong>${escapeHtml(d.monthlyRevenue)}</strong></td></tr>`
+              : ""
+          }
+          <tr><td style="padding: 8px 0; color: #6b7280; vertical-align: top;"><strong>Interested In:</strong></td><td>
+            ${d.interestWebsite ? "✅" : "❌"} Free website with better SEO<br/>
+            ${d.interestReviews ? "✅" : "❌"} Reviews on autopilot<br/>
+            ${d.interestMissedCall ? "✅" : "❌"} Missed-call text back<br/>
+            ${d.interestAiFollowup ? "✅" : "❌"} AI leads follow-up<br/>
+            ${d.interestReactivation ? "✅" : "❌"} Re-activation campaign
+          </td></tr>
+          ${
             d.preferredDate
               ? `<tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Date:</strong></td><td>${escapeHtml(d.preferredDate)}</td></tr>
           <tr><td style="padding: 8px 0; color: #6b7280;"><strong>Preferred Time:</strong></td><td>${escapeHtml(d.preferredTime || "")} ${escapeHtml(d.timezone || "")}</td></tr>`
               : ""
           }
         </table>
+        ${
+          d.qualified === false
+            ? `<div style="margin-top: 16px; padding: 12px; background: #fee2e2; border: 1px solid #fca5a5; border-radius: 6px; color: #991b1b; font-weight: bold;">
+                🚫 DISQUALIFIED LEAD — did not meet qualification criteria. No action required unless you want to nurture them later.
+              </div>`
+            : ""
+        }
         ${
           d.message
             ? `<div style="margin-top: 16px; padding: 16px; background: white; border-left: 4px solid #b07d2a; border-radius: 4px;">
@@ -207,6 +239,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
             ])
             .optional()
             .nullable(),
+          hasBusiness: z.enum(["yes", "no"], {
+            errorMap: () => ({ message: "Please tell us if you have a business" }),
+          }),
+          monthlyRevenue: z.enum(
+            ["$0 – $5,000", "$5,000 – $10,000", "$10,000 – $25,000", "$25,000+"],
+            {
+              errorMap: () => ({ message: "Please select your monthly revenue" }),
+            }
+          ),
+          interestWebsite: z.boolean(),
+          interestReviews: z.boolean(),
+          interestMissedCall: z.boolean(),
+          interestAiFollowup: z.boolean(),
+          interestReactivation: z.boolean(),
           contactConsent: z.literal(true, {
             errorMap: () => ({
               message:
@@ -214,7 +260,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
             }),
           }),
         })
+        .omit({ qualified: true })
         .parse(req.body);
+
+      // Server-side qualification logic (authoritative — ignores any client-sent flag)
+      const noInterests =
+        !appointmentData.interestWebsite &&
+        !appointmentData.interestReviews &&
+        !appointmentData.interestMissedCall &&
+        !appointmentData.interestAiFollowup &&
+        !appointmentData.interestReactivation;
+      const qualified = !(
+        appointmentData.hasBusiness === "no" ||
+        appointmentData.monthlyRevenue === "$0 – $5,000" ||
+        noInterests
+      );
 
       const appointment = await storage.createAppointment({
         name: appointmentData.name,
@@ -225,6 +285,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         location: appointmentData.location,
         service: appointmentData.service || null,
         seriousness: appointmentData.seriousness || null,
+        hasBusiness: appointmentData.hasBusiness,
+        monthlyRevenue: appointmentData.monthlyRevenue,
+        interestWebsite: appointmentData.interestWebsite,
+        interestReviews: appointmentData.interestReviews,
+        interestMissedCall: appointmentData.interestMissedCall,
+        interestAiFollowup: appointmentData.interestAiFollowup,
+        interestReactivation: appointmentData.interestReactivation,
+        qualified,
         contactConsent: appointmentData.contactConsent,
         preferredDate: appointmentData.preferredDate || null,
         preferredTime: appointmentData.preferredTime || null,
@@ -242,10 +310,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Fire-and-forget email notification
       sendNotification(
-        appointmentData.preferredDate
+        !qualified
+          ? `🚫 Disqualified Lead: ${appointmentData.name} — ${appointmentData.businessName} (${appointmentData.location})`
+          : appointmentData.preferredDate
           ? `New Booking: ${appointmentData.name} — ${appointmentData.preferredDate} ${appointmentData.preferredTime}`
           : `New Lead: ${appointmentData.name} — ${appointmentData.businessName} (${appointmentData.location})`,
-        buildAppointmentEmail(appointmentData),
+        buildAppointmentEmail({ ...appointmentData, qualified }),
         appointmentData.email
       );
 
